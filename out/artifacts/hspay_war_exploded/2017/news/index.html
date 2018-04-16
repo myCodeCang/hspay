@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<title>秒付宝支付</title>
+<link rel="stylesheet" href="css/base.css">
+</head>
+
+<body style="background:#f2f2f2">
+<!-- header -->
+<div class="header">
+	<div class="wrap clearfix">
+    	<div class="logo-box fl">
+        	<a href="../index.html" class="logo" title="秒付宝支付官网"><img src="images/logo.png" alt="秒付宝支付官网"/></a>
+            <span class="sub-logo">新闻动态</span>
+        </div>
+        <ul class="nav fr">
+        	<li><a href="../i/index.html">关于秒付宝</a></li>
+            <li><a href="index.html" class="cur">新闻动态</a></li>
+        	<li><a href="../i/merchant_agreement.html">服务协议</a></li>
+        	<li><a href="../zhaopin/index.html">诚聘英才</a></li>
+        	<li><a href="../i/contact.html">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="wrap main">
+	<ul class="news_list" id="ulList">
+        <li><a href="news59.html" target="_blank">•　秒付宝支付"希望之履"公益行携手奥运冠军王丽萍走进敦煌</a> <span>2017-04-19</span></li>
+    </ul>
+</div>
+        
+<!-- footer -->
+<div class="footer">
+	<div class="footer-nav">
+    	<a href="../shanghu/renzheng.html">认证支付</a>
+        <span>|</span>
+        <a href="../shanghu/kuaijie.html">快捷支付</a>
+        <span>|</span>
+        <a href="http://www.miaojiesuan.net/" target="_blank">人民币提现</a>
+        <span>|</span>
+        <a href="../shanghu/zhanghu.html">账户体系</a>
+        <span>|</span>
+        <a href="../zhaopin/index.html" target="_blank">诚聘英才</a>
+        <span>|</span>
+        <a href="../i/contact.html" target="_blank">联系我们</a>
+        <span>|</span>
+        <a href="../gongyi/index.html" target="_blank">秒付宝公益</a>
+        <span>|</span>
+        <a href="http://www.lianlianpay.com/international" target="_blank">International Business</a>
+    </div>
+    <div class="icp">版权归成都华翔通达网络科技有限公司所有 　工信部备案号：蜀ICP备17000687号</div>	
+</div><script type="text/javascript" src="../js/jquery-1.12.1.min.js" ></script><script type="text/javascript">$(document).ready(function(){	var baseurl="/pay";	var info="";	$.ajax({		type : "POST",		url : baseurl+"/newsList",		data : "",		dataType : "json",		async : "false",		success : function(data) {			for( var i = 0; i < data.length; i++ ) {				info+="<li><a href='"+baseurl+"/2017/news/info.html?dynamicid="+data[i].dynamicid+"' target='_blank'>•　"+data[i].title+"</a><span>"+data[i].createtime+"</span></li>";			}			$("#ulList").html(info);		},		error : function(data) {		}	});}); </script>
+
+</body>
+</html>

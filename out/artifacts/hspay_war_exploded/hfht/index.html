@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset=UTF-8>
+<title>赛富特_首页｜互联网金融服务商</title>
+<meta name=keywords content=赛富特,付钱啦,聚合支付,支付通道,聚合SDK>
+<meta name=description
+	content=赛富特为创业者提供全新的支付接入服务，仅需几行简单代码，就能同时接入主流支付服务商，轻松实现收款，助您在支付上抢先一步。>
+<meta name=baidu-site-verification content=TLM6YGqp57>
+<link rel="shortcut icon" href=images/favicon.ico type=image/x-icon>
+<meta http-equiv=X-UA-Compatible content="IE=Edge,chrome=1">
+<meta name=renderer content=webkit>
+<link rel=prefetch href=file:///D|/我的文档/cashCompass.html>
+<script>var _hmt=_hmt||[]</script>
+<link href="css/common.css?42efbaee898ee4c5c75e" rel="stylesheet">
+<link href="css/index.css?42efbaee898ee4c5c75e" rel="stylesheet">
+<link href="css/swiper.min.css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<div class="header">
+		<div class="header-main clearfix">
+			<h1 id="logo">
+				<a href="index.html">首页</a>
+			</h1>
+			<div class="nav-box">
+				<ul class="nav" id="nav">
+					<li class="more"><a href="#nogo">产品与服务</a>
+						<div class="nav-line"></div>
+						<div class="sub-nav product-list">
+							<ul>
+								<li><a href="polyPay.html">聚合支付</a></li>
+								<li><a href="scancode.html"
+									onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;扫码支付&quot;,platformType:&quot;pc&quot;})">扫码支付</a>
+								</li>
+								<!--<li><a href="cashCompass.html"-->
+									<!--onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;现金罗盘&quot;,platformType:&quot;pc&quot;})">现金罗盘</a>-->
+								<!--</li>-->
+								<li><a href="allDirectionData.html">八方数据</a></li>
+							</ul>
+						</div></li>
+					<li class="more"><a href="#nogo">解决方案</a>
+						<div class="nav-line"></div>
+						<div class="sub-nav scheme">
+							<ul>
+								<li><a href="cashFlow.html">个性化服务</a></li>
+								<li><a href="fundDeposit.html">资金通道</a></li>
+								<!--<li><a href="enterpriseFin.html">企业理财</a></li>-->
+								<!--<li><a href="supply.html">供应链金融</a></li>-->
+								<li><a href="stagepay.html"
+									onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;分期支付&quot;,platformType:&quot;pc&quot;,position:&quot;header-nav&quot;})">分期支付</a>
+								</li>
+							</ul>
+						</div></li>
+					<li class="more"><a href="#nogo">开发者中心</a>
+						<div class="nav-line"></div>
+						<div class="sub-nav developer-center">
+							<ul>
+								<li><a href="quickStart.html">开发指南</a></li>
+							</ul>
+						</div></li>
+				</ul>
+			</div>
+			<div class="login-box">
+				<div
+					style="float: left; margin-top: 22px; margin-bottom: 22px; padding-right: 42px; padding-left: 33px; height: 26px; font-size: 14px; line-height: 26px; color: #333; background-position: 0 0;">&nbsp;</div>
+				<div class="no_login" style="display: block;">
+					<a class="login-btn" href="login.html">登录</a><a class="reg-btn"
+						href="register.html"
+						onClick="sa.track(&quot;registerBtnClicks&quot;,{platformType:&quot;pc&quot;,position:&quot;头部右上角&quot;,pageUrl:location.href})">注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class=slide id=slide>
+		<div class=slide_cont>
+			<div class="slides upyun-bnr" onclick='sa.track("bannerClicks",{name:"金融云",platformType:"pc",position:"index-banner"})'>
+				<img src="../images/banner4.jpg" alt="">
+				<a href="register.html">
+					<div class=main>
+						<h1>赛富特支付</h1>
+						<h3>香港金管局监管,安全,快捷</h3>
+						<button class=register-btn>注册使用</button>
+					</div>
+				</a>
+			</div>
+			<div class="slides fundDeposit-bnr"
+				onclick='sa.track("activityClicks",{name:"资金存管",platformType:"pc",position:"index-banner"})'>
+				<a href="fundDeposit.html">
+					<div class=main>
+						<h3>资金通道安全</h3>
+						<p>赛富特微商户提供稳定安全的支付通道</p>
+						
+					</div>
+				</a>
+			</div>
+			<div class="slides cashFlow-bnr"
+				onclick='sa.track("activityClicks",{name:"流量变现",platformType:"pc",position:"index-banner"})'>
+				<a href="cashFlow.html">
+					<div class=main>
+						<h3>商户出金快捷</h3>
+						<p>赛富特为商户提供7*24快捷服务</p>
+						
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class=btn>
+			<div class="btn-cont prev-box">
+				<a href=# class=prev></a>
+			</div>
+			<div class="btn-cont next-box">
+				<a href=# class=next></a>
+			</div>
+		</div>
+	</div> -->
+	<style>
+		.swiper-slide{position:relative;}
+		.swiper-main{position: absolute;top:200px;left:50%;margin-left:-550px;width:1100px;height:100%;}
+		.swiper-main>h1{color:#fff;font-size: 50px;margin-left: 47px;}
+		.swiper-main>p{   
+		 	padding-top: 30px;
+		    font-size: 24px;
+		    line-height: 1;
+		    text-align: left;
+		    color: #e5e5e5;
+		    margin-left: 47px;
+		}
+		.swiper-main>div{
+		    display: block;
+		    background: none;
+		    border: 1px solid #fff;
+		    border-radius: 4px;
+		    width: 138px;
+		    height: 46px;
+		    line-height: 42px;
+		    font-size: 18px;
+		    color: #fff;
+		    text-align: center;
+		    cursor: pointer;
+		    margin-top: 55px;
+		    margin-left: 47px;
+		}
+		.swiper-main>div>a{color:#fff;}
+	</style>
+	<div class="swiper-container" style="margin-top:70px;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+				<img src="images/banner8.jpg">
+				<div class="swiper-main">
+					<h1>赛富特支付</h1>
+					<p>香港金管局监管,安全,快捷</p>
+					<div><a href="register.html">注册使用</a></div>
+				</div>
+            </div>
+            <div class="swiper-slide">
+            	<img src="images/banner6.jpg">
+            	<div class="swiper-main">
+					<h1>资金通道安全</h1>
+					<p>赛富特微商户提供稳定安全的支付通道</p>
+				</div>
+            </div>
+            <div class="swiper-slide">
+            	<img src="images/banner7.jpg">
+            	<div class="swiper-main">
+					<h1>商户出金快捷</h1>
+					<p>赛富特为商户提供7*24快捷服务</p>
+				</div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+	<div class=fill-box>
+		<svg class=text-fill width=100% height=100% version=1.1
+			xmlns=http://www.w3.org/2000/svg>
+    <defs>
+      <linearGradient id=text-shade x1=0% y1=0% x2=100% y2=0%>
+        <stop offset=0% style=stop-color:#06e1b9;stop-opacity:1 />
+        <stop offset=100% style=stop-color:#549fff;stop-opacity:1 />
+      </linearGradient>
+    </defs>
+  </svg>
+	</div>
+	<div class="mod pro-ser">
+		<div class=main>
+			<h2>产品与服务</h2>
+			<h3>为企业提供专业的聚合支付工具和资金管理、征信数据服务，赛富特让支付再融合</h3>
+			<ul>
+				<li><a class="" href="polyPay.html">
+						<h4>聚合支付</h4>
+						<p>
+							全支付场景覆盖<br> 主流支付通道支持
+						</p>
+				</a></li>
+				<li><a href="scancode.html">
+						<h4>扫码支付</h4>
+						<p>
+							专业收款工具<br> 线下商户经营必备
+						</p>
+				</a></li>
+				<!--<li><a href="cashCompass.html">-->
+						<!--<h4>现金罗盘</h4>-->
+						<!--<p>-->
+							<!--为企业用户量身定做的<br> 资金管理解决方案-->
+						<!--</p>-->
+				<!--</a></li>-->
+				<li><a href="allDirectionData.html">
+						<h4>八方数据</h4>
+						<p>
+							全方位数据专家<br> 个人征信数据认证平台
+						</p>
+				</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="mod resolve">
+		<div class=main>
+			<h2>解决方案</h2>
+			<h3>不止支付，为企业提供量身定制的解决方案，赛富特助力企业成长，让商业变现更简单</h3>
+			<div class=resolve-tabs>
+				<ul class=resolve-header>
+					<li class=active>个性服务</li>
+					<li class="">资金通道</li>
+					<!--<li class="">供应链金融</li>-->
+					<li class="">分期支付</li>
+				</ul>
+				<div class=resolve-cont>
+					<div class="resolve-item cash-flow active">
+						<div class=pic></div>
+						<div class=desc>
+							<h4>个性服务</h4>
+							<p>根据不同的商户要求,提供不同的定制服务</p>
+							<a href="cashFlow.html">了解更多</a>
+						</div>
+					</div>
+					<div class="resolve-item enterprise-fin">
+						<div class=pic></div>
+						<div class=desc>
+							<h4>资金通道</h4>
+							<p>为客户提供安全稳定的通道,帮助客户开展资金业务</p>
+							<a href="enterpriseFin.html">了解更多</a>
+						</div>
+					</div>
+					<!--<div class="resolve-item supply">-->
+						<!--<div class=pic></div>-->
+						<!--<div class=desc>-->
+							<!--<h4>供应链金融</h4>-->
+							<!--<p>赛富特联合知名金融机构为中小微企业提供的供应链融资服务平台，通过对融资企业相关数据分析，对企业信用状况和资金缺口情况进行测算，企业可以通过线上平台完成企业融资办理</p>-->
+							<!--<a href="supply.html">了解更多</a>-->
+						<!--</div>-->
+					<!--</div>-->
+					<div class="resolve-item stagepay">
+						<div class=pic></div>
+						<div class=desc>
+							<h4>分期支付</h4>
+							<p>赛富特支付为商户提供各种场景下的分期服务，使商户具备提供分期付款、“白条”类产品的消费金融运营能力。先消费后付款的全新消费模式，可消除用户的购买门槛，让信用提升用户生活品质</p>
+							<a href="stagepay.html">了解更多</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mod us-superiority">
+		<div class=main>
+			<h2>我们的优势</h2>
+			<h3>
+				灵活、便捷的产品服务组合，稳定可靠的运维管理，赛富特提供<br> 金融级安全架构，让金融安全、温暖
+			</h3>
+			<div class=superiority-list>
+				<ul class=clearfix>
+					<li class=item>
+						<div class=item-cont>
+							<h4>极简使用</h4>
+							<p>
+								七行代码，极速完成<br> 支付接入
+							</p>
+						</div>
+					</li>
+					<li class=item>
+						<div class=item-cont>
+							<h4>灵活便利</h4>
+							<p>
+								产品服务灵活组合，满足<br> 企业🈕元化业务需求
+							</p>
+						</div>
+					</li>
+					<li class=item>
+						<div class=item-cont>
+							<h4>不介入资金流</h4>
+							<p>
+								赛富特只负责交易处理<br> 不参与资金清算
+							</p>
+						</div>
+					</li>
+					<li class=item>
+						<div class=item-cont>
+							<h4>稳定可靠</h4>
+							<p>
+								标准化的异地灾备、智能<br> 监控系统,基础设施稳定可靠
+							</p>
+						</div>
+					</li>
+					<li class=item>
+						<div class=item-cont>
+							<h4>安全保证</h4>
+							<p>
+								金融级安全系统，智能监控<br> 系统，多重加密传输
+							</p>
+						</div>
+					</li>
+					<li class=item>
+						<div class=item-cont>
+							<h4>增值服务</h4>
+							<p>
+								提供金融产品及技术服务,帮<br> 助企业整合互联网金融资源
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--<div class="mod users">-->
+		<!--<div class=slide-users id=slide-users>-->
+			<!--<ul class=users-pic>-->
+				<!--<li>-->
+					<!--<div class=main>-->
+						<!--<img width=1920 height=557 data-original=images/sj-10.jpg alt=爱油科技>-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<div class=main>-->
+						<!--<img width=1920 height=557 data-original=images/sj-07.jpg alt=她理财>-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li class=active>-->
+					<!--<div class=main>-->
+						<!--<img width=1920 height=557 data-original=images/sj-06.jpg alt=指尖报销>-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<div class=main>-->
+						<!--<img width=1920 height=557 data-original=images/sj-09.jpg alt=咔咔爱车>-->
+					<!--</div>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<div class=main>-->
+						<!--<img width=1920 height=557 data-original=images/sj-08.jpg alt=土星教育>-->
+					<!--</div>-->
+				<!--</li>-->
+			<!--</ul>-->
+			<!--<div class=users-infors>-->
+				<!--<div class=main>-->
+					<!--<h4>他们在用</h4>-->
+					<!--<p>-->
+						<!--他们都在使用赛富特: <br> 多重数据加密，严控访问权限，保障交易安全-->
+					<!--</p>-->
+					<!--<ul class=infors-list>-->
+						<!--<li><img data-original=images/aykj-webp.png width=100-->
+							<!--height=32 alt=爱油科技> <span> 将成品油传统的线下交易搬到线上，<br>-->
+								<!--自然少不了移动互联网支付的发展。<br> 赛富特通过支付，把我们最好的服务连接到了我们的用户。-->
+						<!--</span></li>-->
+						<!--<li><img data-original=images/tlc-webp.png width=85 height=33-->
+							<!--alt=她理财> <span> APP通过赛富特接入理财平台，<br>-->
+								<!--让更多的女性成为了姐妹眼中的理财达人，<br> 财女计划轻松养成。-->
+						<!--</span></li>-->
+						<!--<li class=active><img data-original=images/zjbx-webp.png-->
+							<!--width=89 height=23 alt=指尖报销> <span> 对于企业来讲，时间意味着生存。<br>-->
+								<!--指尖报销帮助企业解决了繁琐的报销流程，而赛富特提供<br> 的财务管理，让报销变得更加有趣。-->
+						<!--</span></li>-->
+						<!--<li><img data-original=images/kk-webp.png width=110 height=19-->
+							<!--alt=咔咔爱车> <span> 接入赛富特后，线上付费的转化率得到了质的飞跃。<br>-->
+								<!--Kaka爱车的用户反馈这一次的变化让他们赞不绝口。-->
+						<!--</span></li>-->
+						<!--<li><img data-original=images/txjy-webp.png width=100-->
+							<!--height=26 alt=土星教育> <span> 通过使用赛富特的余额理财服务， <br>-->
+								<!--让土星教育的资金获得更多收益，<br> 并且保证了较高的资金流动性。-->
+						<!--</span></li>-->
+					<!--</ul>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class=users-name>-->
+				<!--<div class=main>-->
+					<!--<ul>-->
+						<!--<li>爱油科技</li>-->
+						<!--<li>她理财</li>-->
+						<!--<li class=cur>指尖报销</li>-->
+						<!--<li>咔咔爱车</li>-->
+						<!--<li>土星教育</li>-->
+					<!--</ul>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+	<div class="mod collaborate">
+		<div class=main>
+			<h2>合作伙伴</h2>
+			<div class=collaborate-inner>
+				<ul>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAADICAYAAAAzx/4XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEM4QURBRTBDRTU3MTFFNkIxN0FFQjIwMjA4NzJBM0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEM4QURBRTFDRTU3MTFFNkIxN0FFQjIwMjA4NzJBM0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4QzhBREFERUNFNTcxMUU2QjE3QUVCMjAyMDg3MkEzQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4QzhBREFERkNFNTcxMUU2QjE3QUVCMjAyMDg3MkEzQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhyZb24AABKKSURBVHja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>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAADICAYAAAAzx/4XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RUEwMTIwQjUzOEFFMTFFN0I5RjdDNTVDN0Q3MzE1QzYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RUEwMTIwQjQzOEFFMTFFN0I5RjdDNTVDN0Q3MzE1QzYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4QzhBREFFNENFNTcxMUU2QjE3QUVCMjAyMDg3MkEzQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4QzhBREFFNUNFNTcxMUU2QjE3QUVCMjAyMDg3MkEzQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiG2OzYAABSeSURBVHja7J0JtBxFFYYrCYtAWCKCQFA2FUVcwhJEFBCfCOKKhLAISBQVRAVEVlmCoOwooELUGEAUUUG2cCCRBIGwiCAaEYFAZA1BiUBICJI867frHTv1euZNT1dX97z5vnPuyXmdmZ5eqv+uunXvrSG9vb0GAKAMhnIJAACBAQAEBgAAgQEABAYAEBgAAAQGABAYAEBgAAAQGABAYAAAgQEAQGAAAIEBAAQGAACBAQAEBgAQGAAABAYAEBgAQGAAABAYAEBgAACBAQBAYAAAgQEABAYAAIEBAAQGAACBAQAEBgAQGAAABAYAEBgAQGAAABAYAEBgAACBAQBAYAAAgQEABAYAAIEBAAQGABAYAAAEBgAQGABAYAAAEBgAQGAAAIEBAEBgAACBAQAEBgAAgQEABAYAEBgAgOAsE2pHU6dO5WoCdCA9PT30YACAIRIAAAIDAOWzzCA/v9da28zaKGtvtra+2zbC2srWVnHX4AVr/7E2x9rj1p6w9hdn91p7kaYCgMAMszba2kes7WLt3daGtPC9Ee7fNa290/u/V6390do0axdam02zAegugdna2met7eZ6KKGv0VbO9rW2nhMdABjEAqNj38PaIdY2j/Sb6uGswJAJYPAKjBzTe1k73iR+lZicniEub7f2XpP4a+6gSQF0rsBomHKuSfwssbnFiVqa/axNNP+fjbvG2tesPUrTAuicaWoNS86xNqMicXnWDccWp7ZpZuoC7xp+zNpfrR1uCAEA6IiHQDNBfzKJr6WK411ibR9rT6W2aXr7MmuvaSCGZ1hT7sQbaWKAwNSX/a3dbu0tFR7Dd6zd4G37UQvH9AFrd7t/ARCYGjHEPdgTG/QSYnGztRO8bQda273F769h7UZrX6CpQTdSRyevguUmWftMxccx19qeZmm/i6KCz2njGitAb21r42lyQA+mWnH5eQ3EZbE7hqdT21a19ktry7e5zxNdrwwAgaloWDQxx/CjTCQEU7xtP7b2poL7PYpeDCAw1fBtk4TiV80019tI82WTpCGEQLE0n6fpAQITj73d271qnnHHkva7KA3h7MC/831r29L8AIEpn02tTajBcSx24uL7XS63tlzg39L+5M9ZmyYICEx5yGF6qbUVayAuCvH/XWpbn09ow5J+cy1rF5vWykl0OxJi5XnNcvbNNvezjrX7rD2X0yabZAICclL1NLX8Lu+M/JsvWXvI2j+tzTNJgalLTBItnOZga7uWfCyqtiz/zvk0xaZsZ5I8tD7kwzq5jf28v832trO1kdYeC3Q+EqtVIly3500Sid6VAqMUgEMi/I6q1V1v7TqT5DI92sJF38LamZGug2asrrT2ZOD9DnPnvUVF9/cVa1+0dlUJPe0hBa5J1agXdY+110f4rX+YJGduXrcJjBrIuSUP0Wa639AQbEGO7+nGl+F3acRwa2eZJJkydEP+UMUP026BBCYUs9v83kL3ogrBqEjiIlQcTeVEbu02gdnDdVfL4Gk3Rp/URvdQvSoF+m0Q+Xoo9kcRwncGFvGqWWLqhXqw73PimwdlyP+bkWpnCIx6LSeUtG85TeU7aVZxTkWqNnbqPtxt03j4PW6sX0U3WmJwkrUPB9ynusXzU+dYBfNq2OZvq/j35aRWgfllI/zWAjdM6iqB2dU94CFZZJKEwosbCNqOrtekYuBr1FTsdYxbBezFvOh6ZJtFOn4Nxw7wtv2Td3g/HrC2kUnKr5aNevNPdZvAHBN4f3qQVOjp5oxegUTlOGtv65DGd5i1sYHflrMiHfsV1sZ5PcBQb09/uNfpU8aPO2OIFBhFxY4K3AX8ZIa4yIdykSnPz1Nm704OwGc6sC2NzHjwHwywXznbP+ptW9sNaZvVQF7JXc8VSjxnrZn1Bzpl9RGY/QPuq9e9MW/ytqsxKq5ltQ69H6rze3oHHntWfMnfc567qgBu18JnNey9PWP7H9z3NetzikmCJ8tEU/HrmqSkKjS4UbGQU2vPgPv7oUnC7dOotOVvO1Rc+hhb8v61ouWGJdz7Lb2/tTpmnpmXdVoUl4GOoS/jPYavTb2rtZCRegiMpgdDLYr2sLUjvG0ft/bTCsbnmoqdbZLVH0OslzSqpEa7sRv3K55jluvlhb6/ae7i8YKYQ6RdAu7rGyYJ+e/jrdZ+VoG4XG3tUGuPpN5oGgYqCrjd6WE5NDVdfVHgY93KdefTgqzrtTjAvuXn2Nrblnc6WL2dotPqiwYYrkhc253ZWtZdP3LHaiowOwfazww3DOpjmHsbrxz52inaV7NUvd6YXOUxNRU5xbQf67BLCQJzj/e3HmRlst8XYN87mP7O1Gk596GHX36czb2HWNfwWGubeJ9XCQ3fyat8sjkN9q//0wJ5Cwuc597uRQY1ExgNjUJNFfsOUMVexM63ednaVzxxSXOzE71xBR7Y0NxvksC3Ed6wJoTA+AGCT7W530dN9qJ1Kvz+k9Tf6oV8Pee+7ygoLuIWJCMfsXwwWwbqWioh8NrU3xqSfLOC66YZjLktDJ/aZXUTvlaMfEW/97b1BGpDfrW/ySZsmsDL3t8L2thHL4/74BWYUCUZLvd8BmrYIyu4bnNb+EzRKNZNSzjuyRkCs3zBfW6fIYZX8mhBTIEJVbTJXwBtn4qu2yYtfKZogfC3l3Dc13pv8uGmeP7TuAxhncKjBTEFZr1AXfz0zIQiNataNfEdZukCSD4aDhYt7L1JCcct38iMgCKtnssYb5tik/7DowUilpM3xBrNqkI3P/X35gG690VQYqUCw7JmLT5r+seF5GWdko5bzudtUn8r8vl1bQ7pDjL96+ZcyGP1P1Rn+oM1Pj4NYw8fLAITIqrykQg+ijxobWrNlCgc/TLv/0IsHFdWtu2vrH0vJc6aofmctdNy7kd1lL/kbVMP8y9oy/9CJg6o+TEeEkNgYg2RQtQkmRPpDZ9XBFSgyk/gDJFgV9aa3M+Z/ikWB7Xxsvmq6/mkOdNAzOeqCMMG04UIsWqAP1U5oiY3Sv4W3x+zIMB+yywK/d2MIWyeXpdyvfxUDcXZXG1ALPSG83UkSsZ+rCHSkhLErE5xDf7b4NVAwlUWKjMw3SRTzH1oxUnVL27FQXtEhsCfYuKVyKx7uL4iuuXnek/O72ky5MgGvYvH3f2ZHaDt6/tRggZjCYySAFcNMK5Nc3fN3lihh4QLSz7mUz2BUQ0dzXz9cIDvKSL7MG+bwvAvK/FY35sxPFYYwMM59jHaJH6nRQWOI49g/NlZO7/hR3IrcVQVA18wHUYsgXk5gMC85P2tXJ013Jt3eMXX0a/cFiIbuuzGpJgiRSSnkxS/ZZJgxn816TlcaPrP3h0VoPcy1N1TX0z0WyMzeoxaNeLJDKHbo0EvTLOOKiE5r8DxvaHke6II7s0yesPjOlFcYgqMxntFlmpQl25ixrYzTLL2z02m2lq7M71rGqIhxihidITXVVYD1zpNX2jwec02+VUCrzT9AyDbQb2SPH4gCY8fwKm/N/buR5oRpj6+uyyU9uLXMpKg/9V0KLGcvHMKfn+SaVxfRI3pqxVew1lmaYeZps9DrKn0WIRjv9WN630RySr8pIf3LG+bHJlfq1lb7NRyCioEfpC3TSUsTjAdzNCID2ERLhjg/6801XntJw/gL6izwIivm6Urz6lNXOK96SWYvzD9Z7b0xg1VvFp+ulcK7kN5as936LP4nYwX0/gmw1WGSCkeKlmg5LhTIF7sda57M8QvVGGthyOdwzPOh5I+Dw3xFInalwagae3R3veUb3RuwOOY53pO/j1cyYmg74eRr+h33rYHmgizxEvBhE8UeFb2DvgC8V9Kfka6CqZ/33Q4sQTm3oLfX7MFJX9tBddPdV/uT/0tP1BPoH3/OeJ5/MgktYDTuV27uYdYDtO9vM8rWG9/Ez5U4A6TvVLAAk8A1eNSfec8juVfm2RCoAjTvPsdakh3RsbQ7nAzCHK6Yg2R7jHFZhk+McD/a4Zg3Qqu38ne3/uZMP6XeQF6fXlY4o7dn2EZkyEui922JyMen1/r+IU22lOIodNLJZzbrhm9IvUOrzGDgFgCowZRpHKago8alT9Y0QzsoykDv4uuWY1DA+37NhN/XWf5UvZpoVei8pU3GAjBcqZ/DpimpQ8bLCcYM2diWoHvaupO1dg+5R2zlkbVWjqxS2ZqHO97/LUmdqj8qMkVtYfrrJ0/wP+fji4EQ21oo4zh6kwEJj9Fu3yqPaLlSeWUvNt10eXb2TryNZM/QI7ctE9oZIDxfZoqewjNZoVmGEpPhkIvTb/ca9Fp6ZXcS7c2U/UxBUYBXSEWQ1cG7+ammmzq+U5c0g5Y3UytxxQqOVH7fqSi9qAo2PEDDFV3RBuCIHFZ3dsmn147AZZqg4oFm+Veukd2o8DIOfjLDm4QerMrR2S6t/3bJskTCcVFFZybGuhxJik90azUxCpu+HYw+lCI9TOuoZz657W5P9WeUY2fvmh5hR3UImI5dt2Kn3Zog7jC9Zr8hc73dTczFHLwXRr53OQkV2DdSRld63kZvc5h7kH4gYm/tvlgQS8lP59Liwm2G2jo93iV93d4HU40tsBoedU7Oqgh6Fh3svbpjK6rMo8nliBkz0Q8PxUWv9MkAWQ+17s37YYm2+l8oEnigNbrcrHIG6sy2g1F02g28qoCx6CJDn8lTaVwrFn1xami8tY5HTAU0kyKYhPkQL4h45rJoTvBhK8Kdmqkc1TPQ4mOcpZv2uAefcwk4QWKQVEc0k8yPqdrpAzm/QZhO80iy++XN77mTK+nKNdBiPAG32G8UuDeddsNLTa/MUlI91srOmelFdxoEmdYX+U5PUiPuYelWQDZWm440VPCcd1gikc8t4Lqjajmy7sbDNG0YuUFGdvVY5vpHpC0sGo2ZJJ7K+u7ZaQ4rFWw1xAKf4kXtZs8ibxqN342uoQ7RB3j6a4nlC40rprJZ5m4QZGVC4wU+0RTboGiZjdBIe6zc35vOffwZKXTh2CJKX+Fyre5ntdYkz2NqUb4GdPfiZ1GOUma5bo046HfKSVAp5n+0bdF8CNdH62g7ei+H5TRnvJM238oQ6BC3vfjPIGRw/4Ya1/upiGSuLwCX8yt7g2UR1w0jShn2d/dg7NaScd2iSmvQt8W7nrPdL2MLHFRNvqoAcSlj5tc7ycrVkeOy2OdAKhhrxzg+N/hhmtpZlTwIr4ow6dxcc79+Oksig0LWfdHBcSu87ap57l+twlMr+sRLI70e5oJUf7MQF56PXwbu67ltc4fc0bJN2h+CWNl+Qo0DaocMM18jWlwr592vZZdczZ0OaJ3NklhqucbCPMpbtipLvpGbZ6HhtFXeT1ttZ12wh3aXelhAzek/ri3/T6Tf4nc+RniGToobkJG7/v4qgSmymlGvbE1d1923oUa5L6mf4SqMoeVMfx61zNZ0z0IK0a+DkeZ4gW5NnA9EPlXtne9lmYNV0KrqeZvmfaTAHVdFdau2abTG/SOVnP3V2vwaMZJcTbywTUrWznCPXi7m6T4lb98i2ba2slo/qRJ0lWeauGzy7qXSo8TlmUyrt8BJn++2J1m6WqBKk2hOjsnB/KTSEw+mrFdOWaaQHgw9kM+pLc3TOT31KlT2/ma3ip/dP6BstCFPdrbdrYJl5hYhClu2FbkJuyTo6uuHqMWXjvRDftC8n43jBw9wOfkm3mf6V+OYgUnQls2+e7jbv+tCPKlpn8meAiWuBdWO/FKw90QffUK2poc9wdm/UdPT09pP1r19N9C9+ZbUNL+5XfxnWhfrIm4zHENtajCb93idf6xG3LsWYK4CKWCaH0opVLc1eRzK7sel8+bBhAXJZjuEKC3VwSJ41jTfjDkfFNdFPRbuskHk0ZvsjK83M868Ur7eTSM+G4NzvkVNzwL8bD0Ntl+pxPUtV2XPkaVvMlOaLY1/y9YlUZ/T895fppx3MzEq/KX1Wv5mbV3maRwVRF0LsobejXyOdzWrQIjJpmwQWZ9fpf0uHYVd3NfU4Pz/UrAG36bO1+Jlpy6E52YrON8MhNMNXVqb3Fv+zc6H8xdqQcs63jmmqVX75SD+Hz3UtjT5J9t0WzKogLtR45slQgZ74bwGoqGmh4/zw31rjD9Vywtg2tMvCDOWvlgljoWJzT7Bjgc5Xocm/HmGFsDcRnvfCAhkaP6OVP/Eoty4DZz8GqYpPiaB53gdAPLufNeoaT9awb1H80+UKYPpk7JalK6ce5CjymwH711/Gm5A2siLqeWIC7GxM1fKsJAi549XOEwqMrh8v2D9eSG1ux4FrvucLslC+a67/t+lzrkPylb+WgD0EUMreExSRwUzn9azu8tcePkdJyD0tblaFy+wvORM0+BeyfQ3ACBqc9wSQFoijJt1Qkmv8uN3rYJpnGx8Bho/PsRkyz/CYDA1AzFG2gm5G8DfG666e/b0NT37hUeu/JlVKRqCs0MEJj6cp97UL9nsmMH5ODcyyztd1HMxFkVHe8i1/tSHMhjNDFAYOqPIlEVS6HYgdu97Qqmezq1TX4XhcNX4XdRXo4KOJ1m4iVyAtSWTqupqoJM25iksr1S31VgZ7b3GSXgbRj5uJS4qbibG2lSAJ0rMEIO4EbrBikLd0zEY1F04ZlOWFgvCGAQCEwzNGuzqOThkabB5XxWSP4DNCGA7hEY+WJUXlFFqJV5q6r5RQv6LHZDIFVyU06HEgiX0HQAuk9gxD3OxBomKe+oLNhNTLLEq3w3yt1R4eq+EpiqjaqSEc+6HopWyFNJg3udzaepACAwPhKMKYZYFIBKGMolAAAEBgAQGACAPoIVnAIAoAcDAAgMACAwAAAIDAAgMACAwAAAIDAAgMAAAAIDAIDAAAACAwAIDAAAAgMACAwAIDAAAAgMACAwAIDAAAAgMACAwAAAAgMAgMAAAAIDAAgMlwAAEBgAQGAAABAYAEBgAACBAQBAYAAAgQEABAYAAIEBAAQGABAYAAAEBgAQGABAYAAAEBgAQGAAAIEBAEBgAACBAQAEBgAAgQEABAYAEBgAAAQGABAYAEBgAAAQGABAYAAAEBgAQGAAAIEBAEBgAKB8/ivAAPTAn9svMkeMAAAAAElFTkSuQmCC>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=css/img/segment.png?d6a1f1cd3b6d29152b89ec581fb4c756>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAADICAYAAAAzx/4XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkU5NkNBNjVDRTY5MTFFNkIxN0FFQjIwMjA4NzJBM0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkU5NkNBNjZDRTY5MTFFNkIxN0FFQjIwMjA4NzJBM0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2RTk2Q0E2M0NFNjkxMUU2QjE3QUVCMjAyMDg3MkEzQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2RTk2Q0E2NENFNjkxMUU2QjE3QUVCMjAyMDg3MkEzQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pqm4FeEAABGYSURBVHja7J0HtF1FFYYnhBYDhhBaKElI6EWlhFAF9QFBehEQFdSFRteSEqlKi4JBEFAQKbIoIh3pIKhX6QFDMAklIAESOiYIabQQuO6fM2+tZ3LrzDnnnvve9621F+Ted86d0/6zZ2bvPb3K5bIDAMiCxTgFAIDAAAACAwCAwAAAAgMACAwAAAIDAAgMACAwAAAIDAAgMACAwAAAIDAAgMAAAAIDAIDAAAACAwAIDAAAAgMACAwAIDAAAAgMACAwAIDAAAAgMACAwAAAAgMAgMAAAAIDAIDAAAACAwAIDAAAAgMACAwAIDAAAAgMACAwAIDAAAAgMACAwAAAAgMAgMAAAAIDAAgMAAACAwAIDAAgMAAACAwAIDAAgMAAACAwAIDAAAACAwCAwAAAAgMACAwAAAIDAAgMAAACAwAIDAAgMAAACAwAIDAAgMAAACAwAJAni7e6AaVSiasARWao2WbehpkN8tbHrF+Xv3vf7EOzGWYvmU03m2r2T7MJZu9l0biOjg4ExgvJFYGbvmV2NPf5IixjtqnZOv6GX9Hf9J2852/218yeN3vSn0uoTW+zHc12N9vVbHCD2/Xxtpy/Jl352Gy82W1mfzJ7oaeczF7lcjkvgQn9Ib0NhnDff4remN8xO8BsuH8YmuEJs89zGiuyktkPzQ41Wz3j3xpndo7ZLWaf4MFAEd6qPzY7yWzZiP0M5lQuwgCzY8x+ZNY3p9/c2tvz/ppeb1bujieXQd7i8xmzu8zOjBQXWJSDzZ4zOy5HcenKWmbXmt1ntjECA7l3YX2ffWdORaqsYHa32R/Mli9Ae75o9rjZsf6aIzCQC6PMduE0pMpw/zCPLFi7ljA7w+xm77UiMJApS5mdwmlIFc0M3e+SWbeispdv44oIDGTJPmarcBpSPZ+atenTBm3d3Owf3UFkEJjisgenIDU0hnWda35av5VsZHZnu3eXEJjish2nIBU2MLvBJWMc7cYWZle6Nh74JQ6mmGhmY7XIfSiAS1G8b5vNM1vg/9uTULSzBk0/28bHsK/ZUWZnITCQFjGRpM+6JK5DSV7v9fDz+GuzdTPa9ztmr5q9a7a0F7MhGT1TY83+4pJ0DwQGUvFgQvjIJdPa0zmFbnuXhP2nhZIZb3JJPtEDLsnzqvQ8rW+m+P1vuCRBMg3UvbvUbIRrMOK3VCp9ySVjT6ua3dLR0XGL//xk+8/L9u8rEJieS6hLfy/i8ikaWzw/pX2pa3mu2S9d/WTRBd7LeNJ7T9u4JAJ76xTaofidg8yuriMsGshWdPDXunz8oktm0ITy2ZQWgcAUEF28Zf0bRd7CHBeZrFbjAQntHuWFBh4H+26B/tvfJTMeS7qkbIHe+G97wXvJW1580yWzMLEo63l/s38Fbv+wSwbrlUd2houfVDnNJZHdH9b4m295cTnVe1zXLvT9ZJckddJFahIFpoXEOMx1STp9Jbf0y2ZyNbd0Sd7IahXeWC+bTfTew41VXOdmmR243ayMz7HqoexntoN31/s3sa3EZrw/Txp4fT5D4Tshhf085pJyDTMj96MXkAZop/r7I2Y2a4jvel1W42+2NXvUukAne49m/kLff+xyjAXqTtPUUuV3AmzhJLOB/m3zhtk9Lhkw3d5VntWRQKsg0b7eJX/du56xWcuhN3UWGbnySJQUOMGLgroKI5sUF7G83+4M/7DJK/i2fzGkicag1oncx9SUxKUrt3nPKpbD6nw/v859sKt/KSIwLfCATvBusZLOBgR2oQ7xffBGbqZZVWxc4DEcX2Ofs5rspvTyb0udDyUFbpby+d7E7HKzaV5o0roXYwd21f3YJ2Vx6UTxOL+J3McX6ozp6KW4lXkuh5v16TI208/sdPvfr1foNiEwObj+43wfNw33UeM0f3RJnZFa9KtioWUZlqqxz05r1BV/0Owql33xpYFeaMb5bmgM8qp2i9yH8r+eyvB4j/eiGsOB1b6wrtHtLgnOO9d3/zf0Xs9M/9uPmv0cgcmPEf6kb5rBvjWDcECbnQ+9vTUQuE0LrsOkWg9PA+wWOcYxPQUPoxEP6djIfexZ53t5hBrsfcQlwZWK03nG7CdmO5gI5RYfxSyScxe6bEOxL/bewOttcC4Od8n0aqtePH29+y6vKSRyNbZ+5Nmu9gxNWmiQW+M8awduP8h3lSZV8WLK3vu8qtU3FAKTfZ6HuiW/cEkt3SJTpHD0X7lkyrtZV37biN/8wCVjTXmgmaXf++MMZdtKAlMqldTdr1cdb7aJ0L0ITPdB7qqmDV8paPsOdsXLdfmZS3KpLm3w71XaYmjE793hxyzy4oZIgdmiyue7ey+0FpO9B4TAdBM0u/Rd/9AUDd1olxS4+6q39OMN/O2IyN/6c87Hpqnip10yCBvC8Cqfq1jV6Aqfq7aMJh2U5nA5XaTux74FFBh1Q1QnZcmCnrMlfPu01Eq9gclhkb/1QAuO76EIgVnbP78Lun5oXR8FfU6stIF1nzQWqFmmsxGY1jLXd2cUiKe8IA2q9Yvcp/rFq3m3v5PRVf5WQWknBfyGMm7vqfH9wgOYms1YN4VzJXdffXpV6FcKhabL13NJFLSEdZmI/Wvq+njfxazF0MhjeLEF99mkSK94VddE0JyJzz0mMrfa/yoe5m4EJl8UQn2x7/NPdv+fPqCLubW/yWNmKpRycFOXf1ebEh0SKDCPusanWddwSZRyKJ/4N+GpVcYutGSqBk2PNDvRJfk4oQPqx/hu3CsZCcyzLbrnpkRuP8g1H5UrId0PDyZf5H7v7F3WauIj93InPy4wKvB3NllIYFqJvKelA7dVIuM+dbylThRBrKV/7/OeTkggo9p5hKu9hPDAiHPxUouuwRuR2w+s0A3SPbZ9lb/XQPgPzP6DwOTLcTXEpStlf6NLaNYM7DcXAXX7QkPqdQ4OaFBcuqL6sgqiuzXQk/meS8aw5tYQoVBmtug6xMZGVVosTuJSaxZJuUrfR2DyY45rbhZF4xhnek+mWdYsyDErEjQ0HUHT2XcEbnu778KNDhRFRepWy6OJSfGY26Lr8G7k9pUKguvaTK/hiT/W0dHxJgKTH3e65qM3bw4UmAEFOeZ9A7fTAPWYyN/WOJYKJ60csO1+NQQmZhD+/RZeiwURz+Eis38mHkpOfaEoDxcCU2VKrw4z/MPWbGHuAQW55jsGbnuOi6/zq9yY37mwhDu1W2kMlYp8fdKm91/qz2CpVNIsnuKuVB5DaReXmPBc5L+7Qh6O/XtMHgdHsmN44aPnUnJp82ajwHboTZtWKH3oftSt2yCDbs6ybXrvflxBXHRtNZ54gUvW1lIgZdcF/DQTt39eDURgwqvAzQnYpghr8wwP3E7lH/+bUhs0tTo5cNvNq3z+QUR7lmnRtegfuX0lUR3lRUXdUA18L7wSgabGh+V1gAhM+Jtvdpseb+jN9XDK7QgtqjU0Aw9mYIuuxcqR21d6yX3O7EHrAl1rVmlsUaKTW+Q2AlO5Hm8jlNv0eIcEbjcl5XZMSbn9r0a0ZVCbXYtO3qgiOitU+mPrPik8QJUW/53XATLI2/MIfWumPbUZGuy1QpXPYzLVldbQO+JlE/O7MVQqMK9gRpXL1Cznhf64FrN/K59LM3gqZH8UHgxkRah7nPaKBaFdzGoD1DGFrDXrsnELrsXukdsvcszWLVJXVjlmCqbTOJcG9ZV2orwnRV8refRcBKb5N+4AtKMh+hZEYOYEbldtQHZyZHt2yvk6qLuyQ8T2GtT+qNIXJjKqM6PyFSpqpfy0Cd6z2cvsIPs+N0+tHbpIjbYxdKGtVSLeeu3I/JQf7FBCI2+rvRQnRrZH9WrPzPE67B/5gq/ZZTURmeCFpS0e3u5MaATo8AzbtFzgdo2sABAai7N+Cl5CV0Lf3mtU+VzLun4YIfw655vn+FAeE7n9I5U+rJPs2MlME6CrEZieS6i3sFaDD1III3z/PS1Cp8tr5e9MdXFLxv7WbKscrq/q/cSuYnF9lc/rJTt2dicRGMgEZQ6vFrDdhim3I7TQVa2ugQTwtIg2SUQ1s5N1fRitmRVTbF5jL7dV+U5rV0+qMhQgAdXyvafQRYKsUMGhkILPac+yhArM1BrfneeSAlihD6+2u8V3B7NCXZhdIvdRtUaxdX0UD/Rqle6T1kbSoO/NeXUFmabueTwYuJ1m89LKpdJYUWj+T63auYrmjQ0iWy/SC6r3vP3NxS+VE7QagYmPukbXmP00r5sNgel5hI6j6KEYk1IbYh7g6+t8n8ayqHoAs1iRU15DbDjFLO+BhKJs9qF53Wx0kXoeb/qbLGQgWYl0scueKtDvwIiHq178jOrFKII1pj5ML/+mV5GrNJZ00Yv8Md89iuW8Wl9aN0iDvHtXaYNSInZ1pApAxiidf2TAdnrgxka62BrgDJ1K/muDfycv5uwUREGBahovUczKgsD9bOaS1R7SCASVuNYboJWIHVHnBXNoXjcaXaSeyakR2x7nH5oQ9nNxtUgabbcKY81I6Vzt7R/szuVsG0UP+sMpdYs6ObqBv7na/3YlU03o1Ts6Oh7K60bDg+mZqFSCkg1DEh8X8x6QAg2famI7VaOLiaOZ3uTvqaLbnSmdrz7+4dbSK9O8cGi6V7VW3vaenUREy7kqjkYxLv1TvmaTG+mumXgoDGFmUW40BKbnogr9FwRuq5oiirXQgmiNrGmtQt+Hu7jZk2bHfu5yycoHI1M8ZxLXYd4OzvFalV381HZLoIvUc7nQxZVg6O27DXqDq97rll3uJ724vuKS8ZZ5fkwgRlxU1vTGgO20esI73eBa9fIezJrt1nAEpmeTxlSsugKaXVJujLJ0VXxbkaYllxQ36hu5/7KrPCvSCErs3MaFD9AWCS1eryDDo9qp0QhMz0ZBa1dm8LZNE2U4PxWx/TNeoMrd4Hr19l1SrUS5HQID7cAhLnxlhaxR7MjxKexHg72HdhOREYP8y+HFUqk0qsgNZZAXhHKTpnk3vCgoZ2rLFPd3mUumm6/znkB3QGMyF5nInG//fdp3SxXlO76jo6MQ3UI8GBAqgaD1hooyvSmPStnbaS+mpkzjES5+ydYiOgqquavxGU2hf2Cis2QRGobAQCcq2KQkxGda3A7F2CjT+oOM9q9MZJUuGN+Nr+UE82DmF6EhCAx0Zb73ZORy5z1eIW/lBJcMXma9DOw878locbK53fA6HluUhiAwUInDXJIOkNci6graUzW+sTkfpxIjVeFPVfbfb8F51vlVAN30FPc5w7yXBxAYKDoT/UOv3KEsZpnkISl4TOv0KE9mWouOU97SkS7JM1Kd3Ncy/j3FCN3vknQCnd97fJfwlZT2f36RbqI8Z5FGR7izjTDWX7hmuS+wXQp9Xyejc/VU4PnKokrZjd7W9l0Yhd6v5MLiXcr+AVbVuNNd5ZUJW8lZ3lb2YqN1iwa7uBUkdMwqM6Gxn8tdUgaiUtd0iL9/t40Ur9OLdEJ7lcutDQ0olUr4Cu3H4t6138m/fTU4rPoyS/iH8UP/0Gh8Q0Fhz7kkFuXvbXq8Epk9XFJQXEK7qkvq2vTxxywvSFHMGph+ywunXhLqqugGb2bKeIzZiS5sKv126x7ticAgMAD1BO1O1/wKCWuZwLxQpANhDAageMjrU5F1lbhoVDCmFk1cEBiAYiP3XgPBCjq829UOEBxTxANAYACKzxSzr7pknEurT2qm6Amz2S4Z+5ln3ss1RWx4y8dgAKD7ggcDAAgMACAwAAAIDAAgMACAwAAAIDAAgMAAAAIDAIDAAAACAwAIDAAAAgMACAwAIDAAAAgMACAwAIDAAAAgMACAwAAAAgMAgMAAAAIDAAgMAAACAwAIDAAgMAAACAwAIDAAAAgMACAwAIDAAAAgMACAwAAAAgMAgMAAAAIDAAgMAAACAwAIDAAgMAAACAwAIDAAgMAAACAwAIDAAAACAwCAwAAAAgMACAwAAAIDAAgMACAwAAAIDAAgMACAwAAAIDAAgMAAACAwAIDAAAACAwCAwAAAAgMACAwAAAIDALnyPwEGADcIP235kTrYAAAAAElFTkSuQmCC>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=css/img/58sy.png?bf7dacce020ecfb92f1b53b5b3c474b1>
+					</a></li>
+				</ul>
+				<ul>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=css/img/mwd.png?359de1be9a4befccaeb6efdf437bcb61>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=css/img/kfw.png?ee57a16649e9bacb1959dd9859cd3f55>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=css/img/jkb.png?786bb8f54759df9dd64dd1e352356833>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=css/img/rb.png?b9853af0d1a0627d76a4a6c87e45b73e>
+					</a></li>
+					<li><a href="javascript:void(0);" target=_blank> <img
+							src=css/img/speedcloud.png?9e9e9c3960d9e030084cd1a3203bc89a>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mod employ">
+		<div class=user-num>
+			<span class=text>与</span>
+			<div class="num-cont clearfix">
+				<div class=num-item>
+					<ul>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+					</ul>
+				</div>
+				<div class=num-item>
+					<ul>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>0</li>
+					</ul>
+				</div>
+				<div class=num-item>
+					<ul>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>0</li>
+					</ul>
+				</div>
+				<div class=num-item>
+					<ul>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>0</li>
+					</ul>
+				</div>
+				<div class=num-item>
+					<ul>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li>0</li>
+					</ul>
+				</div>
+				<div class=num-item>
+					<ul>
+						<li>0</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<span class=text>企业和开发者一起使用赛富特</span>
+		</div>
+		<a href="register.html" class=reg-btn>立即注册</a> <a
+			href="contactus.html" class=contactus-link>联系销售</a>
+		<div class=fot-line></div>
+	</div>
+	<div class=footer>
+		<div class="main clearfix">
+			<dl>
+				<dt>产品</dt>
+				<dd>
+					<a href=polyPay.html>聚合支付</a>
+				</dd>
+				<dd>
+					<a href=scancode.html>扫码支付</a>
+				</dd>
+				<!--<dd>-->
+					<!--<a href=cashCompass.html>现金罗盘</a>-->
+				<!--</dd>-->
+				<dd>
+					<a href=allDirectionData.html>八方数据</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>开发者</dt>
+				<dd>
+					<a href=quickStart.html>开发指南</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>合作</dt>
+				<dd>
+					<a href=contactus.html>渠道合作</a>
+				</dd>
+				<dd>
+					<a href=hzhb.html>友情链接</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>公司</dt>
+				<dd>
+					<a href=aboutus.html>关于我们</a>
+				</dd>
+				<dd>
+					<a href=contactus.html>联系我们</a>
+				</dd>
+				<!--<dd>-->
+					<!--<a href=xy.html>法律条款</a>-->
+				<!--</dd>-->
+			</dl>
+			<dl class=other>
+				<dt>企业QQ咨询</dt>
+				<dd>
+					3389670386<em>(工作日9:30-18:30）</em>
+				</dd>
+				<dd>
+				<a  key ="59b0e8400c90965e99a03777"  logo_size="124x47"  logo_type="realname"  href="http://www.anquan.org" ><script src="//static.anquan.org/static/outer/js/aq_auth.js"></script></a>
+				</dd>
+			</dl>
+		</div>
+		<div class=copyright>©2017
+			赛富特支付有限公司&nbsp;&nbsp;&nbsp;&nbsp;渝ICP备17010209号</div>
+	</div>
+	<script type="text/javascript" src="js/common.js?42efbaee898ee4c5c75e"></script>
+	<script type="text/javascript" src="js/index.js?42efbaee898ee4c5c75e"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script>
+		/*swiper*/
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			autoplay:5000,
+			loop:true,
+			autoplayDisableOnInteraction : false
+		});
+	</script>
+</body>
+</html>

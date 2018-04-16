@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+<meta charset=UTF-8>
+<title>赛富特_注册｜互联网金融服务商</title>
+<meta name=keywords content="赛富特,付钱啦,聚合支付,支付通道,聚合SDK,聚合支付SDK,秒收,apple pay,创业支付,开发者支付,支付接口,快速支付对接,付款接口,移动支付,应用内支付,微信支付,支付宝支付,一秒支付,创业,开发者,支付sdk">
+<meta name=description content="赛富特|为创业者提供全新的支付接入服务，仅需几行简单代码，就能同时接入主流支付服务商，轻松实现收款，助您在支付上抢先一步。 ">
+<link rel="shortcut icon" href=images/favicon.ico type=image/x-icon>
+<link href="css/common.css?2a41eea31d84eb72bbce" rel="stylesheet">
+<link href="css/login.css?2a41eea31d84eb72bbce" rel="stylesheet">
+<link href="/css/validform.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <div class="header-main clearfix">
+    <h1 id="logo"><a href="index.html">首页</a></h1>
+    <div class="nav-box">
+      <ul class="nav" id="nav">
+        <li class="more"> <a href="#nogo">产品与服务</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav product-list">
+            <ul>
+              <li> <a href="polyPay.html">聚合支付</a> </li>
+              <li> <a href="scancode.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;扫码支付&quot;,platformType:&quot;pc&quot;})">扫码支付</a> </li>
+              <li> <a href="cashCompass.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;现金罗盘&quot;,platformType:&quot;pc&quot;})">现金罗盘</a> </li>
+              <li> <a href="allDirectionData.html">八方数据</a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="more"> <a href="#nogo">解决方案</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav scheme">
+            <ul>
+              <li> <a href="cashFlow.html">流量变现</a> </li>
+              <li> <a href="fundDeposit.html">资金存管</a> </li>
+              <li> <a href="enterpriseFin.html">企业理财</a> </li>
+              <li> <a href="supply.html">供应链金融</a> </li>
+              <li> <a href="stagepay.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;分期支付&quot;,platformType:&quot;pc&quot;,position:&quot;header-nav&quot;})">分期支付</a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="more"> <a href="#nogo">开发者中心</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav developer-center">
+            <ul>
+              <li> <a href="quickStart.html">开发指南</a> </li>
+              
+          
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="login-box">
+      <div style="float: left;margin-top: 22px;margin-bottom: 22px;padding-right: 42px;padding-left: 33px;height: 26px;font-size: 14px;line-height: 26px;color: #333;background-position: 0 0;">&nbsp;</div>
+      <div class="no_login" style="display: block;"> <a class="login-btn" href="login.html">登录</a><a class="reg-btn" href="register.html">注册</a> </div>
+    </div>
+  </div>
+</div>
+
+<a class=fql-logo href=index.html></a>
+<form class="form-horizontal" id="registerform"
+	action="/register/enroll" method="post">
+<div class="new-login-box overturn">
+  <div class=flip-container>
+    <div class=register-back>
+      <div class=register-back-inner>
+        <div class="register-title" style="font-size: 22px;text-align: center;margin-bottom: 30px;">商户注册
+        </div>
+        <div id=register-phone-box class=toogle-item>
+          <div class=input-parent>
+            <input type="text" class="register-phone-number account-input" name="email"
+									datatype="*,e" ajaxurl="/register/getEmail"
+									nullmsg="请输入邮箱！" errormsg="请正确填写邮箱！" placeholder="电子邮件">
+									<span class="Validform_checktip"> * 注册后不能修改，用于登录用户名</span>
+          </div>
+          <div class=input-parent>
+            <input type="password" class="register-phone-password account-input" name="password" nullmsg="请输入登陆密码！" 
+									datatype="*6-20" errormsg="密码范围在6~20位之间！" placeholder="登陆密码">
+									<span class="Validform_checktip"> * 6-20个字符，请注意区分大小写</span>
+          </div>
+          <div class=input-parent>
+            <input type="password" class="register-phone-password account-input" datatype="*" nullmsg="请输入确认密码！" 
+									recheck="password" errormsg="您两次输入的账号密码不一致！" placeholder="确认密码">
+									<span class="Validform_checktip"> * 请与前一密码保持一致</span>
+          </div>
+          <div class=input-parent>
+            <input type="password" class="register-phone-password account-input" name="payment" nullmsg="请输入支付密码！"
+									datatype="*6-15" errormsg="密码范围在6~15位之间！" placeholder="支付密码">
+									<span class="Validform_checktip"> * 申请支付的密码</span>
+          </div>
+          <div class=input-parent>
+			<input type="text" class="register-phone-password account-input" name="webName" nullmsg="请输入网站名称！"
+									datatype="*" errormsg="请输入网站名称" placeholder="网站名称">
+									<span class="Validform_checktip"> * 个人填写姓名/公司填写公司名称</span>
+          </div>
+          <div class=input-parent>
+			<input type="text" class="register-phone-password account-input" name="website" nullmsg="请输入网站网址！"
+									datatype="url" nullmsg="请输入网址！" errormsg="请正确填写网址！"
+									placeholder="网站网址">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=input-parent>
+								<select name="herolist" class="select-block">
+									<option value="0" selected="selected">党政机关</option>
+									<option value="1">商业</option>
+									<option value="2">制造业</option>
+									<option value="3">服务业</option>
+									<option value="4">农业牧渔业</option>
+									<option value="5">其它行业</option>
+								</select>
+          </div>
+          <div class=input-parent>
+								<select name="huge" id="huge" class="select-block">
+									<option value="0" selected="selected">个人</option>
+									<option value="1">企业</option>
+								</select>
+          </div>
+          <div class=input-parent>
+								<input type="text" class="register-phone-password account-input" name="name" datatype="*"
+									errormsg="请输入个人或公司名称" placeholder="公司/个人">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=input-parent>
+								<input type="text" class="register-phone-password account-input" name="contacts"
+									datatype="*" errormsg="请输入联系人名称" placeholder="联 系 人">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=input-parent id="idcard">
+								<input type="text" class="register-phone-password account-input" name="idcard"
+									datatype="idcard" nullmsg="请填写身份证号码！" errormsg="您填写的身份证号码不对！"
+									placeholder="身 份 证">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=input-parent id="licence" style="display: none;">
+								<input type="text" class="register-phone-password account-input" name="licence"
+									datatype="*15-15" errormsg="您填写的营业执照不对！" placeholder="营业执照">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=input-parent>
+								<input type="text" class="register-phone-password account-input" name="address"
+									datatype="*" errormsg="请填写联系地址" placeholder="联系地址">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=input-parent>
+								<input type="text" class="register-phone-password account-input" name="qq" datatype="n"
+									nullmsg="请填写QQ号码！" errormsg="您填写的QQ号码不正确 ！" placeholder="QQ号码">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=input-parent>
+								<input type="text" class="register-phone-password account-input" id="phone" name="phone"
+									datatype="m" ajaxurl="/register/getPhote" nullmsg="请填写手机号码！" errormsg="您填写的手机号码不正确 ！"
+									placeholder="手机号码">
+									<span class="Validform_checktip"> * </span>
+          </div>
+          <div class=send-verif-box style="border-bottom: 1px solid #fff;">
+            <div class=input-parent style="width: 197px;">
+              <input type=text class="msg-code account-input" datatype="*" ajaxurl="/register/valiSms" 
+              nullmsg="请填写验证码！" errormsg="您填写的验证码不正确 ！"
+									placeholder="短信验证码">
+									<span class="Validform_checktip"> * </span>
+            </div>
+            <div class="send-verif-btn get-verif-code" style="float: right;" id="sms"> 获取验证码 </div>
+          </div>
+          <p style="margin-top: 10px;">点击注册，即表示您同意并愿意遵守赛富特<a href=xy.html target=_blank>《服务协议》</a></p>
+          <input type="submit" class="register-btn transition-btn register-phone-btn" value="注册"/>
+          <div class=link-login> 已有赛富特账号？<a class=register-promptly href="login.html">立即登录</a> </div>
+        </div>
+      </div>
+    </div>
+    <p style="bottom: -600px;">©2017 重庆风华捷讯网络科技有限公司 渝ICP备17010209号</p>
+  </div>
+</div>
+</form>
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap-select.js"></script>
+<script type="text/javascript" src="/js/bootstrap-switch.js"></script>
+<script type="text/javascript" src="/js/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+var basePath="";
+$(document).ready(function() {
+	var num = 300;
+	var interv = "";
+	var $btnSms=$("div#sms");
+	var b=true;
+	function changeTime() {
+		if (num > 0) {
+			$btnSms.html(num+'秒');
+			num = num - 1;
+		}else{
+			b=true;
+			clearInterval(interv);
+			$btnSms.html("重新获取");
+		}
+	}
+	$btnSms.click(function(){
+		phoneSms();
+		});
+	$("#huge").change(function() {
+		var huge = $("#huge").val();
+		if(huge==0){
+			$("#idcard").fadeIn();
+			$("#licence").fadeOut();
+		}else{
+			$("#idcard").fadeOut();
+			$("#licence").fadeIn();
+		}
+	});
+	 var demo = $("#registerform").Validform({
+		tiptype:3,
+		postonce:true,
+		ajaxPost:true,
+		ignoreHidden:true,
+		datatype:{//传入自定义datatype类型【方式二】;
+			"idcard":function(gets,obj,curform,datatype){
+				//该方法由佚名网友提供;
+			
+				var Wi = [ 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1 ];// 加权因子;
+				var ValideCode = [ 1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2 ];// 身份证验证位值，10代表X;
+			
+				if (gets.length == 15) {   
+					return isValidityBrithBy15IdCard(gets);   
+				}else if (gets.length == 18){   
+					var a_idCard = gets.split("");// 得到身份证数组   
+					if (isValidityBrithBy18IdCard(gets)&&isTrueValidateCodeBy18IdCard(a_idCard)) {   
+						return true;   
+					}   
+					return false;
+				}
+				return false;
+				
+				function isTrueValidateCodeBy18IdCard(a_idCard) {   
+					var sum = 0; // 声明加权求和变量   
+					if (a_idCard[17].toLowerCase() == 'x') {   
+						a_idCard[17] = 10;// 将最后位为x的验证码替换为10方便后续操作   
+					}   
+					for ( var i = 0; i < 17; i++) {   
+						sum += Wi[i] * a_idCard[i];// 加权求和   
+					}   
+					valCodePosition = sum % 11;// 得到验证码所位置   
+					if (a_idCard[17] == ValideCode[valCodePosition]) {   
+						return true;   
+					}
+					return false;   
+				}
+				
+				function isValidityBrithBy18IdCard(idCard18){   
+					var year = idCard18.substring(6,10);   
+					var month = idCard18.substring(10,12);   
+					var day = idCard18.substring(12,14);   
+					var temp_date = new Date(year,parseFloat(month)-1,parseFloat(day));   
+					// 这里用getFullYear()获取年份，避免千年虫问题   
+					if(temp_date.getFullYear()!=parseFloat(year) || temp_date.getMonth()!=parseFloat(month)-1 || temp_date.getDate()!=parseFloat(day)){   
+						return false;   
+					}
+					return true;   
+				}
+				
+				function isValidityBrithBy15IdCard(idCard15){   
+					var year =  idCard15.substring(6,8);   
+					var month = idCard15.substring(8,10);   
+					var day = idCard15.substring(10,12);
+					var temp_date = new Date(year,parseFloat(month)-1,parseFloat(day));   
+					// 对于老身份证中的你年龄则不需考虑千年虫问题而使用getYear()方法   
+					if(temp_date.getYear()!=parseFloat(year) || temp_date.getMonth()!=parseFloat(month)-1 || temp_date.getDate()!=parseFloat(day)){   
+						return false;   
+					}
+					return true;
+				}
+				
+			}
+		},
+		callback:function(data){
+			if(data.status=="y"){
+				setTimeout(function(){
+					window.location.href=basePath+"/hfht/login.html";
+				},1000);
+			}else{
+				setTimeout(function(){ 
+					window.location.href=basePath+"/hfht/register.html";
+														}, 1000);
+											}
+										}
+									});
+	function phoneSms(){
+		var phone = $("#phone").val();
+		if(phone.length==11 && b)
+		$.ajax({
+			type: "post", 
+			url: basePath+"/register/getSms", 
+			data: "phone="+phone ,
+			success: function(msg){
+				if(msg=="100"){
+					b=false;
+					num = 300;
+					interv = setInterval(changeTime,1000);
+				}else{
+					alert(msg);
+				}
+			}
+		}); }
+
+});
+</script>
+</body>
+</html>

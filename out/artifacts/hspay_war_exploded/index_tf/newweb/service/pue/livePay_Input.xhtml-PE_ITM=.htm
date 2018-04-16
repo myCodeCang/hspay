@@ -1,0 +1,776 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="keywords" content="新付宝" />
+<title>新付宝 - 应用中心 - 水电煤缴费</title>
+<link href="../../style/index.css" tppabs="https://www.tftpay.com/newweb/style/index.css" rel="stylesheet" type="text/css" />
+<link href="../../style/global.css" tppabs="https://www.tftpay.com/newweb/style/global.css" rel="stylesheet" type="text/css" />
+<link href="../../style/commons.css" tppabs="https://www.tftpay.com/newweb/style/commons.css" rel="stylesheet" type="text/css" />
+<link href="../../style/pro.css" tppabs="https://www.tftpay.com/newweb/style/pro.css" rel="stylesheet" type="text/css" />
+<link href="../../style/index.css" tppabs="https://www.tftpay.com/newweb/style/index.css" rel="stylesheet" type="text/css" />
+<link href="../../style/global.css" tppabs="https://www.tftpay.com/newweb/style/global.css" rel="stylesheet" type="text/css" />
+<link href="../../style/commons.css" tppabs="https://www.tftpay.com/newweb/style/commons.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../script/jquery132min.js" tppabs="https://www.tftpay.com/newweb/script/jquery132min.js"></script>
+<script type="text/javascript" src="../../script/jquery.js" tppabs="https://www.tftpay.com/newweb/script/jquery.js"></script>
+<style type="text/css">
+<!--
+#pagex{}
+img.page{
+float:left;
+margin:5px 1px 0px 1px;
+width:300px;height:200px;
+color:#666;
+font:12px/20px 宋体;
+text-align:center;
+}
+img.page:hover {
+margin:0 -6px 0px -5px;
+padding:0 5px;
+width:480px;height:320px;
+font:bold 16px/30px 宋体;
+}
+-->
+</style>
+
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+$(document).ready(function() {
+    selectProv('');
+});
+    //改变条形码、合同号、用户号显示
+    function changeIns(objValue) {
+        var peContNoObj = $('#pe_cont_no');
+        var peUsrNo     = $('#pe_usr_no');
+        var barCodeObj  = $("#bar_code");
+        var ordAmtObj   = $("#ordAmt");
+        if (objValue == "0") {
+            $("#PE_CONT_NO").val("");
+            peContNoObj.attr("style","display:none;");
+            $("#PE_USR_NO").val("");
+            peUsrNo.attr("style","display:none;");
+            barCodeObj.removeAttr("style");
+            ordAmtObj.removeAttr("style");
+        } else if (objValue == "1") {
+            peContNoObj.removeAttr("style");
+            $("#PE_USR_NO").val("");
+            peUsrNo.attr("style","display:none;");
+            $("#BAR_CODE").val("");
+            barCodeObj.attr("style","display:none;");
+            $("#PAY_AMT").val("");
+            ordAmtObj.attr("style","display:none;");
+        } else {
+            $("#PE_CONT_NO").val("");
+            peContNoObj.attr("style","display:none;");
+            peUsrNo.removeAttr("style");
+            $("#BAR_CODE").val("");
+            barCodeObj.attr("style","display:none;");
+            $("#PAY_AMT").val('');
+            ordAmtObj.attr("style","display:none;");
+        }
+    }
+
+    //当水电煤选择项选择‘请选择时’，选择框值初始化
+    function selectProvIns() {
+        var provSelect = document.getElementById("INST_PROV_NM");
+        provSelect.options.length = 0;
+        var provOpp = new Option("－选择省(市)－", "");
+        //将option添加到select标签里面 
+        provSelect.add(provOpp);
+        var citySelect = document.getElementById("INST_CITY_NM");
+        citySelect.options.length = 0;
+        var cityOpp = new Option("－选择城市－", "");
+        //将option添加到select标签里面 
+        citySelect.add(cityOpp);
+        var instSelect = document.getElementById("INST_CD");
+        instSelect.options.length = 0;
+        var instOpp = new Option("－请选择－", "");
+        //将option添加到select标签里面 
+        instSelect.add(instOpp);
+    }
+
+    //查询省市处理
+    function selectProvAfter() {
+        var citySelect = document.getElementById("INST_CITY_NM");
+        citySelect.options.length = 0;
+        var cityOpp = new Option("－选择城市－", "");
+        //将option添加到select标签里面 
+        citySelect.add(cityOpp);
+        var instSelect = document.getElementById("INST_CD");
+        instSelect.options.length = 0;
+        var instOpp = new Option("－请选择－", "");
+        //将option添加到select标签里面 
+        instSelect.add(instOpp);
+    }
+
+    //查询省市
+    function selectProv(peItm) {
+        $.ajax({
+                    type : "POST",
+                    url : "/newweb/pmodule/pue/jsp/livePay_qryProv.xhtml?PE_ITM="+ peItm,
+                    dataType : "json",
+                    async : false,
+                    success : function(msg) {
+                        if (msg.GWA.MSG_CD != null) {
+                            if (msg.GWA.MSG_CD == "PUE00000") {
+                                var provSelect = document.getElementById("INST_PROV_NM");
+                                provSelect.options.length = 0;
+                                var provOpp1 = new Option("－选择省(市)－","");
+                                provSelect.add(provOpp1);
+                                for ( var i = 0; i < msg.REC_NUM; i++) {
+                                    var opp = new Option(msg.REC[i].INST_PROV_NM,msg.REC[i].INST_PROV_NM);
+                                    //将option添加到select标签里面 
+                                    provSelect.add(opp);
+                                }
+                                selectProvAfter();
+                            } else if (msg.GWA.MSG_CD == "PUE98750") {
+                                selectProvAfter();
+                                alert("查无省市");
+                            } else if (msg.GWA.MSG_CD == "PUE98765") {
+                                selectProvIns();//选择无效的缴费项目，即初始项
+                            } else {
+                                selectProvAfter();
+                                alert("错误码：" + msg.GWA.MSG_CD + " 错误信息："
+                                        + msg.GWA.MSG_INF);
+                            }
+                        }
+                        else{
+                            alert("没有返回信息");
+                        }
+                    }
+
+                });
+    }
+
+    //查询城市处理1
+    function selectCityAfter() {
+        var instSelect = document.getElementById("INST_CD");
+        instSelect.options.length = 0;
+        var instOpp = new Option("－请选择－", "");
+        //将option添加到select标签里面 
+        instSelect.add(instOpp);
+    }
+
+    //查询城市处理2
+    function selectCityAfter2() {
+        var citySelect = document.getElementById("INST_CITY_NM");
+        citySelect.options.length = 0;
+        var cityOpp = new Option("－选择城市－", "");
+        //将option添加到select标签里面 
+        citySelect.add(cityOpp);
+        var instSelect = document.getElementById("INST_CD");
+        instSelect.options.length = 0;
+        var instOpp = new Option("－请选择－", "");
+        //将option添加到select标签里面 
+        instSelect.add(instOpp);
+    }
+
+    //查询城市
+    function selectCity(INST_PROV_NM) {
+        var cretType = document.getElementById("PE_ITM").value;
+        $.ajax({
+            type : "POST",
+            url : "/newweb/pmodule/pue/jsp/livePay_qryCity.xhtml?PE_ITM="+ cretType + "&INST_PROV_NM=" +INST_PROV_NM,
+            dataType : "json",
+            async : false,
+            success : function(msg) {
+                if (msg.GWA.MSG_CD != null) {
+                    if (msg.GWA.MSG_CD == "PUE00000") {
+                        var citySelect = document.getElementById("INST_CITY_NM");
+                        citySelect.options.length = 0;
+                        var cityOpp1 = new Option("－选择城市－", "");
+                        citySelect.add(cityOpp1);
+                        for ( var i = 0; i < msg.REC_NUM; i++) {
+                            var opp = new Option(msg.REC[i].INST_CITY_NM,
+                                    msg.REC[i].INST_CITY_NM);
+                            //将option添加到select标签里面 
+                            citySelect.add(opp);
+                        }
+                        selectCityAfter();
+                    } else if (msg.GWA.MSG_CD == "PUE98748") {
+                        selectCityAfter2();
+                        alert("查无城市");
+                    } else if (msg.GWA.MSG_CD == "PUE98765") {
+                        selectProvIns();
+                    } else if (msg.GWA.MSG_CD == "PUE98764") {
+                        selectCityAfter2();
+                    } else {
+                        selectCityAfter2();
+                        alert("错误码：" + msg.GWA.MSG_CD + " 错误信息："
+                                + msg.GWA.MSG_INF);
+                    }
+                }
+                else{
+                    alert("没有返回信息");
+                }
+            }
+
+        });
+    }
+
+    //查询事业单位
+    function selectInstitution() {
+        var cretType = document.getElementById("PE_ITM").value;
+        var prov = document.getElementById("INST_PROV_NM").value;
+        var city = document.getElementById("INST_CITY_NM").value;
+        $.ajax({
+                    type : "POST",
+                    url : "/newweb/pmodule/pue/jsp/livePay_qryInstitution.xhtml?PE_ITM="+ cretType + "&INST_PROV_NM=" + prov + "&INST_CITY_NM=" + city,
+                    dataType : "json",
+                    async : false,
+                    success : function(msg) {
+                        if (msg.GWA.MSG_CD != null) {
+                            if (msg.GWA.MSG_CD == "PUE00000") {
+                                var instSelect = document.getElementById("INST_CD");
+                                instSelect.options.length = 0;
+                                var instOpp1 = new Option("－请选择－", "");
+                                instSelect.add(instOpp1);
+                                for ( var i = 0; i < msg.REC_NUM; i++) {
+                                    var opp = new Option(msg.REC[i].INST_NM,msg.REC[i].INST_CD);
+                                    //将option添加到select标签里面 
+                                    instSelect.add(opp);
+                                }
+                                document.getElementById("INST_CITY").value = msg.INST_CITY;
+                            } else if (msg.GWA.MSG_CD == "PUE98744") {
+                                alert("查无事业单位");
+                            } else if (msg.GWA.MSG_CD == "PUE98765") {
+                                selectProvIns();
+                            } else if (msg.GWA.MSG_CD == "PUE98763") {
+                                selectCityAfter();
+                            } else {
+                                alert("错误码：" + msg.GWA.MSG_CD + " 错误信息："
+                                        + msg.GWA.MSG_INF);
+                            }
+                        }else {
+                            alert("没有返回信息");
+                        }
+                    }
+
+                });
+    }
+
+    //提交表单
+    function formSubmit() {
+        var amt = $("#PAY_AMT").val();
+        var cretType = document.getElementById("PE_ITM").value;
+        var prov = document.getElementById("INST_PROV_NM").value;
+        var city = document.getElementById("INST_CITY_NM").value;
+        var institution = document.getElementById("INST_CD").value;
+        var insTypes = $("input[name='insType']");
+        var insType = "";
+        for ( var i = 0; i < insTypes.size(); i++) {
+            if (insTypes[i].checked) {
+                insType = insTypes[i].value;
+            }
+        }
+        var barCode = document.getElementById("BAR_CODE").value;
+        var peContNo = document.getElementById("PE_CONT_NO").value;
+        var peUserNo = document.getElementById("PE_USR_NO").value;
+
+        if (cretType == "" || prov == ""
+                || city == "" || institution == "") {
+            alert("请填写完整的缴费信息");
+            return false;
+        } else if (insType == "0" && (barCode == "" || amt == "")) {
+            alert("请填写完整的缴费信息");
+            return false;
+        } else if (insType == "0" && barCode != "" && amt != "") {
+            
+            if(amt==""){
+                alert("请输入金额！");
+                return false;
+            }else if (!(/^\d*$/.test(amt)||/^\d+\.+\d*$/.test(amt))) {
+                alert("金额格式不正确！");
+                return false;
+            }else if(/^\d+\.+\d*$/.test(amt)) {
+                var amts = new Array();
+                amts = amt.split(".");
+                if(amts[1].length > 2)
+                    {
+                    alert("金额最多精确到分！");
+                    return false;
+                    }
+                }
+        } else if (insType == "1" && peContNo == "") {
+            alert("请填写完整的缴费信息");
+            return false;
+        } else if (insType == "2" && peUserNo == "") {
+            alert("请填写完整的缴费信息");
+            return false;
+        }
+      var IS_CHKED = document.getElementById("agree").checked;
+        if (!IS_CHKED) {
+        alert("请阅读《新付宝自助缴费协议》并勾选！");
+        return false;
+        } else {
+        var livePay_submit = document.getElementById("livePay_submit");
+        livePay_submit.disabled = "disabled";
+        livePay_submit.value = "加载中";  
+        var institu = document.getElementById("INST_CD");
+        document.getElementById("INST_NM").value = institu.options[institu.selectedIndex].text;
+        document.form1.submit();
+    }
+  }
+   function showDiv(){
+	document.getElementById('popDiv').style.display='block';
+	document.getElementById('popIframe').style.display='block';
+	document.getElementById('bg').style.display='block';
+	//火狐在css中设置失败，只好在这里重新设置
+	if(!document.all) {
+		var height= (document.documentElement.clientHeight-480)/2 + 'px' 
+		var widht = (document.documentElement.clientWidth-1000)/2 + 'px' 
+		document.getElementById('popDiv').style.left = widht;
+		document.getElementById('popDiv').style.top = height;
+		document.getElementById('ttoolbar').style.top = '0px';
+	}
+	}
+	function closeDiv(){
+	document.getElementById('popDiv').style.display='none';
+	document.getElementById('bg').style.display='none';
+	document.getElementById('popIframe').style.display='none';
+ }
+// 缩放图片
+function myimgToSize(oBool) {
+	var oImg = document.getElementById('oImg');
+	if(oImg.nodeName!='IMG'){
+		oImg = new Image();
+		var canvas = document.getElementById('oImg');
+		oImg.id = canvas.id;
+		oImg.alt = canvas.alt;
+		oImg.src = canvas.src;
+		oImg.name = canvas.name;
+		oImg.title = canvas.title;
+		oImg.className = canvas.className;
+		oImg.style.cssText = canvas.style.cssText;
+		oImg.height = canvas.width;
+		oImg.width = canvas.width;
+		oImg.onmouseup=mymEnd; 
+		oImg.onmousedown=mymStart;
+		var object = canvas.parentNode; 
+		object.replaceChild(oImg,canvas);
+	}
+	if(oImg == null || typeof oImg == 'undefined') {
+		alert("请先选择一张图片");
+		return false;
+	}
+	if(document.all) {//IE
+		var intZom = parseInt(oImg.style.zoom) + (oBool ? 20 : -20);
+	if(intZom <= 0)
+		return false;
+	oImg.style.zoom = intZom + '%';
+	} else {//火狐
+		var point = oBool ? 0.2 : -0.2;
+		var width = oImg.width + oImg.width*point;
+		var height = oImg.height + oImg.height*point;
+		if(width <= 0 || height <= 0)
+			return false;
+		oImg.width = width;
+		oImg.height = height;
+	}
+}
+// 拖动图片
+var oBoolean = false, oLeftSpace = 0, oTopSpace = 0;
+function mymStart(e) {
+	oBoolean = true;
+	if (oBoolean) {
+		var oImg = document.getElementById('oImg');
+		if(oImg == null || typeof oImg == 'undefined') {
+			alert("请先选择一张图片");
+			return false;
+		}
+		if (window.Event) {
+			//火狐
+			oLeftSpace = e.clientX;
+			oTopSpace = e.clientY;
+		} else {
+			oLeftSpace = window.event.clientX - oImg.style.pixelLeft;
+			oTopSpace = window.event.clientY - oImg.style.pixelTop;
+		}
+		document.onmousemove = function(ev) {
+			if (window.Event) {
+				//火狐
+				if (ev.button == 0 && oBoolean) {
+					oImg.style.left = (ev.clientX - oLeftSpace)+"px";
+					oImg.style.top = (ev.clientY - oTopSpace)+"px";
+					return false;
+				}
+			} else {
+				if (window.event.button == 1 && oBoolean) {
+					oImg.style.pixelLeft = window.event.clientX - oLeftSpace;
+					oImg.style.pixelTop = window.event.clientY - oTopSpace;
+					return false;
+				}
+			}
+		}
+	}
+}
+function mymEnd() {
+	oBoolean = false;
+	document.onmousemove = null;
+	return false;
+}
+String.prototype.endWith=function(str){
+if(str==null||str==""||this.length==0||str.length>this.length)
+return false;
+if(this.substring(this.length-str.length)==str)
+return true;
+else
+return false;
+return true;
+} 
+function changearg(){
+	$("#tftarg").attr("style","display:block");
+    }
+//-->
+</script>
+<!--[if lte IE 6]>
+    <script src="../../script/DD_belatedPNG_0.0.8a-min.js" tppabs="https://www.tftpay.com/newweb/script/DD_belatedPNG_0.0.8a-min.js" language="javascript"></script>
+    <script>
+      DD_belatedPNG.fix('div,li,a,h3,span,img,.png_bg,ul,input,dd,dt,a,a:hover');
+    </script>
+<![endif]-->
+</head>
+<body class="body_m">
+
+
+
+
+
+
+
+
+
+
+
+
+		
+<link href="../../style/newstyle_index.css" tppabs="https://www.tftpay.com/newweb/style/newstyle_index.css" rel="stylesheet" type="text/css" />
+<div class="wrap headTop"><dl><dt>您好,欢迎来到新付宝！</dt><dt class="wrappic"><span>客户热线：</span></dt><dd><a href="../../../nlogin.jsp" tppabs="https://www.tftpay.com/OPTSURM7/PTS3013100.dow"><b>登录</b></a><em>|</em><a href="../../../nregiste.jsp" tppabs="https://www.tftpay.com/newweb/service/nregiste_all.xhtml"><b>注册</b></a></dd></dl></div> 
+<div class="nav2">
+<div class="navSide">
+<div class="leftLogo"></div>
+<div class="tftpaylogo"><a href="#"><img src="../../pic/tftpaylogo.png" tppabs="https://www.tftpay.com/newweb/pic/tftpaylogo.png" width="320" height="48" /></a></div>
+<div class="navBox1">
+<ul>
+<li class="navHome"><a id="ins1" href="/" tppabs="https://www.tftpay.com/index_main.jsp"><b></b>首页</a></li>
+<li class="navcpzx"><a id="ins3" href="../../../appcenter.jsp" tppabs="https://www.tftpay.com/newweb/service/Appcenter_index.xhtml"><b></b>产品中心</a></li>
+<li class="navzffs"><a id="ins4" href="../../../paymethod_index.jsp" tppabs="https://www.tftpay.com/newweb/service/Paymethod_index.xhtml"><b></b>支付行业</a></li>
+<li class="navhyfa"><a id="ins2" href="../../../industry_index.jsp" tppabs="https://www.tftpay.com/newweb/service/Industry_index.xhtml"><b></b>行业方案</a></li>
+<li class="navbzzx"><a id="ins6" href="../../../nihelplist_center.jsp"tppabs="https://www.tftpay.com/newweb/service/nihelplist_center.xhtml"><b></b>帮助中心</a></li>
+<li class="navaqbz"><a id="ins5" href="../../../safety_index.jsp" tppabs="https://www.tftpay.com/newweb/service/Safety_index.xhtml"><b></b>安全保障</a></li>
+</ul>
+</div>
+</div>
+</div>    
+
+
+<script type="text/javascript" language="javascript">
+        document.getElementById('ins3').className = 'current';
+    </script>
+<!--logo tel 结束-->
+<div style="margin:0 auto; width:1002px;">
+		<div id="popDiv" class="mydiv2" style="display: none;">
+   <div class="div_title" style="height: 33px;width: 100%;background-color: #D6E3F3;border-bottom: #8db2e3 1px solid;">
+			<div align="left"><!--布局用-->
+					<table width="100%" id="ttoolbar" style="height:32px;width: 100%;top:-1px;position:relative;"  class="toolbar">
+						<tbody>
+							<tr style="height:33px;">
+									<td width="1px"><span class="spacer"></span></td><!--分隔条-->
+									<td style="width: 30px;">
+										<table cellspacing="0" cellpadding="0" >
+											<tbody>
+												<tr class="">
+													<td class="b_left"></td>
+													<td class="b_center"><input type="image" onClick="myimgToSize(1);" src="../../pic/zoomIn.gif" tppabs="https://www.tftpay.com/newweb/pic/zoomIn.gif" alt="放大" title="放大" style="">
+		                      </td>
+													<td class="b_right"></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td width="1px"><span class="spacer"></span></td><!--分隔条-->
+									<td style="width: 30px;">
+										<table cellspacing="0" cellpadding="0">
+											<tbody>
+												<tr class="">
+													<td class="b_left"></td>
+													<td class="b_center"><input type="image" onClick="myimgToSize(0);" src="../../pic/zoomOut.gif" tppabs="https://www.tftpay.com/newweb/pic/zoomOut.gif" alt="缩小" title="缩小" style="">
+		                      </td>
+													<td class="b_right"></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td width="1px"><span class="spacer"></span></td><!--分隔条-->
+									<td></td>
+									<td class="closebtn" align="right">
+									 <input type="image" onclick="closeDiv()" src="../../pic/close2.gif" tppabs="https://www.tftpay.com/newweb/pic/close2.gif"> 
+									</td>
+							</tr>
+						</tbody>
+					</table>
+		  </div>
+   </div>
+   <div class="div_conten">
+			 <div align="center" style="width: 100%; height: 465px; overflow: hidden; z-index:999;" class="oImgMaxBox">
+							<img class="oImg" name="oImg" id="oImg" src="../../pic/shanghaishuifeimax.jpg" tppabs="https://www.tftpay.com/newweb/pic/shanghaishuifeimax.jpg"width="1000px" style="position: relative; zoom: 100%; cursor: move; z-index: auto;" >
+			 </div>
+   </div>
+</div>
+<div id="bg" class="bg" style="display: none;"></div>
+<a href=""><font style="color: #FFFFFF;">1</font></a>
+<iframe id='popIframe' class='popIframe' frameborder='0'></iframe>
+</div>	
+<div id="m_banner_pro" style="margin-top:-20px;"></div>
+<div id="m_header2"></div>
+<div class="wge1_main">
+<div class="wge1_live">
+<div class="t_live left  border_b_blue">
+<div class="t_live_icon left"><a href="livePay_new_index.xhtml.htm" tppabs="https://www.tftpay.com/newweb/service/pue/livePay_new_index.xhtml" class="blue14_a">水电煤缴费</a> <font class="marginl10 marginr10">&gt;</font>缴</div>
+<!--标题内容+紫色小竖线结束--></div>
+<!--标题背景-->
+<div class="left main_live_progress_line border_b_blue font_14"><span class="marginl50 gray">选择缴费项目</span> <span class="marginl80 blue_jindu b">填写缴费信息</span> <span class="marginl80 gray">确认付款</span> <span class="marginl100 gray">缴费完成</span></div>
+<div class="left height500 main_live_left border_b_blue"></div>
+<!--边上装订圈-->
+<div class="left width420 border_b_blue height500">
+<form id="form1" name="form1" action="https://www.tftpay.com/newweb/service/pue/livePay_Confirm.xhtml" method="post">
+<div class="left width380 inline margint50 marginl20"><label class="ui-form2-label_live">缴费项目：</label> <select name="PE_ITM" tabindex="5" id="PE_ITM" size="1" class="select width100" onchange="selectProv(this.value)" disabled="disabled">
+    <option value="">请选择</option>
+    <option value="001" >水费</option>
+    <option value="002" >电费</option>
+    <option value="003" >燃气费用</option>
+    <option value="004" >其他费用</option>
+</select> <input name="PE_ITM_H" id="PE_ITM_H" type="hidden" value="" /></div>
+<div class="left width380 inline margint10 marginl20"><label class="ui-form2-label_live">缴费地区：</label> <select name="INST_PROV_NM" tabindex="5" id="INST_PROV_NM" class="select width100" onchange="selectCity(this.value)">
+    <option value="">－选择省(市)－</option>
+</select> <select name="INST_CITY_NM" tabindex="5" id="INST_CITY_NM" class="select width100" onchange="selectInstitution()">
+    <option value="">－选择城市－</option>
+</select> <input type="hidden" name="INST_CITY" id="INST_CITY" value="" /></div>
+<div class="left width380 inline margint10 marginl20"><label class="ui-form2-label_live">收费单位：</label> <select name="INST_CD" tabindex="5" id="INST_CD" class="select width207">
+    <option value="" selected="selected">－请选择－</option>
+</select> <input type="hidden" name="INST_NM" id="INST_NM" value="" /></div>
+<div class="left width380 inline margint10 marginl20 line-h32 label_live_color"><label class="ui-form2-label_live">缴费输入项：</label> <input type="radio" name="insType" id="insType0" value="0" checked="checked" onclick="changeIns(this.value)" /> <span class="marginl5 marginr10">条形码</span> <input type="radio" name="insType" id="insType1" value="1" onclick="changeIns(this.value)" /> <span class="marginl5 marginr10">合同号</span> <input type="radio" name="insType" id="insType2" value="2" onclick="changeIns(this.value)" /><span class="marginl5">用户号</span></div>
+<div class="left width380 inline margint10 marginl20" id="bar_code" style=""><label class="ui-form2-label_live">条形码编号：</label> <input name="BAR_CODE" id="BAR_CODE" type="text" class="input width203" value="" /></div>
+<div class="left width380 inline margint10 marginl20" id="pe_cont_no" style="display: none;"><label class="ui-form2-label_live">合 同 号：</label> <input name="PE_CONT_NO" id="PE_CONT_NO" type="text" class="input width203" value="" /></div>
+<div class="left width380 inline margint10 marginl20" id="pe_usr_no" style="display: none;"><label class="ui-form2-label_live">用 户 号：</label> <input name="PE_USR_NO" id="PE_USR_NO" type="text" class="input width203" value="" /></div>
+<div class="left width380 inline margint10 marginl20"><label class="ui-form2-label_live">缴费金额：</label> <input name="PAY_AMT" id="PAY_AMT" type="text" class="input width203 marginr5" value="" />元</div>
+</form>
+<div class="left width240 marginl120 inline margint30"><input name=""id="agree" type="checkbox" value="" checked="checked" /> <font class="marginl5">已阅读并同意《<a href="#"onclick="changearg()" class="blue_a">新付宝自助缴费协议</a>》</font><br />
+</div>
+<div class="left width210 marginl120 inline margint30"><input id="livePay_submit" type="button" class="btn_blue" onclick="formSubmit()" value="下一步" /></div>
+</div>
+<!--中间表单-->
+<div class="left wge1_live_right border_b_blue">
+<p class="margin60 margint50"><span><a href="javascript:showDiv()"  class="blue_a">显示大图</a></span></p>
+<p class="margin60"><img src="../../pic/shanghaishuifeimax.jpg" tppabs="https://www.tftpay.com/newweb/pic/shanghaishuifeimax.jpg"width="470px"height="290px" /></p>
+</div>
+<!--右边单据图-->
+<div id="tftarg" style="display:none;">
+<div id="ARG" class="left red font_14 width600 margint10 marginl60">新付宝自助缴费协议：</div>
+<div style="margin-left: 60px;" class="marginb30"><textarea name="textarea" id="textarea" cols="80" rows="12" class="tleft margint10 padding8 width600 reg_textarea" readonly="readonly">新付宝自助缴费协议
+第一条 总则 
+为明确双方的权利和义务，规范双方行为，甲方(个人用户)、乙方(成都华翔通达网络科技有限公司)本着平等互利的原则，就甲方在乙方网站进行公共事业缴费相关事宜达成本协议。 
+
+第二条 甲方权利及义务 
+（一）甲方自愿申请使用乙方缴费服务。 
+（二）甲方对乙方缴费服务如有疑问、建议或意见时，可拨打乙方客服电话0155-08423999或登录乙方网站（网址：http://www.tftpay.com）进行咨询和投诉。 
+（三）甲方用于支付的银行账户，需为甲方个人拥有合法使用权的账户，并具有网上支付功能，同时遵守各家银行的相关业务条款。一旦甲方点击确认支付，则不能进行变更或撤销支付行为。甲方应谨慎操作，对因甲方操作不当造成的损失，乙方不承担赔偿责任，但可以应甲方或行政司法机关要求提供相应支付信息。 
+（四）甲方保证提供的资料真实、准确、完整。对于因甲方提供信息不真实、不准确或不完整所造成的甲方、乙方或其他第三方损失由甲方承担。甲方必须正确填写账单信息，并且妥善保管预留信息，为充分保护甲方合法权益，除在乙方办理业务使用之外，不要通过任何方式向任何第三人提供此信息。 
+（五）甲方应在账单到期日前进行缴费并在确认交费后应及时查看订单状态，甲方发现缴费指令未执行、未适当执行、延迟执行的，应及时通过拨打客服电话0155-08423999或通过在线客服通知乙方。乙方应积极调查并告知甲方调查结果，因甲方自身原因造成的甲方损失由甲方自行承担。因甲方未及时查看订单状态而造成的损失（包括但不限于因缴费失败后未及时再行缴费产生的滞纳金，罚款等），乙方不承担责任。 
+（六）甲方同意乙方有权基于向甲方提供更优质服务或其他乙方产品的目的而保留并使用甲方在使用本服务期间填写的所有信息及历史使用记录，或者为完成相应服务和交易向其他第三方披露该等信息。 
+（七）甲方承诺在使用乙方提供的服务时，遵守国家法律、法规，维护社会公共利益或公共道德。甲方从事非法活动或不正当交易产生的一切后果与责任，由甲方独立承担。 
+
+第三条 乙方权利、义务 
+（一）乙方有权根据甲方资信情况或交易记录，决定是否受理甲方的缴费业务。乙方可以根据注册信息等相关要素对甲方从事交易的权限和身份进行核实。乙方有权根据自己的判断，在无需通知的情况下，暂时或永久拒绝甲方使用本协议约定服务，且无须承担任何责任。 
+（二）乙方有权根据自身业务的发展，增加、减少或撤销缴费服务项目，调整缴费服务的内容，对缴费功能进行升级、改造。 因甲方提供的账单逾期或甲方账户资金不足等任何甲方原因导致账单支付不成功的，乙方将向甲方返回失败信息，因此导致甲方逾期时间增长或任何其他损失的，该损失应由甲方自行承担。即便如此，乙方系统向甲方返回的信息为缴费成功，但因对应的服务银行及公共事业单位的系统或操作导致该账单最终还是需要支付滞纳金的，甲方同意完全承担该等滞纳金，甲方对此有异议的，将直接与对应的银行及公共事业单位协商解决，乙方有义务应甲方要求提供相关缴费信息。 
+（三）一旦甲方使用本协议约定服务，且通过乙方系统向甲方发送相应指令的，不论本协议是否终止，基于该指令所涉及的已支付款项和费用均不予退回。 
+（四）乙方有义务在技术上确保整个网上交易平台的安全、有效、正常运行，保证甲方顺利使用本协议约定服务，并向甲方提供交易记录、账户状态等查询的服务。 
+（五）乙方对甲方在注册中提供的相关身份资料及在交易中产生的交易记录负有保密义务，但本协议另有规定除外。 
+（六）乙方可对甲方收取合理的交易费用，并可能根据业务发展对费用进行变更。乙方应向甲方明示交易费用及其变更，如甲方不接受相关费用标准及其变更，则不应进行交易。一旦甲方使用本协议约定服务，即视为甲方同意接受包括费用条款在内的所有约定。 
+
+第四条 免责条款 
+（一）若甲方向乙方缴费系统提交的账单为逾期账单，导致其缴费的结果为销账失败。由此产生的违约金或赔偿金滞纳金或其他款项，由甲方自行承担。若甲方对此有异议的，可与各公共事业单位进行协商，乙方可协助提供相关交付信息。 
+（二）因不可抗力及通讯故障、停电、黑客攻击、银行问题、公共事业单位出账问题等非乙方原因所引起交易中断、交易错误的，乙方不承担责任。 
+
+第五条 协议变更和终止 
+（一）乙方将有权随时修改本协议的有关条款，一旦本协议的内容发生变动，乙方将会通过网站公告等方式告知甲方。 
+（二）如果甲方不同意乙方对本协议相关条款所做的修改，甲方应停止使用本协议约定的服务。甲方继续使用本协议约定服务的，视为甲方理解并接受修改后的协议条款。 
+（三）甲方同意乙方在发现甲方违反本协议约定、注册资料虚假、异常交易或有疑义或有违法嫌疑时，有权不经通知先行中断或终止甲方账户、密码，并拒绝甲方使用乙方部分或全部服务功能，并不对因上述情况而发生的服务中断或终止而承担任何赔偿责任。 
+（四）如甲方在乙方平台上存在违法行为或违反本协议的行为，或因甲方此前使用本服务的行为引发争议的，乙方有权要求甲方予以赔偿。如因乙方违反本协议约定，造成甲方损失的，乙方将对乙方甲方的直接损失承担赔偿责任。 
+
+第六条 差错和争议的解决 
+（一）甲方发现自身未按规定操作，或由于自身其他原因造成缴费指令未执行、未适当执行、延迟执行的，应及时通过拨打客服电话0155-08423999或通过在线客服通知乙方。乙方应积极调查并告知甲方调查结果。 
+（二）双方在履行本协议的过程中，如发生争议，应协商解决。协商不成的，任何一方均可向乙方所在地人民法院提起诉讼。 
+
+第七条 协议的解释 
+本协议的成立、生效、履行和解释，均适用中华人民共和国法律；无相关法律规定的，应适用乙方网站相关协议及附属规则。
+         </textarea></div></div>
+<div class="left height150 wth100">
+<div class="left bottom20 left0 right0">
+<div class="left marginl30 margint20 width700">
+<p class="b font_purple">水电煤缴费遇到问题？</p>
+<p class="font_qianhei">问：缴费需要手续费吗？</p>
+<p class="gray">答：在新付宝缴水电煤，完全免费。</p>
+<p class="font_qianhei">问：可以帮别人代缴吗？</p>
+<p class="gray">答：可以。只要您有他人的缴费相关信息（如缴费账号），就可以代他人缴费。</p>
+</div>
+</div>
+<!--问题结束--></div>
+<!--主内容完成--></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="foot">
+	<div class="footz">
+		<div class="foots">
+			<span class="foota">
+				<span class="foota1">新付宝</span>
+				<span class="foota2">
+					<dl>
+						<dt>
+							<ol>
+								<li>
+									<a href="/" tppabs="https://www.tftpay.com/index_main.jsp">首页</a>
+								</li>
+								<li>
+									<a href="../nabout_index.xhtml.htm" tppabs="https://www.tftpay.com/newweb/service/nabout_index.xhtml" target="_blank">关于我们</a>
+								</li>
+								<li>
+									<a href="../nabout_contact.xhtml.htm" tppabs="https://www.tftpay.com/newweb/service/nabout_contact.xhtml" target="_blank">联系我们</a>
+								</li>
+								<li>
+									<a href="../nabout_partner_business.xhtml.htm" tppabs="https://www.tftpay.com/newweb/service/nabout_partner_business.xhtml" target="_blank">合作伙伴</a>
+								</li>
+								<li>
+									<a href="../nabout_maps.xhtml.htm" tppabs="https://www.tftpay.com/newweb/service/nabout_maps.xhtml" target="_blank">站点地图</a>
+								</li>
+								<li>
+									<a href="../../../industry_index.jsp" tppabs="https://www.tftpay.com/newweb/service/Industry_index.xhtml" target="_blank">行业解决方案</a>
+								</li>
+							</ol>
+						</dt>
+						<dd>
+							<ol>
+								<li>
+									<a href="javascript:if(confirm('http://www.feiren.com/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/'" tppabs="http://www.feiren.com/" target="_blank">腾邦集团</a>
+								</li>
+								
+								 <li>
+									<a href="javascript:if(confirm('http://www.rongfast.com/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.rongfast.com/'" tppabs="http://www.rongfast.com/" target="_blank">融易行</a>
+								 </li>
+								
+								 <li>
+									<a href="javascript:if(confirm('http://www.p2p178.com/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.p2p178.com/'" tppabs="http://www.p2p178.com/" target="_blank">腾邦创投</a>
+								 </li>
+									<li>
+										<a href="javascript:if(confirm('http://www.tengbang.com/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.tengbang.com/'" tppabs="http://www.tengbang.com/" target="_blank">腾邦贷</a>
+									</li>
+								</ol>
+							</dd>
+						</dl>
+					</span>
+				</span>
+				<span class="foota">
+				<span class="foota1">关于腾邦</span>
+				<span class="foota2">
+					<dl>
+						<dt>
+							<ol>
+								<li>
+									<a href="javascript:if(confirm('http://tengbang.feiren.com/web/aboutcompany.jsp  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://tengbang.feiren.com/web/aboutcompany.jsp'" tppabs="http://tengbang.feiren.com/web/aboutcompany.jsp" target="_blank">关于腾邦</a>
+								</li>
+								<li>
+									<a href="javascript:if(confirm('http://www.feiren.com/article.php?id=42  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/article.php?id=42'" tppabs="http://www.feiren.com/article.php?id=42" target="_blank">服务条款</a>
+								</li>
+								<li>
+									<a href="javascript:if(confirm('http://www.feiren.com/article.php?id=43  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/article.php?id=43'" tppabs="http://www.feiren.com/article.php?id=43" target="_blank">法律顾问</a>
+								</li>
+								<li>
+									<a href="javascript:if(confirm('http://www.feiren.com/contactus.php  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/contactus.php'" tppabs="http://www.feiren.com/contactus.php" target="_blank">联系我们</a>
+								</li>
+								<li>
+									<a href="javascript:if(confirm('http://www.feiren.com/news/joining/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/news/joining/'" tppabs="http://www.feiren.com/news/joining/" target="_blank">招商加盟</a>
+								</li>
+								<li>
+									<a href="javascript:if(confirm('http://www.feiren.com/article.php?id=380  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/article.php?id=380'" tppabs="http://www.feiren.com/article.php?id=380" target="_blank">隐私声明</a>
+								</li>
+							</ol>
+						</dt>
+						<dd>
+							<ol>
+								<li>
+									<a href="javascript:if(confirm('http://www.feiren.com/shoppingCard/  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/shoppingCard/'" tppabs="http://www.feiren.com/shoppingCard/" target="_blank">腾邦商业卡</a>
+								</li>
+								<li>
+									<li>
+										<a href="javascript:if(confirm('http://www.feiren.com/sitemap.html  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/sitemap.html'" tppabs="http://www.feiren.com/sitemap.html" target="_blank">网站地图</a>
+									</li>
+									<li>
+										<a href="javascript:if(confirm('http://www.feiren.com/article.php?id=518  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://www.feiren.com/article.php?id=518'" tppabs="http://www.feiren.com/article.php?id=518" target="_blank">度假旅游资质</a>
+									</li>
+									<li>
+										<a href="javascript:if(confirm('http://group.tempus.cn/pw/job2/UI/index_zp.aspx  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://group.tempus.cn/pw/job2/UI/index_zp.aspx'" tppabs="http://group.tempus.cn/pw/job2/UI/index_zp.aspx" target="_blank">诚聘英才</a>
+									</li>
+								</ol>
+							</dd>
+						</dl>
+					</span>
+				</span>
+				<span class="footb">
+					<dl>
+						<dt>
+							<ol>
+								<li class="paddingt10"><br />
+									<a href="javascript:if(confirm('https://itunes.apple.com/cn/app/teng-fu-tongmpos/id1009091716?mt=8  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='https://itunes.apple.com/cn/app/teng-fu-tongmpos/id1009091716?mt=8'" tppabs="https://itunes.apple.com/cn/app/teng-fu-tongmpos/id1009091716?mt=8" target="_blank"><img src="../../../../172.16.85.152/pic/mposios.png" tppabs="http://172.16.85.152:9082/pic/mposios.png" width="110" height="90" /></a>
+							    </li>
+								<li class="paddingt10"><br />
+									<a href="javascript:if(confirm('http://113.106.85.99:9082/newweb/data/tft112test2.apk  \n\n该文件无法用 Teleport Ultra 下载, 因为 它是一个域或路径外部被设置为它的启始地址的地址。  \n\n你想在服务器上打开它?'))window.location='http://113.106.85.99:9082/newweb/data/tft112test2.apk'" tppabs="http://113.106.85.99:9082/newweb/data/tft112test2.apk" target="_blank"><img src="../../../../172.16.85.152/pic/mposms.png" tppabs="http://172.16.85.152:9082/pic/mposms.png" width="110" height="90" /></a>
+							    </li>
+							</ol>
+						</dt>
+						<dd></dd>
+					</dl>
+				</span>
+				<span class="footc"><img src="../../../pic/footc_img.gif" tppabs="https://www.tftpay.com/pic/footc_img.gif" /></span>
+			</div>
+			<div class="footx" style="text-align: center;">
+				Copyright @ 2014-2019 成都华翔通达网络科技有限公司 版权所有 粤ICP备11009418号-2 客服热线：0830-3153101
+			</div>
+		</div>
+	</div>
+
+<!--主结束-->
+<!--foot结束-->
+<!--所有结束-->
+</body>
+</html>
+
+
+>

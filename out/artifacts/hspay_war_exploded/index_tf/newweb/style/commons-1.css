@@ -1,0 +1,1459 @@
+@charset "utf-8";
+/* CSS Document */
+.border_tabtrading{ border:1px solid #ebeaeb;}
+.border_tabtrading th{
+   border-bottom:1px solid #f6f4f7;
+   background: url("../pic/tab_th1120-1.png")/*tpa=http://www.tftpay.com/newweb/pic/tab_th1120.png*/;
+   background-repeat: repeat-x;
+   height:33px;
+}
+.border_tabtrading td{ border-bottom:1px solid #f6f4f7; border-left:none;border-right:none;border-top:none;}
+.border_tabtradingm{
+   border-bottom:1px solid #f6f4f7;
+   background: url("../pic/tab_th1120-1.png")/*tpa=http://www.tftpay.com/newweb/pic/tab_th1120.png*/;
+   background-repeat: repeat-x;
+   height:33px;
+   font-weight: normal;
+}
+
+.border_tabtrading{ border:1px solid #ebeaeb;}
+.border_tabtrading th{
+   border-bottom:1px solid #f6f4f7;
+   background: url("../pic/tab_th1120-1.png")/*tpa=http://www.tftpay.com/newweb/pic/tab_th1120.png*/;
+   background-repeat: repeat-x;
+   height:33px;
+}
+.border_tabtrading td{ border-bottom:1px solid #f6f4f7; border-left:none;border-right:none;border-top:none;}
+.border_tabtradingm{
+   border-bottom:1px solid #f6f4f7;
+   background: url("../pic/tab_th1120-1.png")/*tpa=http://www.tftpay.com/newweb/pic/tab_th1120.png*/;
+   background-repeat: repeat-x;
+   height:33px;
+   font-weight: normal;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,code,legend,blockquote, select, button{margin:0; padding:0; }
+h1,h2,h3,h4,h5,h6 {font-size: 100%;}
+li {list-style:none;}
+img {border:0;}
+address{font-style:normal;}
+em, cite, strong, th {font-style:normal;text-align:left;}
+.s_clear{clear:both;}
+.clear {clear: both;overflow: hidden;font-size: 0px;line-height: 0px;height: 1;}
+.center{ text-align:center}
+.posrel{position:relative;}
+.posabs{position:absolute;}
+.hide{overflow:hidden;}
+.left{float:left;}
+.right{float:right;}
+.none{display:none;}
+.inline{display:inline;}
+.tcenter{text-align:center;}
+.tright{text-align:right;}
+.tleft{text-align:left;}
+.vbottom{ vertical-align:bottom}
+.block{display:block;}
+.inihang{width:100%;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;}
+a:focus{ outline:none;}
+a{blr:expression(this.onFocus=this.blur());}
+input, select, button {vertical-align:middle;}
+.submit{padding:0 5px; font-size:14px;}
+.hr{border:0; border-top:1px; height:1px;}
+/* 常用*/
+input,textarea,select{font-family:"Microsoft YaHei" !important;font-size: 12px;color:#444;}
+.input{border:1px solid #d4d5d7;height:30px;line-height: 30px;background: url("../pic/input_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/input_bg.jpg*/;background-repeat: repeat-x;
+text-align: left;text-indent: 10px;}
+.input_h_28{border:1px solid #d4d5d7;height:26px;line-height: 26px;background: url("../pic/input_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/input_bg.jpg*/;background-repeat: repeat-x;
+text-align: left;text-indent: 10px;}
+.input_card{border:1px solid #d4d5d7;height:22px;line-height: 22px;background: url("../pic/input_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/input_bg.jpg*/;background-repeat: repeat-x;
+text-align: left;text-indent: 10px; margin-top:2px; margin-bottom:2px;}
+.select{border:1px solid #d4d5d7;height:32px;background: url("../pic/input_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/input_bg.jpg*/;background-repeat: repeat-x;
+text-align: left; padding-bottom:5px;padding-top:5px; padding-right:3px; *padding:10px 0px; _padding:10px 0px;}
+.select14{border:1px solid #d4d5d7;height:32px;background: url("../pic/input_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/input_bg.jpg*/;background-repeat: repeat-x;
+text-align: left; padding-bottom:5px;padding-top:5px; padding-right:3px; *padding:10px 0px; _padding:10px 0px; font-size:14px;}
+.textarea{border:1px solid #d4d5d7;line-height: 30px;background-repeat: repeat-x;text-align: left;text-indent: 10px;background: url("../pic/textarea_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/textarea_bg.jpg*/;height:60px;}
+.textareah200{border:1px solid #d4d5d7;line-height: 18px;background-repeat: repeat-x;text-align: left;background: url("../pic/textarea_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/textarea_bg.jpg*/;height:200px;vertical-align: top;
+}
+.textareah50{border:1px solid #d4d5d7;line-height: 18px;background-repeat: repeat-x;text-align: left;background: url("../pic/textarea_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/textarea_bg.jpg*/;height:50px;vertical-align: top;
+}
+.input_btn{background: url("../pic/input_btn_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/input_btn_bg.jpg*/;height: 32px;width: 31px; border:none;}
+.akongjian{border:1px solid #d4d5d7;height:30px;line-height: 30px;background: url("../pic/input_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/input_bg.jpg*/;background-repeat: repeat-x;
+text-align: left;text-indent: 10px; width:220px; display:block;}
+/* 表单*/
+.margin0{ margin:0;}
+.margint1{ margin-top:1px;*margin-top:2px;_margin-top:3px;}
+.margint20{ margin-top:20px;}
+.margint22{margin-top:22px;}
+.margintie20{ *margin-top:20px;_margin-top:20px;}
+.margintie10{ *margin-top:8px;_margin-top:8px;}
+.margint30{ margin-top:30px;}
+.margint38{ margin-top:38px;}
+.margint40{ margin-top:40px;}
+.margint49{ margin-top:49px;}
+.margint50{ margin-top:50px;}
+.margint70{ margin-top:70px;}
+.marginr60{ margin-right:60px;}
+.marginr70{ margin-right:70px;}
+.marginr80{ margin-right:80px;}
+.marginr110{ margin-right:110px;}
+.marginr120{ margin-right:120px;}
+.marginr130{ margin-right:130px;}
+.marginr140{ margin-right:140px;}
+.marginr160{ margin-right:160px;}
+.marginr50{ margin-right:50px;}
+.marginr100{ margin-right:100px;}
+.marginr20{ margin-right:20px;}
+.marginr25{ margin-right:25px;}
+.marginr30{ margin-right:30px;}
+.marginr35{ margin-right:35px;}
+.marginr10{ margin-right:10px;}
+.marginr2{ margin-right:2px;}
+.marginr5{ margin-right:5px;}
+.marginr6{ margin-right:6px;}
+.marginr8{ margin-right:8px;}
+.marginr15{ margin-right:15px;}
+.marginr13{ margin-right:13px;}
+.marginb10{ margin-bottom:10px;}
+.marginb15{ margin-bottom:15px;}
+.marginb20{ margin-bottom:20px;}
+.marginb30{ margin-bottom:30px;}
+.marginb40{ margin-bottom:40px;}
+.marginb50{ margin-bottom:50px;}
+.marginb80{ margin-bottom:80px;}
+.marginb100{ margin-bottom:100px;}
+.marginb5{ margin-bottom:5px;}
+.margint2{ margin-top:2px;}
+.margint3{ margin-top:3px;}
+.margint4{ margin-top:4px;}
+.margintjr5{ margin-top:2px;*margin-top:10px;_margin-top:10px;}
+.margint6{ margin-top:6px;}
+.margint5{ margin-top:5px;}
+.margint7{ margin-top:7px;}
+.margint8{ margin-top:8px;}
+.margint10{ margin-top:10px;}
+.margint12{ margin-top:12px;}
+.margint14{ margin-top:14px;}
+.margint13{ margin-top:13px;*margin-top:8px;_margin-top:9px;}
+.margint15{ margin-top:15px;}
+.margint17{ margin-top:17px;}
+.margint18{ margin-top:18px;}
+.margint20{ margin-top:20px;}
+.margint25{ margin-top:25px;}
+.margint30{ margin-top:30px;}
+.margint35{ margin-top:35px;}
+.margint40{ margin-top:40px;}
+.margint54{ margin-top:54px;}
+.margint56{ margin-top:56px;}
+.margint60{ margin-top:60px;}
+.margint85{ margin-top:85px;}
+.margint100{ margin-top:100px;}
+.marginl5{ margin-left:5px;}
+.marginl6{ margin-left:6px;}
+.marginl7{ margin-left:7px;}
+.marginl15{ margin-left:15px;}
+.marginl12{ margin-left:12px; display:inline;}
+.marginl27{ margin-left:27px;}
+.marginl21{ margin-left:21px;}
+.marginl30{ margin-left:30px;}
+.marginl122{ margin-left:122px;}
+.marginl142{ margin-left:142px;}
+.marginl36{ margin-left:36px;}
+.marginl39{ margin-left:39px;}
+.marginl40{ margin-left:40px;}
+.marginl42{ margin-left:42px;}
+.marginl43{ margin-left:43px;}
+.marginl44{ margin-left:44px;}
+.marginl55{ margin-left:55px;}
+.marginl19{ margin-left:19px;}
+.marginl20{ margin-left:20px;}
+.marginl24{ margin-left:24px;}
+.marginl78{ margin-left:78px;}
+.marginl120{ margin-left:120px;}
+.marginl115{ margin-left:115px;}
+.marginl117{ margin-left:117px;}
+.marginl119{ margin-left:119px;}
+.marginl135{ margin-left:135px;}
+.marginl130{ margin-left:130px;}
+.marginl127{ margin-left:127px;}
+.marginl140{ margin-left:140px;}
+.marginl145{ margin-left:145px;}
+.marginl150{ margin-left:150px;}
+.marginl160{ margin-left:160px;}
+.marginl163{ margin-left:163px;}
+.marginl164{ margin-left:164px;}
+.marginl165{ margin-left:165px;}
+.marginl170{ margin-left:170px;}
+.marginl180{ margin-left:180px;}
+.marginl182{ margin-left:182px;}
+.marginl190{ margin-left:190px;}
+.marginl200{ margin-left:200px;}
+.marginl240{ margin-left:240px;}
+.marginl265{ margin-left:267px;}
+.marginl280{ margin-left:280px;}
+.marginl300{ margin-left:300px;}
+.marginl350{ margin-left:350px;}
+.marginl100{ margin-left:100px;}
+.marginl93{ margin-left:93px;}
+.marginl94{ margin-left:94px;}
+.marginl95{ margin-left:95px;}
+.marginl98{ margin-left:99px;}
+.marginl85{ margin-left:85px;}
+
+.marginlie94{ *margin-left:94px;}
+.marginlie133{ *margin-left:133px;}
+.marginl110{ margin-left:110px;}
+.marginl90{ margin-left:90px;}
+.marginl95{ margin-left:95px;}
+.marginl98{ margin-left:99px;}
+.marginl85{ margin-left:85px;}
+.marginl60{ margin-left:60px;}
+.marginl70{ margin-left:70px;}
+.marginl74{ margin-left:74px;}
+.marginl75{ margin-left:75px;}
+.marginl80{ margin-left:80px;}
+.marginl50{ margin-left:50px;}
+.marginl10{ margin-left:10px;}
+.marginl7{ margin-left:7px;}
+.padding10{ padding:10px;}
+.padding20{ padding:20px;}
+.padding30{ padding:30px;}
+.padding100{ padding:100px;}
+.padding32{ padding:32px;}
+.padding70{ padding:70px;}
+.paddingt5{ padding-top:5px;}
+.paddingt10{ padding-top:10px;}
+.paddingt20{ padding-top:20px;}
+.padding50{ padding:50px;}
+.paddingr5{ padding-right:5px;}
+.paddingl5{ padding-left:5px;}
+.paddingl7{ padding-left:7px;}
+.paddingl10{ padding-left:10px;}
+.paddingl15{ padding-left:15px;}
+.paddingl30{ padding-left:30px;}
+.paddingl50{ padding-left:50px;}
+.paddingl60{ padding-left:60px;}
+.paddingl78{ padding-left:78px; *padding-left:108px;}
+.paddingl100{ padding-left:100px;}
+.paddingl110{ padding-left:110px;}
+.paddingl120{ padding-left:120px;}
+.paddingl150{ padding-left:150px;}
+.paddingl180{ padding-left:180px;}
+.paddingl200{ padding-left:200px;}
+.paddingl240{ padding-left:240px;}
+.paddingl260{ padding-left:260px;}
+.paddingl320{ padding-left:320px;}
+.paddingl360{ padding-left:360px;}
+.paddingl420{ padding-left:420px;}
+.paddingl460{ padding-left:460px;}
+.paddingl90{ padding-left:90px;}
+.paddingl80{ padding-left:80px;}
+.paddingl20{ padding-left:20px;}
+.paddingl18{ padding-left:18px;}
+.paddingl30{ padding-left:30px;}
+.paddingl35{ padding-left:35px;}
+.paddingb5{ padding-bottom:5px;}
+.paddingb50{ padding-bottom:50px;}
+.paddingb20{ padding-bottom:20px;}
+.padding20{ padding:20px;}
+.padding10{ padding:10px;}
+.padding8{ padding:8px;}
+.paddingr110{ padding-right:110px;}
+.paddingr320{ padding-right:320px;}
+.paddingr380{ padding-right:383px;}
+.relative{ position:relative;}
+.left0{ left:0px;}
+.left36{ left:36px;}
+.left30{ left:30px;}
+.left60{ left:60px;}
+.left117{ left:117px;}
+.left233{ left:233px;}
+.left200{ left:200px;}
+.right0{ right:0px;}
+.bottom10{bottom:10px;}
+.bottom20{ bottom:20px;}
+.top200{ top:200px;}
+.absolute{position:absolute;}
+/* 间距 */
+.border {border: 1px solid #d8d8d8;}
+.border_none {border: 0px solid #d8d8d8;}
+.border_none tr td {border: 0px;}
+.border_iwpay {border:1px solid #e9e9e9;}
+.border_help {border: 1px solid #ebebeb;}
+.bordernobottom {border-top: 1px solid #d8d8d8;border-left: 1px solid #d8d8d8;border-right: 1px solid #d8d8d8;}
+.border_dashed_right {border-top: 1px solid #d8d8d8;border-left: 1px solid #d8d8d8;border-bottom: 1px solid #d8d8d8;border-right: 1px dashed #d8d8d8 }
+.border_dashed_left {border-top: 1px solid #d8d8d8;border-right: 1px solid #d8d8d8;border-bottom: 1px solid #d8d8d8;border-left: 1px dashed #d8d8d8 }
+.borderblue{border: 1px solid #c4dbeb;}
+.bordertopb {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #d8d8d8;
+	border-bottom-color: #d8d8d8;
+}
+.bordertophelpb {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #ebebeb;
+	border-bottom-color: #ebebeb;
+}
+.border_tab2{ border:none;}
+.border_tab2 td{border-bottom:1px solid #f6f4f7; border-left:none;border-right:none;border-top:none;}
+.border_tab{ border:1px solid #ebeaeb;}
+.border_tab td{ border-bottom:1px solid #f6f4f7; border-left:none;border-right:none;border-top:none;}
+.border_tab3{border-top:none;border-left:1px solid #ebeaeb;border-right:1px solid #ebeaeb;border-bottom:none;}
+.border_tab3 td{ border-bottom:1px solid #f6f4f7; border-left:none;border-right:none;border-top:none;}
+.border_tab3 th{ border-bottom:1px solid #ebeaeb; border-left:none;border-right:none;border-top:none; font-weight:normal;height:32px; color:#555;}
+.border_sucess {border: 1px solid #e7f7d3; background:#fbfff4;}
+.border_error{border: 1px solid #f4e7d1; background:#fffded;}
+.border_prompt{border: 1px solid #e2d2ae; background:#fffcdb; color:#8d6d32;}
+.border_initiate{border: 1px solid #e2d2ae; background:#fffcdb; color:#766a43;}
+.border_gray{border: 1px solid #e8e8e8; background:#f8f8f8; color:#4d4d4f;}
+.bordertr{ border-bottom:1px solid #f6f4f7;}
+.bordertr_graybg{ border-bottom:1px solid #f6f4f7; background:#fbfbfb;}
+.bordertr_none{  border-bottom:1px solid #fff;}
+.borderb{ border-bottom:1px solid #DCDCDC}
+.borderb2{ border-bottom:1px dashed #DCDCDC}
+.borderr1{ border-right:1px dashed #DCDCDC}
+.borderb2_line{ border-bottom:1px dashed #DCDCDC; line-height:30px;}
+.borderb3_line{ border-bottom:1px dashed #DCDCDC; line-height:50px; font-size:14px;}
+.borderb4_line{
+	border:1px dashed #DCDCDC;
+	padding-left: 10px;
+	background-color: #E7FCDC;
+	width:650px;
+}
+.borderb5_line{
+	border:1px dashed #DCDCDC;
+	padding-left: 10px;
+	background-color: #E7FCDC;
+	width:900px;
+}
+/* 下划�?/
+
+.line_h{ line-height:30px;}
+
+/*font&color*/
+.height5{ height:5px;}
+.height10{ height:10px;}
+.height25{ height:25px;}
+.height32{ height:32px;}
+.height36{ height:36px;}
+.height50{ height:50px;}
+.height90{ height:90px;}
+.height40{ height:40px;}
+.height80{ height:80px;}
+.height100{ height:100px;}
+.height70{ height:70px;}
+.height66{ height:66px;}
+.height75{ height:75px;}
+.height60{ height:60px;}
+.height15{ height:15px;}
+.height150{ height:150px;}
+.height170{ height:170px;}
+.height180{ height:180px;}
+.heightie140{ *height:140px; _height:140px;}
+.heightie180{ *height:180px; _height:180px;}
+.height193{ height:193px;}
+.height190{ height:191px;}
+.height200{ height:200px;}
+.height20{ height:20px;}
+.height220{ height:220px;}
+.height225{ height:225px;}
+.height230{ height:230px;}
+.height237{ height:237px;}
+.height240{ height:240px;}
+.height245{ height:245px;}
+.height250{ height:250px;}
+.height263{ height:263px;}
+.height310{ height:310px;}
+.height320{ height:320px;}
+.height350{ height:350px;}
+.height385{ height:385px;}
+.height400{ height:396px;}
+.height390{ height:392px;}
+.height450{ height:450px;}
+.height485{ height:485px;}
+.height500{ height:500px;}
+.height520{ height:520px;}
+.height521{ height:521px;}
+.height550{ height:550px;}
+.height600{ height:600px;}
+.height640{ height:642px;overflow:hidden;}
+.height650{ height:650px;}
+.height700{ height:700px;}
+.height750{ height:745px;}
+.height800{ height:800px;}
+.height804{ height:804px;}
+.height825{ height:825px;}
+.height850{ height:850px;}
+.height855{ height:855px;}
+.height900{ height:900px;}
+.height940{ height:940px;}
+.height1000{ height:1000px;}
+.height1050{ height:1050px;}
+.height1100{ height:1130px;}
+.height1200{ height:1200px;}
+.height1300{ height:1300px;}
+/* 高度 */
+.wth100{ width:100%;}
+.wth3{ width:3%;}
+.wth5{ width:5%;}
+.wth8{ width:8%;}
+.wth10{ width:10%;}
+.wth12{ width:12%;}
+.wth15{ width:15%;}
+.wth18{ width:18%;}
+.wth20{ width:20%;}
+.wth22{ width:22%;}
+.wth30{ width:30%;}
+.width20{ width:20px;}
+.width30{ width:30px;}
+.width40{ width:40px;}
+.width50{ width:50px;}
+.width80{ width:80px;}
+.width60{ width:60px;}
+.width65{ width:65px;}
+.width78{ width:78px;}
+.width90{ width:90px;}
+.width100{ width:100px;}
+.width116{ width:116px;}
+.width118{ width:118px;}
+.width120{ width:120px;}
+.width124{ width:124px;}
+.width128{ width:128px;}
+.width140{ width:140px;}
+.width130{ width:130px;}
+.width136{ width:136px;}
+.width150{ width:150px;}
+.width168{ width:168px;}
+.width170{ width:170px;}
+.width175{ width:175px;}
+.width180{ width:180px;}
+.width190{ width:190px;}
+.width195{ width:195px;}
+.width198{ width:198px;}
+.width200{ width:200px;}
+.width203{ width:203px;}
+.width205{ width:205px;}
+.width207{ width:207px;}
+.width210{ width:210px;}
+.width220{ width:219px;}
+.width227{ width:227px;}
+.width228{ width:228px;}
+.width230{ width:230px;}
+.width236{ width:236px;}
+.width240{ width:240px;}
+.width250{ width:250px;}
+.width260{ width:260px;}
+.width261{ width:261px;}
+.width262{ width:262px;}
+.width263{ width:263px;}
+.width264{ width:262px;}
+.width280{ width:280px;}
+.width298{ width:298px;}
+.width300{ width:300px;}
+.width320{ width:320px;}
+.width330{ width:330px;}
+.width350{ width:350px;}
+.width380{ width:380px;}
+.width400{ width:400px;}
+.width420{ width:420px;}
+.width450{ width:450px;}
+.width460{ width:460px;}
+.width450{ width:450px;}
+.width510{ width:510px;}
+.width526{ width:526px;}
+.width98{ width:98%;}
+.width508{ width:508px;}
+.width500{ width:500px;}
+.width525{ width:525px;}
+.width530{ width:530px;}
+.width538{ width:538px;}
+.width560{ width:593px;}
+.width583{ width:583px;}
+.width600{ width:600px;}
+.width610{ width:610px;}
+.width630{ width:630px;}
+.width650{ width:650px;}
+.width700{ width:700px;}
+.width720{ width:720px;}
+.width730{ width:730px;}
+.width740{ width:740px;}
+.width760{ width:760px;}
+.width770{ width:770px;}
+.width780{ width:780px;}
+.width788{ width:788px;}
+.width790{ width:790px;}
+.width800{ width:800px;}
+.width811{ width:811px;}
+.width850{ width:850px;}
+.width860{ width:860px;}
+.width870{ width:870px;}
+.width880{ width:880px;}
+.width938{ width:938px;}
+.width940{ width:940px;}
+.width952{ width:952px;}
+.width953{ width:953px;}
+.width790{ width:790px;}
+.width792{ width:792px;}
+.width800{ width:800px;}
+.width801{ width:801px;}
+.width802{ width:802px;}
+.width860{ width:860px;}
+.width880{ width:880px;}
+.width900{ width:900px;}
+.width918{ width:918px;}
+.width938{ width:938px;}
+.width960{ width:960px;}
+.width980{ width:980px;}
+.width1000{ width:1000px;}
+.width1002{ width:1002px;}
+.width778{ width:778px;}
+
+/* 正文内容�*/
+.p_images{
+	width:680px;
+	text-align: center;
+}
+.p_images img{ margin:20px;
+}
+.p_font{
+	width:680px;
+}
+.p_bold{
+    width:680px;
+	font-weight: bold;
+}
+.p{}
+a.p:link,a.p:visited,a.p:hover,a.p:active{color:#5c9b0c;}
+/* 宽度*/
+.line-h18{ line-height:18px;}
+.line-h22{ line-height:22px;}
+.line-h24{ line-height:24px;}
+.line-h30{ line-height:30px;}
+.line-h32{ line-height:32px;}
+.line-h36{ line-height:36px;}
+.line-h40{ line-height:40px;}
+.line-h45{ line-height:45px;}
+.line-h50{ line-height:50px;}
+.z-index50{ z-index:50;}
+
+
+table{ border-collapse:collapse;
+text-align:center;
+margin-bottom:10px;
+border:1px solid #DCDCDC;
+line-height:28px;}
+.table02,.table02 tr,.table02 td{ 
+border:none; padding:2px;}
+table td{ }
+.tabletr01{height:28px;
+position:relative;
+line-height:28px;
+background:url("../images/tit01-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/tit01.jpg*/ repeat-x;}
+.tabletr01 h1{ padding-left:20px;
+height:28px;
+line-height:28px;
+float:left;
+font-size:14px;}
+.tabletr02{ background:#F5F5F5;
+line-height:28px;}
+.tabletr03{ height:40px;
+position:relative;
+line-height:40px;
+background:url("../images/tit03-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/tit03.jpg*/ repeat-x;}
+td{ 
+border:1px solid #DCDCDC;}
+.tdnone{ 
+border:none;}
+height:28px;}/* 默认表格 */
+.td50left{ width:45px;
+text-align:left;
+padding-left:5px;}
+.td10left{ width:10px;
+text-align:left;
+padding-left:5px;}
+.td30left{ width:30px;
+text-align:left;
+padding-left:5px;}
+.td60left{ width:60px;
+text-align:left;
+padding-left:5px;}
+.tdleft{
+text-align:left;
+padding-left:5px;}
+.tdleft2{
+text-align:left;}
+.tdcenter{
+text-align:center;}
+.tdp15left{
+text-align:left;
+width:15%;
+padding-left:10px;}
+.tdp35left{
+text-align:left;
+width:35%;
+padding-left:10px;}
+.tdp85left{
+text-align:left;
+width:85%;
+padding-left:10px;}
+.td70left{ width:70px;
+text-align:left;
+padding-left:5px;}
+.td75left{ width:75px;
+text-align:left;
+padding-left:5px;}
+.td80left{ width:80px;
+text-align:left;
+padding-left:5px;}
+.td140left{ width:140px;
+text-align:left;
+padding-left:5px;}
+.td90left{ width:90px;
+text-align:left;
+padding-left:5px;}
+.td100left{ width:100px;
+text-align:left;
+padding-left:5px;}
+.td250left{ width:250px;
+text-align:left;
+padding-left:5px;}
+.td120left{ width:120px;
+text-align:left;
+padding-left:5px;}
+.td150left{ width:150px;
+text-align:left;
+padding-left:5px;}
+.td180left{ width:180px;
+text-align:left;
+padding-left:5px;}
+.td200left{ width:190px;
+text-align:left;
+padding-left:5px;}
+.td400left{ width:400px;
+text-align:left;
+padding-left:5px;}
+.td450left{ width:450px;
+text-align:left;
+padding-left:5px;}
+.td620left{ width:615px;
+text-align:left;
+padding-left:5px;}
+.td20{ width:20px;}
+.td30{ width:30px;}
+.td40{ width:40px;}
+.td50{ width:50px;}
+.td60{ width:60px;}
+.td80{ width:80px;}
+.td90{ width:90px;}
+.td95{ width:95px;}
+.td110{ width:110px;}
+.td110center{ width:110px;text-align:center;}
+
+.td100{ width:100px;}
+.td180{ width:180px;}
+.td70{ width:70px;}
+.td170{ width:170px;}
+.td140{ width:140px;}
+.td240{ width:240px;}
+.td320{ width:320px;}
+.td200{ width:200px;}
+.td120{ width:120px;}
+.td250{ width:250px;}
+.tdleft{ text-align:left;}
+.td_left{ width:140px;
+font-weight:bold;
+text-align:right;}
+.td_right{ padding-left:5px;}
+.row{ background:#f0f0f0;}
+.row2{ background:url("../images/tit01-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/tit01.jpg*/ repeat-x;}/*表格*/
+.tipsbox{ background:#FFF;
+position:relative;
+padding:20px;
+border:3px solid #323232;
+}/*提示�*/
+.article_li{ padding-left:15px;
+background:url("../images/article_li_bg-1.gif")/*tpa=http://www.tftpay.com/newweb/images/article_li_bg.gif*/ no-repeat left;}/**/
+.exclamation{ width:59px;
+height:58px;
+background:url("../images/exclamation-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/exclamation.jpg*/ no-repeat;}
+.exclamation3{background: url("../images/exclamation-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/exclamation.jpg*/ no-repeat scroll left center transparent ; margin-left:80px;font-size: 12px;line-height: 20px; height:60px;margin-bottom: 10px; margin-top:25px; padding-left: 80px;text-align:left; 
+}
+.exclamation02{ width:55px;
+
+height:55px;
+background:url("../images/exclamation02-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/exclamation02.jpg*/ no-repeat;}
+.exclamation03{ width:21px;
+
+height:21px;
+background:url("../images/exclamation03-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/exclamation03.jpg*/ no-repeat;}
+.sorry{ width:80px;
+height:59px;
+background:url("../images/sorry-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/sorry.jpg*/ no-repeat;}
+.yes{ width:58px;
+height:59px;
+background:url("../images/yes-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/yes.jpg*/ no-repeat;}
+.yes02{ width:28px;
+height:28px;
+background:url("../images/yes02-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/yes02.jpg*/ no-repeat;}
+.tit_icon{ position:absolute;
+width:5px;
+height:30px;
+top:-1px;
+left:-1px;
+background:url("../images/tit01_h1-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/tit01_h1.jpg*/ no-repeat;}
+
+.inputpay{
+	width:240px;
+	height:24px;
+	line-height:24px;
+	border:1px solid #7bae09;
+	font-size: 16px;
+	text-align: left;
+	text-indent: 4px;
+}
+
+.green_bubble{ padding-left:30px;
+background:url("../images/green_bubble-1.gif")/*tpa=http://www.tftpay.com/newweb/images/green_bubble.gif*/ no-repeat left;}
+.green_bubble2{ padding-left:20px;
+background:url("../images/green_bubble2-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/green_bubble2.jpg*/ no-repeat left;}/* 绿色提示气泡*/
+.green_arrow{ padding-left:30px;
+background:url("../images/green_arrow-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/green_arrow.jpg*/ no-repeat left;}/* 绿色箭头*/
+.magnifier{ padding-left:28px;
+line-height:28px;
+background:url("../images/magnifier-1.gif")/*tpa=http://www.tftpay.com/newweb/images/magnifier.gif*/ left no-repeat;}/* 查看所有记�?*/
+
+.down{ padding-left:28px;
+line-height:28px;
+background:url("../pic/down-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/down.gif*/ left no-repeat;}/* 下载查询结果 */
+.down02{padding-left:35px;
+height:28px;
+line-height:28px;
+background:url("../images/down02-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/down02.jpg*/ no-repeat left;}
+.name{ padding-left:20px;
+line-height:22px;
+background:url("../images/name-1.gif")/*tpa=http://www.tftpay.com/newweb/images/name.gif*/ left no-repeat;}/* 实名认证 */
+.magnifier02{ padding-left:56px;
+line-height:56px;
+display:block;
+background:url("../images/magnifier02-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/magnifier02.jpg*/ left no-repeat;
+width:140px;}/* 放大�*/
+.magnifier03{
+	width:28px;
+	height:28px;
+background:url("../images/magnifier-1.gif")/*tpa=http://www.tftpay.com/newweb/images/magnifier.gif*/ left no-repeat;}/* 放大� */
+.login_icon01{ padding-left:25px;
+background:url("../images/login_icon01-1.gif")/*tpa=http://www.tftpay.com/newweb/images/login_icon01.gif*/ no-repeat left;}
+.reg_icon01{
+	background-image: url("../images/phone-1.png")/*tpa=http://www.tftpay.com/newweb/images/phone.png*/;
+	background-repeat: no-repeat;
+	background-position: left;
+	height:32px;
+	text-align: left;
+	text-indent: 32px;
+	line-height:32px;
+}
+.reg_icon02{
+	background-image: url("../images/email-1.png")/*tpa=http://www.tftpay.com/newweb/images/email.png*/;
+	background-repeat: no-repeat;
+	background-position: left;
+	height:32px;
+	text-align: left;
+	text-indent: 32px;
+	line-height:32px;
+}
+.mobile{ width:310px;
+height:610px;
+background:url("../images/mobile-1.png")/*tpa=http://www.tftpay.com/newweb/images/mobile.png*/ no-repeat;
+position:absolute;
+top:100px;
+right:15px;}
+/*小图�*/
+.flip{
+	width:100%;
+	height:25px;
+	position:relative;
+	margin-top:2px;}
+
+.flip_right{
+	float:right; margin-right:20px;
+	}
+.flip_right span{float:left; height:22px;display:inline;margin-left:5px;}
+.flip_right a{
+	float:left;
+	height:16px;
+	line-height:16px;
+	border:1px solid #DCDCDC;
+	padding:2px 8px;
+	
+	}
+.flip_right a:hover,.flip_right a.current{
+	border:1px solid #8c5091;
+	color:#8c5091;
+}/*翻页*/
+.btn_blue{background: url("../pic/btn_blue_bg-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue_bg.gif*/;height: 36px;width: 132px;border:none;line-height:24px;padding-bottom:2px;color:#fff;font-size:14px;vertical-align: top;}
+.btn_bluegary{background: url("../pic/btn_blue_bggray-1.jpg")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue_bggray.jpg*/;height: 36px;width: 132px;border:none;line-height:24px;padding-bottom:2px;color:#c4c3c3;font-size:14px;vertical-align: top;}
+.btn_blue140{background: url("../pic/btn_blue_bg140-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue_bg140.gif*/;height: 36px;width: 142px;border:none;line-height:24px;padding-bottom:2px;color:#fff;font-size:14px;vertical-align: top; font-family:"微软雅黑";}
+.btn_green_login_index{background: url("../pic/btn_green_login_index-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_green_login_index.gif*/;height: 32px;width: 120px;border:none;line-height:24px;padding-bottom:2px;color:#fff;font-size:14px;vertical-align: top;}
+.btn_blue172{background: url("../pic/btn_blue_bg172-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue_bg172.gif*/;height: 36px;width: 172px;border:none;line-height:24px;padding-bottom:2px;color:#fff;font-size:14px;vertical-align: top;}
+.btn_blue2{background: url("../pic/btn_blue-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue.gif*/ no-repeat;line-height: 24px;height: 34px;width: 84px; border:none; color:#7da20c; font-size:14px; padding-bottom:2px;}
+.btn_blue3{background: url("../pic/btn_blue3-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue3.gif*/ no-repeat;line-height: 34px;height: 34px;width: 123px;border:none;color:#7da20c;font-size:12px;text-align: left;text-indent: 24px;}
+.btn_blue2{background: url("../pic/btn_blue-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue.gif*/ no-repeat;line-height: 24px;height: 34px;width: 84px; border:none; color:#7da20c; font-size:14px; padding-bottom:2px;}
+.btn_orglive{background: url("../pic/btn_orglive-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_orglive.gif*/ no-repeat;line-height: 34px;height: 34px;width: 123px;border:none;color:#b96d1b;font-size:12px;text-align: left;text-indent: 24px;}
+.btn_blue3_2{background: url("../pic/btn_blue3_2-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blue3_2.gif*/ no-repeat;line-height: 34px;height: 34px;width: 123px;border:none;color:#7da20c;font-size:12px;text-align: left;text-indent: 24px;}
+.btn_green94{background: url("../pic/btn_green94-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_green94.gif*/ no-repeat;line-height: 30px;height: 31px;width: 94px; border:none; color:#76a20c; font-size:12px; font-weight:bold;}
+.btn_gray94{background: url("../pic/btn_gray94-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_gray94.gif*/ no-repeat;line-height: 24px;height: 31px;width: 94px; border:none; color:#a7a9ac; font-size:14px; padding-bottom:2px; font-weight:bold;}
+
+.btn_gray1021{background: url("../pic/btn_gray1021-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_gray1021.gif*/ no-repeat;line-height: 24px;height: 24px;width: 56px; border:none; color:#989898; font-size:12px;}
+
+.btn_gray74{background: url("../pic/btn_gray_74-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_gray_74.gif*/ no-repeat;line-height: 24px;height: 30px;width: 74px; border:none; color:#636466; font-size:14px; padding-bottom:2px; font-weight:bold;}
+.btn_blankcard{background: url("../pic/btn_blankcard-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_blankcard.gif*/ no-repeat;line-height: 24px;height: 24px;width: 55px; border:none; color:#636466; font-size:12px;}
+.btn_gray113{background: url("../pic/btn_gray_113-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_gray_113.gif*/ no-repeat;line-height: 24px;height: 30px;width: 146px; border:none; color:#636466; font-size:12px; padding-bottom:2px;}
+.btn_gray130{background: url("../pic/btn_gray_130-1.gif.png")/*tpa=http://www.tftpay.com/newweb/pic/btn_gray_130.gif*/ no-repeat;line-height: 24px;height: 30px;width: 130px; border:none; color:#636466; font-size:12px; padding-bottom:2px;}
+.btn_green138{background: url("../pic/btn_green_138-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_green_138.gif*/ no-repeat;line-height: 28px;height: 36px;width: 138px; border:none; color:#7da20c; font-size:12px; padding-bottom:2px; font-weight:bold;}
+.btn_gray132{background: url("../pic/btn_gray112-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_gray112.gif*/ no-repeat;line-height: 35px;height: 35px;width: 132px; border:none; color:#4d4d4f; font-size:14px; padding-bottom:2px;}
+.btn_gray184{background: url("../pic/btn_gray84-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_gray84.gif*/ no-repeat;line-height: 35px;height: 35px;width: 84px; border:none; color:#4d4d4f; font-size:14px; padding-bottom:2px;}
+.btn_greenboard{background: url("../pic/btn_greenboard_bg-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_greenboard_bg.gif*/ no-repeat;line-height: 24px;height: 36px;width: 132px; border:none; color:#4d4d4f; font-size:14px; }
+.btn_user1{ width:76px; height:24px; background:url("../pic/btn_user1-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_user1.gif*/; border:none; color:#629b1c; display:block; text-align:center;}
+.btn_user2{ width:76px; height:24px; background:url("../pic/btn_user2-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_user2.gif*/; border:none; color:#629b1c; text-align:left; text-indent:15px; display:block;}
+.btn_user3{ width:50px; height:24px; background:url("../pic/btn_user3-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_user3.gif*/; border:none; color:#629b1c; text-align:center;  display:block;}
+
+/*按钮*/
+.yellow_bg{ background:#ffffe1;}
+.yellow_bg02{ border:1px solid #DCDCDC;
+border-top:none; background:#ffffe1;
+height:30px;
+line-height:30px;}
+.font_12{font-size:12px;}
+.font_gray{ color:#9d9fa2;}/*En*/
+.font_qianhei{ color:#4d4d4f;}/*浅黑�*/
+.font_purple{ color:#975ca6;}/*紫色*/
+.font_13{font-size:13px;}
+.font_14{font-size:14px;}
+.font_15{font-size:15px;}
+.font_16{font-size:16px;font-family:Arial, Helvetica, sans-serif;}
+.font_18{font-size:18px;font-family:Arial, Helvetica, sans-serif;}
+.font_20{font-size:20px;font-family:Arial, Helvetica, sans-serif;}
+.pink{color:#DA6490;}
+.orange_14{color:#FF6600; font-size:14px;}
+.orange_24{color:#ff4e00; font-size:24px; font-family:Arial, Helvetica, sans-serif; line-height:24px;}
+.gray{color:#9b9c9c;}
+.gray_foot_line{color:#dedede;}
+.gray_foot{color:#9d9fa2;}
+.white{color:white;}
+.red{color:red;}
+.green{color:#7fb00d;}
+.green16{color:#789b32;font-size:16px;}
+.apphire{color:#1166BB;}
+a.white:link,a.white:visited,a.white:hover,a.white:active{color:white;}
+.blue_jindu{color:#5487c8;}
+.purple{color:purple;}
+.b{ font-weight:bold;}
+.b14{ font-size:14px;
+font-weight:bold;}
+.b16{ font-size:16px;
+font-weight:bold;}
+.green_u{ color:#5a8214;
+text-decoration:underline;}
+.h25{ line-height:22px;}
+.blue{ color:#899bce;}
+.blue_b{ color:#094a9c;
+font-weight:bold;}
+.red{ color:#C80000;}
+.yellow{ color:#e6af00;}
+.yellow14_b{ color:#e6af00;
+font-size:14px;
+font-weight:bold;}
+.green14_b{ color:#5a8214;
+font-size:14px;
+font-weight:bold;}
+.underline{text-decoration:underline;}
+.ray{ color:#646464;
+font-weight:100;}
+.ray50{ color:#505050;
+text-decoration:underline;}
+.org{ color:#ff6600;
+}
+.org2{ color:#ff4200;
+}
+.org_b{ color:#ff6600;
+font-weight:bold;
+}
+a:link{
+
+	font-size: 12px;
+	color:#505050;
+	text-decoration: none;
+}
+a:visited{
+	font-size: 12px;
+	color:#505050;
+	text-decoration: none;}
+a:hover{
+
+	font-size: 12px;
+	color:#965596;
+	text-decoration:underline;
+}/*默认链接*/
+.green_a:link{
+
+	font-size: 12px;
+	color:#7fb00d;
+	text-decoration: none;
+}
+.green_a:visited{
+	font-size: 12px;
+	color:#7fb00d;
+	text-decoration: none;}
+.green_a:hover{
+
+	font-size: 12px;
+	color:#57780b;
+	text-decoration:underline;
+}/*绿色链接*/
+.green2_a:link{
+
+	font-size: 12px;
+	color:#629b1c;
+	text-decoration: none;
+}
+.green2_a:visited{
+	font-size: 12px;
+	color:#629b1c;
+	text-decoration: none;}
+.green2_a:hover{
+
+	font-size: 12px;
+	color:#629b1c;
+	text-decoration:underline;
+}/*绿色链接2*/
+.green3_a:link{
+	font-size: 12px;
+	color:#7fb00d;
+	text-decoration: underline;
+}
+.green3_a:visited{
+	font-size: 12px;
+	color:#7fb00d;
+	text-decoration: underline;}
+.green3_a:hover{
+
+	font-size: 12px;
+	color:#57780b;
+	text-decoration: underline;
+}/*绿色�?�*/
+.purple_a:link{
+
+	font-size: 12px;
+	color:#965596;
+	text-decoration: none;
+}
+.purple_a:visited{
+	font-size: 12px;
+	color:#965596;
+	text-decoration: none;}
+.purple_a:hover{
+
+	font-size: 12px;
+	color:#965596;
+	text-decoration:underline;
+}/*紫色链接*/
+.white_a:link{
+
+	font-size: 12px;
+	color:#FFF;
+	text-decoration: none;
+}
+.white_a:visited{
+	font-size: 12px;
+	color:#FFF;
+	text-decoration: none;}
+.white_a:hover{
+
+	font-size: 12px;
+	color:#FFF;
+	text-decoration:underline;
+}/*白色链接*/
+.b_a:link{
+
+	font-size: 14px;
+	color: #505050;
+	font-weight:bold;
+
+}
+.b_a:visited{
+	font-size: 14px;
+	color: #505050;
+	font-weight:bold;
+}
+.b_a:hover{
+
+	font-size: 14px;
+	color: #505050;
+	font-weight:bold;
+	text-decoration:underline;
+}/*加粗链接*/
+.yellow_a:link{
+
+	font-size: 12px;
+	color:#e6af00;
+	text-decoration: none;
+}
+.yellow_a:visited{
+	font-size: 12px;
+	color:#e6af00;
+	text-decoration: none;}
+.yellow_a:hover{
+
+	font-size: 12px;
+	color:#e6af00;
+	text-decoration:underline;
+}/* 黄色链接*/
+.org2_a:link{
+	font-size: 12px;
+	color:#a6810c;
+	text-decoration: none;
+}
+.org2_a:visited{
+	font-size: 12px;
+	color:#a6810c;
+	text-decoration: none;}
+.org2_a:hover{
+
+	font-size: 12px;
+	color:#a6810c;
+	text-decoration:underline;
+}/* 黄色链接*/
+.red_a:link{
+	
+	font-size: 12px;
+	color:#C80000;
+	text-decoration: none;
+}
+.red_a:visited{
+	font-size: 12px;
+	color:#C80000;
+	text-decoration: none;}
+.red_a:hover{
+	
+	font-size: 12px;
+	color:#C80000;
+	text-decoration:underline;
+}/* 红色链接*/
+.ray_a:link{
+	font-size: 12px;
+	color:#969696;
+	text-decoration: none;
+}
+.ray_a:visited{
+	font-size: 12px;
+	color:#969696;
+	text-decoration: none;}
+.ray_a:hover{
+	font-size: 12px;
+	color:#9d9fa2;
+	text-decoration:underline;
+}/* 灰色链接*/
+.gray_a:link{
+
+	font-size: 12px;
+	color:#77787b;
+	text-decoration: none;
+}
+.gray_a:visited{
+	font-size: 12px;
+	color:#77787b;
+	text-decoration: none;}
+.gray_a:hover{
+
+	font-size: 12px;
+	color:#77787b;
+	text-decoration:underline;
+}/* 灰色链接*/
+
+.mapgray_a:link{
+	font-size: 14px;
+	color:#4d4d4f;
+	text-decoration: none;
+	line-height:24px;
+}
+.mapgray_a:visited{
+	font-size: 14px;
+	color:#4d4d4f;
+	text-decoration: none;
+	line-height:24px;}
+.mapgray_a:hover{
+	font-size: 14px;
+	color:#4d4d4f;
+	text-decoration:underline;
+	line-height:24px;
+}/* 灰色链接*/
+
+.org_a:link{
+	
+	font-size: 12px;
+	color:#a86f14;
+	text-decoration: none;
+}
+.org_a:visited{
+	font-size: 12px;
+	color:#a86f14;
+	text-decoration: none;}
+.org_a:hover{
+
+	font-size: 12px;
+	color:#a86f14;
+	text-decoration:underline;
+}/* 橙色链接*/
+.org_a_b:link{
+
+	font-size: 12px;
+	color:#ff6600;
+	text-decoration: none;
+}
+.org_a_b:visited{
+	font-size: 12px;
+	color:#ff6600;
+	text-decoration: none;}
+.org_a_b:hover{
+	
+	font-size: 12px;
+	color:#ff6600;
+	text-decoration:underline;
+}/* 橙色粗链�*/
+.blue_a:link{
+	
+	font-size: 12px;
+	color:#2993d1;
+	text-decoration: none;
+}
+.blue_a:visited{
+	font-size: 12px;
+	color:#2993d1;
+	text-decoration: none;}
+.blue_a:hover{
+
+	font-size: 12px;
+	color:#2993d1;
+	text-decoration:underline;
+}/*蓝色链接*/
+.paging_a:link{
+	padding-left:4px;
+	padding-right:4px;
+	font-size: 12px;
+	color:#FFF;
+	background:#a7a9ac;
+}
+.paging_acurrent{
+	font-size: 12px;
+	color:#FFF;
+	text-decoration: none;
+	background:#975ca6;
+	height:16px;
+	padding-left:4px;
+	padding-right:4px;
+}
+.paging_acurrent:link,paging_acurrent:hover,.paging_acurrent:visited{
+	font-size: 12px;
+	color:#FFF;
+	text-decoration: none;
+	background:#975ca6;
+	height:16px;
+	padding-left:4px;
+	padding-right:4px;
+}
+.paging_a:visited{
+	font-size: 12px;
+	color:#FFF;
+	background:#a7a9ac;
+	text-decoration:underline;}
+.paging_a:hover{
+	font-size: 12px;
+	color:#FFF;
+	text-decoration: none;
+	background:#975ca6;
+	height:16px;
+	padding-left:4px;
+	padding-right:4px;
+}/*news分页链接*/
+.bluebg{ background:#679fca; color:#FFF; padding:4px 10px;}
+.bluebg_gray_a:link{
+	font-size: 12px;
+	color:#636466;padding:4px 10px;
+	text-decoration: none;
+}
+.bluebg_gray_a:visited{
+	font-size: 12px;
+	color:#636466;
+	text-decoration: none;}
+.bluebg_gray_a:hover{
+	font-size: 12px;
+	color:#fff;
+	background:#679fca; 
+	text-decoration: none;
+}/*蓝色背景灰色字链*/
+.bluebg_blue_a:link{
+	font-size: 12px;
+	color:#2b93d1;padding:4px 10px;
+	text-decoration: none;
+}
+.bluebg_blue_a:visited{
+	font-size: 12px;
+	color:#2b93d1;
+	text-decoration: none;}
+.bluebg_blue_a:hover{
+
+	font-size: 12px;
+	color:#fff;
+	background:#679fca; 
+	text-decoration: none;
+}/*蓝色背景蓝色字链接主要用于查询文字链�*/
+.blue14_a:link{
+	
+	font-size: 14px;
+	color:#2993d1;
+	text-decoration: none;
+}
+.blue14_a:visited{
+	font-size: 14px;
+	color:#2993d1;
+	text-decoration: none;}
+.blue14_a:hover{
+
+	font-size: 14px;
+	color:#2993d1;
+	text-decoration:underline;
+}/*蓝色链接*/
+.red_error{ color:#FF0000; background:url("../pic/icon_error-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/icon_error.gif*/ no-repeat left top; text-indent:18px; margin-top:3px;}
+ .an_icon3{
+	background: url("../images/icon_3-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/icon_3.jpg*/;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 20px;
+	font-size:12px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	width:700px;
+	line-height:40px;
+	margin-bottom:10px;
+}
+ .an_line{
+	background-repeat: no-repeat;
+	background-position: left center;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	width:650px;
+	height:30px;
+	margin-bottom:20px;
+}
+ .orgbtn02{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	background: url("../images/orgbtn02_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/orgbtn02_bg.jpg*/;
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 60px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.reg_org_btn{
+	border-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 35px;
+	font-weight: bold;
+	color: #FFF;
+	background: url("../images/register_btn2-1.gif")/*tpa=http://www.tftpay.com/newweb/images/register_btn2.gif*/;
+	background-repeat: no-repeat;
+	height: 35px;
+	width: 155px;
+}
+.bule_line{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #b7da67;
+	margin-top:30px;
+	margin-bottom:5px;
+	width:100%;
+}
+.green04_btn{
+	height:22px;
+	width:80px;
+	text-align:center;
+	line-height:22px;
+	background:url("../images/greenbtn04_bg-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/greenbtn04_bg.jpg*/ no-repeat;
+	display:block;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.star{color:#FF0000; font-family:Arial, Helvetica, sans-serif; font-size:20px; line-height:30px;}
+
+/* news  5 11 */
+.width290{ width:290px;}
+.td50left{ width:50px;
+text-align:left;
+padding-left:5px;}
+
+.msg_cb {
+	width:450px; height:40px;
+	background:#f5f5f5;
+	border:1px solid #dedede;
+	padding:6px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left:10px; line-height:18px;
+}
+.msg_cb1 {
+	width:450px; height:60px;
+	background:#f5f5f5;
+	border:1px solid #dedede;
+	padding:6px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left:10px; line-height:20px;
+}
+
+.msg_cb2 {
+	width:450px; height:80px;
+	background:#f5f5f5;
+	border:1px solid #dedede;
+	padding:6px;
+	margin-top: 10px;
+
+	margin-right: 0px;
+	margin-left:10px; line-height:20px;
+}
+
+.msg_cb3 {
+	width:400px; height:80px;
+	background:#f5f5f5;
+	border:1px solid #dedede;
+	padding:6px;
+	margin-top: 20px;
+	margin-bottom:10px;
+	margin-right: 0px;
+	margin-left:10px; line-height:20px;
+}
+.msg_cs {
+	width:84px; height:32px;
+	background:#f5f5f5;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left:0px; font-size:14px; font-family:Arial, Helvetica, sans-serif;
+}
+
+.msg_cr {
+	width:565px; height:60px; text-align:left;
+	background:#f5f5f5; float:left;
+	border:1px solid #dedede;
+	padding:8px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left:0px; line-height:28px;
+}
+
+.msg_cy {
+	width:706px; height:60px; text-align:left;
+	background:#f5f5f5; float:left;
+	border:1px solid #dedede;
+	padding:8px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-left:0px; line-height:28px;
+}
+
+
+.down_all{ padding-left:18px;
+line-height:28px;
+background:url("../images/add_green-1.gif")/*tpa=http://www.tftpay.com/newweb/images/add_green.gif*/ left  no-repeat ;}
+
+
+.f_list { height:30px; line-height:25px;}
+
+.f_list_l { width:300px; float:left;}
+.f_list_r { width:100px; float:left;}
+.f_bt { height:30px;}
+.f_bt_l  { width:100px; float:left; padding-left:70px; }
+
+.org_btnt{ height:30px;
+width:150px;
+text-align:center;
+line-height:30px;
+background:url("../images/dunctional_demo_btn1-1.gif")/*tpa=http://www.tftpay.com/newweb/images/dunctional_demo_btn1.gif*/ no-repeat;
+display:block;}
+
+.msg_cs1 {
+	width:80px; height:60px;
+	margin-top: 10px; background:url("../images/yes-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/yes.jpg*/ no-repeat; float: right;
+}
+.msg_cs2 {
+	width:80px; height:60px;
+	margin-top: 10px; background:url("../images/icon_error-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/icon_error.jpg*/ no-repeat;float: right;
+}
+
+.msg_cs3 {
+	width:80px; height:60px;
+	margin-top: 10px; background:url("../images/exclamation-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/exclamation.jpg*/ no-repeat;float: right;
+}
+.down01{ padding-left:19px; 
+line-height:28px;
+background:url("../images/add_green-1.gif")/*tpa=http://www.tftpay.com/newweb/images/add_green.gif*/ left no-repeat;}/* 新增往来帐�?*/
+
+.td110left{ width:110px;
+text-align:left;
+padding-left:5px;}
+.td40left{ width:40px;
+text-align:left;
+padding-left:5px;}
+
+.down01{ padding-left:19px; 
+line-height:28px;
+background:url("../images/add_green-1.gif")/*tpa=http://www.tftpay.com/newweb/images/add_green.gif*/ left no-repeat;}/* 新增往来帐�?*/
+
+
+.tipsbox1{ background:#FFF;
+position:relative;
+padding:20px; margin-left:80px;
+border:3px solid #323232;
+}/*提示�*/
+
+
+
+
+.msg_error{background: url("../images/icon_error-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/icon_error.jpg*/ no-repeat scroll left center transparent ; margin-left:80px;font-size: 12px;line-height: 20px; height:60px;margin-bottom: 10px; margin-top:25px; padding-left: 80px;text-align:left; 
+}
+.pay_list0333{ width:620px; height:80px; margin: 0 auto; line-height:22px;  background:#e7fcdc; 
+border: solid 1px #dcdcdc; text-align:left; margin-bottom:60px; padding-left:80px; padding-top:20px; background:url("../images/sorry-1.gif")/*tpa=http://www.tftpay.com/newweb/images/sorry.gif*/ no-repeat left +20px; }
+
+.error2{
+	width:58px;
+	height:58px;
+	background: url("../images/icon_error-1.jpg")/*tpa=http://www.tftpay.com/newweb/images/icon_error.jpg*/;
+	background-repeat: no-repeat;
+}
+.close02{position:absolute;height:28px;width:24px;top:118px;right:30px;	display:block;background:url("../pic/close02-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/close02.gif*/  right no-repeat;border:none;}
+.close_iwpay{position:absolute;height:28px;width:24px;top:8px;right:20px;	display:block;background:url("../pic/close_iwpay-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/close_iwpay.gif*/  right no-repeat;border:none;}
+.btn_CombinedPayments{ width:60px; height:24px; background:url("../pic/btn_user1-1.gif")/*tpa=http://www.tftpay.com/newweb/pic/btn_user1.gif*/; border:none; color:#629b1c; display:block; text-align:center;}
+.checkbox{ width:13px; height:13px; background:url("../pic/checkbox_bg-1.png")/*tpa=http://www.tftpay.com/newweb/pic/checkbox_bg.png*/ no-repeat; border:none; display: block; overflow:hidden;}
+.checkbox2{display:block; 
+width:25px; 
+height:25px; 
+overflow:hidden; 
+background: url("../pic/checkbox_bg-1.png")/*tpa=http://www.tftpay.com/newweb/pic/checkbox_bg.png*/ no-repeat; float: left;}
+

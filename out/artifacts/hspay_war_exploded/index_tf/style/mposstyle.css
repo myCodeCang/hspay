@@ -1,0 +1,102 @@
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li{margin:0;padding:0;}
+html{background:#fff;}
+li{list-style:none;}
+img{border:none;display:block;}
+
+.mposbj{margin:0 auto;height:680px;width:100%;background:url("../pic/mposbj.gif")/*tpa=https://www.tftpay.com/pic/mposbj.gif*/ no-repeat;overflow:hidden;}
+.mposbja{margin:0 auto;height:580px;width:1020px;padding-top:100px;}
+.mposbja dl{float:left;width:1020px;}
+.mposbja dt{float:left;width:805px;height:580px;background:url("../pic/mposimg.png")/*tpa=https://www.tftpay.com/pic/mposimg.png*/ no-repeat;}
+.mposbja dd{float:left;width:215px;padding-top:70px;}
+.mposbja dd li{float:left;width:215px;height:79px;padding-bottom:38px;}
+.mposbjb{margin:0 auto;width:1118px;font-family:"Microsoft YaHei" ! important;overflow:hidden;}
+.mposbjb dl,.mposbjb dt,.mposbjb dd{float:left;width:1118px;}
+.mposbjb dt{padding:36px 0 20px 0;font-size:23px;color:#222;background:url("../pic/mposjtpic.gif")/*tpa=https://www.tftpay.com/pic/mposjtpic.gif*/ no-repeat 266px 44px;}
+.mposbjb dt span{color:#9b459c;}
+.mposbjb dt em{padding:0 6px;}
+.mposbjb dd{height:540px;background:url("../pic/mposlcimg.gif")/*tpa=https://www.tftpay.com/pic/mposlcimg.gif*/ no-repeat 0 40px;}
+
+.pos{margin:0 auto;width:100%;background:#fff;overflow:hidden;font-family:"Microsoft YaHei" ! important;}
+.posbackg{margin:0 auto;height:400px;width:1920px;background:url("../pic/posimg.jpg")/*tpa=https://www.tftpay.com/pic/posimg.jpg*/ no-repeat;}
+.pos_cont{margin:0 auto;width:1000px;margin-top:10px;overflow:hidden;}
+.pos_conta{float:left;width:1000px;}
+.pos_jt{background:url("../pic/mposjtpic.gif")/*tpa=https://www.tftpay.com/pic/mposjtpic.gif*/ no-repeat 180px 8px;}
+.size22{font-size:22px;color:#333;}
+.size14{font-size:14px;color:#555;}
+.line-he22{line-height:22px;}
+.pos_conta p a{color:#1b61a9;padding-right:80px;text-decoration:none;font-size:15px;}
+.marginr16{margin-right:36px;}
+.pos_kj{float:left;width:130px;height:126px;border:1px dashed #c3d600;border-radius:6px;padding:22px 19px;}
+.pos_kj dl,.pos_kj dt,.pos_kj dd{float:left;width:130px;}
+.pos_kj dt{height:38px;line-height:30px;padding-left:62px;font-size:20px;color:#333;}
+.pos_kj dd{line-height:22px;font-size:14px;color:#555;}
+.xlpic,.fxpic,.kspic,.zypic,.txpic{background:url("../pic/pospic.png")/*tpa=https://www.tftpay.com/pic/pospic.png*/ no-repeat;}
+.xlpic{background-position:34px 0px;}
+.fxpic{background-position:32px -38px;}
+.kspic{background-position:31px -75px;}
+.zypic{background-position:31px -115px;}
+.txpic{background-position:30px -155px;}
+.tftposlc{margin:0 auto;width:1058px;height:540px;background:url("../pic/tftposlc.gif")/*tpa=https://www.tftpay.com/pic/tftposlc.gif*/ no-repeat 0 60px;margin-top:28px;overflow:hidden;padding-left:58px;}
+
+/*头部底部新增样式*/
+.wrap{width:1002px;margin:0 auto;height:auto;font: 500 12px/1.5 微软雅黑;}
+.wrap dl{float:left;width:1002px;}
+.wrap dt{float:left;width:170px;color:#888;}
+.wrap dt span{padding-left:15px;}
+.wrap dd{float:left;width:662px;text-align:right;}
+.wrap dd a{color:#9d559e;text-decoration:none;}
+.wrap dd em{color:#9d559e;padding:0 8px;}
+.wrap dd span{color:#777;padding-left:24px;}
+.headTop{height:30px;line-height:30px;position:relative;z-index:9999;}
+.headTop:after{display:block;clear:both;visibility:hidden;height:0;content:'';}
+.wrappic{background:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/ no-repeat 0px 2px;}
+.nav2{height:83px;width:100%;background:url("../pic/navBg1.png")/*tpa=https://www.tftpay.com/pic/navBg1.png*/ no-repeat center top;min-width:1180px;}
+.navSide{width:1002px;height:83px;margin:0 auto;position:relative;z-index:9998;}
+.nav2 .leftLogo,.navBox1 li a b,.foota1{background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.nav2 .leftLogo{width:230px;height:199px;background-position:0 -71px;float:left;margin:-30px 0 0 -223px;position:absolute;}
+.nav2 .tftpaylogo{float:left;width:136px;height:40px;margin:19px 0 0 13px;color:#fff;}
+.navBox1{float:left;padding:14px 0 0 246px;overflow:hidden;font-family:"Microsoft YaHei";}
+.navBox1 li{float:left;width:100px;border-right:#924193 1px solid;height:58px;text-align:center;font-size:16px;color:#fff;}
+.navBox1 li a.on,.navBox li a.mv{color:#721573;}
+.navBox1 li a:hover{color:#721573;}
+.navBox1 li span{color:#721573;}
+.navBox1 li a,.navBox li a:visited{color:#fff;line-height:18px;text-decoration:none;display:block;}
+.navBox1 li a b{width:34px;height:28px;display:block;margin:0 auto 12px;}
+.navBox1 li.navHome a.on b,.navBox1 li.navHome a.mv b{background-position:0 -295px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navcpzx a.on b,.navBox1 li.navcpzx a.mv b{background-position:-240px -295px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navzffs a.on b,.navBox1 li.navzffs a.mv b{background-position:-4px -345px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navhyfa a.on b,.navBox1 li.navhyfa a.mv b{background-position:-49px -347px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navbzzx a.on b,.navBox1 li.navbzzx a.mv b{background-position:-98px -347px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navaqbz a.on b,.navBox1 li.navaqbz a.mv b{background-position:-148px -347px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navHome a b{background-position:0 -269px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navcpzx a b{background-position:-240px -266px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navzffs a b{background-position:0 -376px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navhyfa a b{background-position:-45px -376px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navbzzx a b{background-position:-94px -375px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+.navBox1 li.navaqbz a b{background-position:-146px -376px;background-image:url("../pic/newindexpic.png")/*tpa=https://www.tftpay.com/pic/newindexpic.png*/;background-repeat:no-repeat;}
+
+#foot{margin:0 auto;width:100%;background-color:#3d4650;overflow:hidden;height:auto;}
+.foots,.footx,.foota,.footb,.footc,.foota2 dl,.foota2 dt,.foota2 dd,.foota2 dt li,.foota2 dd li,.foota1,.foota2,.footb dl,.footb dt,.footb dd,.footb dt li,.footb dd li,.footx dl,.footx dt,.footx dd,.footx dd li{float:left;}
+.footz{margin:0 auto;width:1002px;padding:10px 0;}
+.foots{width:1002px;padding-top:10px;border-bottom:1px solid #25313d;height:192px;}
+.foota{width:220px;}
+.foota1{width:180px;padding-left:20px;background-position:-4px -556px;color:#a0a5ab;font-size:20px;font-family:"Microsoft YaHei";height:30px;line-height:28px;}
+.foota2{width:180px;padding:5px 0 8px 20px;}
+.foota2 dt,.foota2 dd{width:90px;}
+.foota2 dt li,.foota2 dd li{width:90px;line-height:24px;font-size:13px;}
+.foota2 dt li a,.foota2 dd li a{color:#bac0c7;text-decoration:none;}
+.footb,.footb dl{width:320px;}
+.footb dt{width:310px;margin-left:10px;}
+.footb dt li{width:110px;color:#b2b8bf;line-height:40px;font-family:"Microsoft YaHei";text-align:center;margin-left:17px;}
+.footb dt li span{font-size:14px;}
+.footb dd{}
+.footb dd li{}
+.footc{width:230px;height:102px;margin:48px 0 0 0;overflow:hidden;}
+.footx{width:1002px;border-top:1px solid #606770;line-height:24px;color:#8e969f;padding:10px 0;}
+.footx dl{width:1002px;}
+.footx dt{width:340px;padding-right:10px;font-size:12px;}
+.footx dd{width:652px;}
+.footx dd li{padding:6px 2px 0 2px;}
+
+

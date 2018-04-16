@@ -1,0 +1,127 @@
+.top{width:100%;background:#767676;height:40px}
+.top_in{width:1200px;height:40px;margin:0 auto}
+.top_in em{float:left;line-height:40px;font-size:14px;color:#fefefe;margin-right:10px}
+.zcdl{float:left;height:40px;margin-left:20px}
+.zcdl a{font-size:14px;color:#fefefe;line-height:40px;float:left;padding-left:6px;padding-right:6px;display:block}
+.zcdl i{display:block;height:14px;width:1px;background:#c4c4c4;float:left;margin-top:14px}
+.sjwx{float:right;height:20px;position:relative;margin-top:10px;z-index:8000}
+.sjwx em{width:24px;height:20px;margin-eft:20px}
+.none{width:80px;height:80px;position:absolute;display:none;z-index:800}
+.wxgzh{top:30px;left:0;background:red}
+.sjapp{top:30px;right:0;background:blue}
+.kfdh{float:right;font-size:16px;color:white;line-height:40px;margin-left:10px}
+/*导航加搜索框*/
+.dhjssk{width:1200px;height:107px;margin:0 auto;overglow:hidden;background:none;position:relative;z-index:5000}
+.logo{width:160px;height:66px;float:left;margin-top:20px;}
+.logo img{width:160px;height:66px;}
+.searchk{width:442px;height:40px;float:right;}
+.sjhcp{width:100%;height:40px;float:left;background:#fff}
+.sjhcp_in{width:60px;height:40px;float:left;position:relative;z-index:600}
+.sjhcp_in span{width:60px;height:40px;font-size:16px;color:#2f2f2f;text-indent:23px;line-height:40px;cursor:pointer}
+.little_list{width:85px;height:auto;position:absolute;top:40px;left:-1px;display:none;border:1px solid #e50012;z-index:200;background:#fff}
+.little_list em{width:85px;height:34px;text-indent:23px;line-height:34px;cursor:pointer;font-size:16px;font-style:normal}
+.jiantou{width:17px;height:40px;float:left;border-right:1px solid #ff7800;padding-right:8px}
+.jiantou img{width:8px;height:4px;margin:0 auto;margin-top:18px}
+.ssl{width:49px;height:40px;background:#e50012;float:right;cursor:pointer}
+.wmdys{height:77px;float:right;margin-top:12px;overflow:hidden}
+.wmdys ul{height:77px;overflow:hidden}
+.wmdys ul li{height:67px;overflow:hidden;width:100px;float:left;border-radius:10px;padding-top: 10px;}
+.wmdys ul li:HOVER{background-color: #f6f6f6;height:65px;cursor:pointer}
+.wmdys ul li img{height:36px;overflow:hidden;width:36px;display:block;margin:0 auto}		
+.wmdys ul li p{height:31px;width:100%;display:block;text-align:center;line-height:31px;fontSize:16px;color:#605f5f}	
+.hot_ss{ height:22px;width:auto;position:absolute;bottom:16px;left:318px;z-index:1}
+.hot_ss a{font-size:14px;color:#9d9d9d;padding-left:8px;padding-hight:8px;line-height:22px;float:left}
+
+.center_right {
+	float:right;
+	padding:0 20px 30px 0;
+	width:930px;
+	overflow:hidden
+}
+.center_right h1{
+	color: #333;
+	overflow: hidden;
+	line-height: 33px;
+	font-size: 24px;
+	border-left: 3px solid #fa3b4a;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    margin-bottom: 19px;
+    margin-top: 19px;
+    padding-left: 10px;
+}
+#lefts {
+	float:left;
+	padding:5px 0 30px 0;
+	width:228px
+}
+#rbox {
+	margin:0 auto;
+	overflow:hidden;
+	padding:0 20px 0 20px;
+	width:300px
+}
+#lefts h2.title {
+	height:40px;
+	line-height:34px;
+	text-indent:25px;
+	text-align:left;
+	border-bottom:1px solid #F4F4F4;
+	font-size:16px
+}
+#lefts h2.title a:hover {
+	text-decoration:none;
+	color:#015BF1
+}
+ul#nav {
+	width:100%;
+	overflow:hidden;
+	text-align:left
+}
+ul#nav li {
+	width:100%;
+	height:34px;
+	border-bottom:1px solid #F4F4F4;
+	color:#B0B2B5;
+	font-family:Arial
+}
+ul#nav li a {
+	font-size:14px;
+	display:block;
+	width:100%;
+	height:34px;
+	line-height:34px;
+	text-indent:25px;
+	color:#000
+}
+ul#nav li a:hover {
+	background:#F9F9F9;
+	text-decoration:none;
+}
+ul#nav li.selected {
+    background: #f2f2f2 none repeat scroll 0 0;
+}
+ul#nav li.selected a{
+    color: #cc0000;
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+.well  p{
+	margin: 0 0 10px;
+}
+.well  ol{
+	margin: 0 0 10px 25px;
+	padding: 0;
+	font-size: 12px;
+}
+.well  ol li{
+	list-style-type: decimal;
+	margin-bottom: 5px;
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta http-equiv="X-UA-Compatible" content="IE=10;IE=9;IE=8;IE=7" />
+<meta name="keywords" content="秒付宝" />
+<title>秒付宝 - 个人登录</title>
+
+<link href="../style/index_specpurpcss-1.css" tppabs="newweb/style/index_specpurpcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="../script/writeObject_index_main-1.js" tppabs="newweb/script/writeObject_index_main.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../script/jquery.min-1.js" tppabs="newweb/script/jquery.min.js"></script>
+<script type="text/javascript" src="../script/tinytable-1.js" tppabs="newweb/script/tinytable.js"></script>
+<script type="text/javascript">
+    function writePassShow(oid, cfg, passid){
+		writePassObject(oid, cfg, passid, "");
+	}
+
+    var ts="1492865764085";
+    var message = "密码";
+	var chkSmsFlg='Y';
+	var smsSndFlg=0;
+    function userSubmit(pwdId) {
+		if ($.trim($("#USR_ID").val()) == "") {
+            $('#usererror').css('display','block').html("请输入登录用户名");
+            return false;
+        }
+		
+        var powerobj;
+        if (_app == 'Microsoft Internet Explorer' || navigator.userAgent.indexOf("Trident")>0) {
+            powerobj = getIBSInput(pwdId + "_ie", ts, "usererror", message);
+        } else {
+            powerobj = getIBSInput(pwdId + "_noie", ts, "usererror", message);
+        }
+		if(typeof(powerobj1)=="object"){		//typeof(powerobj1)当密码长度大于6位的时候是string类型，否则是object类型
+            $('#usererror').css('display','block'); 
+			return false;
+		}
+		
+        if ($.trim($("#VER_CD").val()) == "") {
+            $('#usererror').css('display','block').html("请输入图片验证码");
+            return false; 
+        }
+        if(smsSndFlg==0){
+			$('#usererror').css('display','block').html("请先获取短信验证码");
+            return false; 
+		}
+		if(chkSmsFlg=='Y'){
+			if (!checksmscode()) {
+				return false; 
+			}
+		}
+		
+        document.getElementById("user_pswd").value = powerobj;
+
+        document.getElementById("form").action="/newweb/service/nuser_login.xhtml";
+		if(chkSmsFlg=='N'){
+			document.getElementById("form").submit();
+		}else{
+			var smsCd=$.trim($("#MBL_VER_CD").val());
+			$.ajax({
+				type:"post",
+				url:"/newweb/service/chk_log_msg.xhtml?MBL_VER_CD="+smsCd+"&random="+Math.random(),
+				dataType : "json",
+				success : function(data) {
+					if(data.GWA.MSG_CD!='URM00000'){
+						$('#usererror').css('display','block').html(data.GWA.MSG_INF);
+						return false;
+					}
+					document.getElementById("form").submit();
+					return true;
+				},error:function(){
+					alert("对不起，出现错误！");
+					return false;
+				}
+			});
+		}
+    }
+           
+           
+    function updateCode(){
+		var verify=document.getElementById('divCode');
+		verify.setAttribute('src','/newweb/common/codeImage.jsp?'+ Math.random());
+    }
+
+	var kj_speed = 1000, kj_wait, kj_isinerval;
+	function send(s){
+		kj_wait = s;
+		// 获取银行短信验证码 
+		getsmscd();
+	}
+
+	function getsmscd(){
+		var logId = $.trim($("#USR_ID").val());
+		var verCd = $.trim($("#VER_CD").val());
+
+		if(logId.replace(/(^\s*)|(\s*$)/g, "").length==0){
+			$('#usererror').css('display','block').html("请输入登录用户名");
+			return false;
+		}
+		
+		var powerobj1 = "";
+		var ocx1 = "user_pswd_ocx";
+		if (_app == 'Microsoft Internet Explorer' || navigator.userAgent.indexOf("Trident")>0) {
+			powerobj1 = getIBSInput(ocx1 + "_ie", ts, "usererror", message);
+		} else {
+			powerobj1 = getIBSInput(ocx1 + "_noie", ts, "usererror", message);
+		}
+		if(typeof(powerobj1)=="object"){		//typeof(powerobj1)当密码长度大于6位的时候是string类型，否则是object类型
+            $('#usererror').css('display','block'); 
+			return false;
+		}else{
+			$('#usererror').css('display','none');
+		}
+		
+        if (verCd.replace(/(^\s*)|(\s*$)/g, "").length==0) {
+            $('#usererror').css('display','block').html("请输入图片验证码");
+            return false; 
+        } 
+
+		var logPsw = powerobj1.replace(/\+/g, '%2B').replace(/\"/g,'%22').replace(/\'/g, '%27').replace(/\//g,'%2F');
+		var req_param = "MBLNO_OR_LOGID="+logId+"&LOG_PSWD_IN="+logPsw+"&VER_CD="+verCd+"&PSN_CRP_FLG=0&random="+Math.random();
+
+
+		$.ajax({
+			type:"POST",
+			url:"/newweb/service/send_log_msg.xhtml",
+			processData:false,
+			data:req_param,
+			dataType:"json",
+			success:function(data) {
+				if (data.GWA.MSG_CD == 'URM00000') {
+					chkSmsFlg='Y';
+					smsSndFlg=1;
+					$("#MBL_VER_CD").attr("disabled",false);
+					$("#getSmsCode").attr("disabled",false);
+					var msg=typeof(data.GWA.MSG_INF)=="undefined"?"":data.GWA.MSG_INF;
+					if(msg.length!=0){
+						chkSmsFlg='N';
+						$("#CHK_SMS_FLG").val('N');
+						$('#usererror').css('display','block').html(data.GWA.MSG_INF);
+						$("#MBL_VER_CD").attr("disabled",true);
+						$("#getSmsCode").attr("disabled",true);
+					}
+					if(chkSmsFlg=='Y'){
+						waitSM();
+					}
+				}else{
+					if(data.RSP_IN_BLST=='Y'){
+						alert('由于您的个人信息在公安的黑名单内,目前无法登陆.如有问题请联系秒付宝客服.电话:0830-3153101');
+						chkSmsFlg='N';
+						$("#CHK_SMS_FLG").val('N');
+						$("#MBL_VER_CD").attr("disabled",true);
+						$("#getSmsCode").attr("disabled",true);
+						return false;
+					}
+					$('#usererror').css('display','block').html(data.GWA.MSG_INF);
+					return false;
+				}
+			},
+			error:function(data) {
+				alert("对不起，短信发送次数超限！");
+			}
+		});
+		return true;
+	}
+	function waitSM() {
+		if (kj_wait == 0) {
+			$("#getSmsCode").val("获取验证码");
+			if(chkSmsFlg=='Y'){
+				$("#getSmsCode").attr("disabled", false);
+			}
+			clearInterval(kj_isinerval);
+		} else {
+			$("#getSmsCode").attr("disabled", true);
+			$("#getSmsCode").val("重新获取(" + kj_wait + ")");
+			kj_wait--;
+			kj_isinerval = window.setTimeout("waitSM()", kj_speed);
+		}
+	}
+	
+	function checkoper(){
+		if ($.trim($("#USR_ID").val()) == "") {
+            $('#usererror').css('display','block').html("请输入登录用户名");
+            return false;
+        }else{
+			$('#usererror').css('display','none');
+			return true;
+		}
+	}
+	function checkcode(){
+		var verCd=$.trim($("#VER_CD").val());
+		if (verCd.length == 0) {
+            $('#usererror').css('display','block').html("请输入图片验证码");
+            return false;
+        }else if (verCd.length == 4){
+			$('#usererror').css('display','none');
+			return true;
+		}else{
+			$('#usererror').css('display','block').html("请输入正确的图片验证码");
+            return false;
+		}
+	}
+
+	function checksmscode(){
+		var smsCd=$.trim($("#MBL_VER_CD").val());
+		if (smsCd.length == 0) {
+            $('#usererror').css('display','block').html("请输入短信验证码");
+            return false;
+        }else if (smsCd.length == 6) {
+            $('#usererror').css('display','none');
+			return true;
+        }else{
+			$('#usererror').css('display','block').html("请输入正确的短信验证码");
+            return false;
+		}
+	}
+</script>
+<!--[if lte IE 6]>
+   <script src="../script/DD_belatedPNG_0.0.8a-min-1.js" tppabs="newweb/script/DD_belatedPNG_0.0.8a-min.js" language="javascript"></script>
+   <script>
+     DD_belatedPNG.fix('div,li,a,h3,span,img,.png_bg,ul,input,dd,dt,a,a:hover');
+   </script>
+<![endif]-->
+</head>
+<body class="body_register">
+	<div id="container">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="top">
+        <ul>
+            <li><a href="../../index.jsp" tppabs="index_main.jsp" target="_blank">网站首页</a></li>
+            <li><a href="href="../../nihelplist_center.jsp"" tppabs="newweb/service/nihelplist_center.xhtml">帮助中心</a></li>
+            
+            
+            <li><a href="nlogin-1.xhtml.htm" tppabs="newweb/service/nlogin.xhtml">登录</a></li> 
+            
+        </ul>
+  </div>
+
+		<!--顶部帮助 退出结束-->
+
+		<div id="register_header">
+			<div class="left returnpasswd_logo">
+				<a href="../../index.jsp" tppabs="index_main.jsp"><img
+					src="../pic/logo_login-1.png" tppabs="newweb/pic/logo_login.png" border="0" /></a>
+			</div>
+		</div>
+
+		<!--logo tel 结束-->
+		<div class="main_login">
+			<div id="login_l" class="left"></div>
+			<div id="login_r" class="left">
+				<div class="clearfix login_r_tab barProds left">
+					<ul class="tabs">
+					<li class="tab2"><a class="selected"
+							href="../../home.jsp.htm" tppabs="home.jsp"> 商户登录 </a></li>
+					<li class="tab1"><a>个人登录</a></li>
+						
+					</ul>
+					<!--右边结束-->
+					<div class="tabContent clearfix">
+
+						<div class="tab1" style="display:block;">
+							<div class="login_labela">
+								<font id="usererror" name="usererror" style="display: none; height: 34px;" class="tsypic"></font>
+							</div>
+							<form name="form" id="form" method="post" action="">
+								<label class="login_label">
+									<input type="text" id="USR_ID" name="USR_ID" class="login_inputzh" placeholder="用户名" onblur="checkoper();" style="color: #999" />
+								</label>
+								<label class="login_mminputzh">
+									<span id="usr_pass" placeholder="输入密码" style="color: #999">
+									<script type="text/javascript">writePassShow("user_pswd_ocx",{"accepts":"[:graph:]+","caption":"秒付宝","width":198,"height":18,"textColor":"#000000","backColor":"#FFFFFF","classnm":""},"usr_pass");</script>
+									<input type="hidden" id="user_pswd" name="user_pswd" value="" />
+									</span>
+								</label>
+								
+							    <label class="loginyzma"> 
+									<span style="folat: left; width: 70%;">
+										<input id="VER_CD" name="VER_CD" type="text" size="4" maxlength="4" class="loginyzm" placeholder="请输入验证码"  onblur="checkcode();" style="color: #999">
+										<a href="#" name="validCode_a" onclick="JavaScript:updateCode();return false">
+										<img id="divCode" class="margint" src="../common/codeImage-1.jsp.jpg" tppabs="newweb/common/codeImage.jsp" align='middle' width="64" height="34" />
+										</a>
+									</span>
+									<span style="folat: right; width: 30%;">
+										<a href="#" onclick="JavaScript:updateCode();return false">
+										<font class="youjl ine-h28" color="#555555">换一张</font> </a>
+									</span>
+								</label> 
+								
+								<label class="loginyzma">
+									<span style="folat:left;width:60%;">
+									<input id="MBL_VER_CD" name="MBL_VER_CD" type="text" size="6" maxlength="6" class="login_mminputyz" tabindex='3' placeholder="请输入验证码" onblur="checksmscode();" style="color: #999"/></span>
+									<span style="folat:right; width:40%;"><input id="getSmsCode" onclick="send(60);" type="button" class="login_mminputan" value="获取手机验证码" /></span>
+								</label>
+
+								<label class="loginyzma">
+									<input id="LogIn" type="button" class="logindlan" onclick="userSubmit('user_pswd_ocx')" value="登 录"/></label>
+
+								<div class="login_labelc">
+									<a href="nSafeCenter_login_pswd-1.xhtml.htm" tppabs="newweb/service/nSafeCenter_login_pswd.xhtml">忘记密码？</a>
+								</div>
+								<div class="login_labeld">
+									<a href="nregiste_all-1.xhtml.htm" tppabs="newweb/service/nregiste_all.xhtml">免费注册</a> | <a
+										href="nihelplist_center-1.xhtml-help_typ=0.htm" tppabs="newweb/service/nihelplist_center.xhtml?HELP_TYP=0"
+										target="_blank">安全控件有问题？</a>
+								</div>
+
+								<input type="hidden" name="CHK_SMS_FLG" id="CHK_SMS_FLG" value="Y" />
+								<input type="hidden" name="JRN_KEY" id="JRN_KEY" value="" />
+								<input type="hidden" name="FLAG" id="FLAG" value="" />
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--主结束-->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="foot" class="left">
+	<div class="left tcenter width1002">
+		<a href="../../index.jsp" tppabs="index_main.jsp" class="ray_a marginr5">首页</a>
+		<font class="gray_foot_line marginr5">|</font> <a
+			href="nabout_index-1.xhtml.htm" tppabs="newweb/service/nabout_index.xhtml"
+			class="ray_a marginr5">关于我们</a> <font class="gray_foot_line marginr5">|</font>
+		<a href="nabout_contact-1.xhtml.htm" tppabs="newweb/service/nabout_contact.xhtml"
+			class="ray_a marginr5">联系我们</a> <font class="gray_foot_line marginr5">|</font>
+		<a href="nabout_partner_business-1.xhtml.htm" tppabs="newweb/service/nabout_partner_business.xhtml"
+			class="ray_a marginr5">合作伙伴</a> <font class="gray_foot_line marginr5">|</font><a
+			href="nabout_maps-1.xhtml.htm" tppabs="newweb/service/nabout_maps.xhtml"
+			class="ray_a marginr5">站点地图</a>
+	</div>
+	<div class="left tcenter width1002 gray_foot">Copyright&#169;2014-2019
+		成都华翔通达网络科技有限公司 版权所有 粤ICP备11009418号-2 客服热线：0830-3153101</div>
+	
+</div>
+		<!--foot结束-->
+	</div>
+	<!--所有结束-->
+<script type="text/javascript" src="../script/jquery.enplaceholder-1.js" tppabs="newweb/script/jquery.enplaceholder.js"></script>
+<script type="text/javascript">
+ <!-- placeholder 提示 -->     
+	$('#form #USR_ID').placeholder({isUseSpan:true});
+    $('#form #VER_CD').placeholder();
+	var msg='URM00000';
+	if(msg!='' && msg!='URM00000'){
+		$('#usererror').css('display','block').html("您的输入有错");
+	}
+</script>
+</body>
+</html>
+oni

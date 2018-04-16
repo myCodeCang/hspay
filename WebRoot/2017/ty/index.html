@@ -1,0 +1,247 @@
+﻿<!DOCTYPE HTML>
+
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>秒付宝钱包-首页</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</head>
+
+<body>
+
+<!-- header start -->
+
+
+
+<link rel="stylesheet" type="text/css" href="css/index.css?v=1.0.3" />
+<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css?v=1.0.3" />
+<script type="text/javascript">
+</script>
+<div class="header clearfix">
+    <div class="wrap">
+        <div class="logo">
+            <h1><a href="https://llwalletwebuat.lianlianpay.com/index.jsp">秒付宝钱包</a></h1>
+            
+                
+                    <h2><span>商户体验版</span></h2>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            
+        </div>
+        
+            
+		        <ul class="header-link">
+                    <li><a href="https://llwalletwebuat.lianlianpay.com/login.htm">登录</a></li>
+                    <li><a href="https://llwalletwebuat.lianlianpay.com/toRegisterOnregister.htm">注册</a></li>
+                </ul>
+            
+            
+        
+    </div>
+</div>
+<!-- header end -->
+
+<div id="pagepiling">
+    <div class="section section1">
+    	<div class="icon1"><img src="images/sec1.png" alt="秒付宝钱包"></div>
+        <div class="txt1"><img src="images/sec1-1.png" alt="安全、灵活、放心"></div>
+        <div class="txt2"><img src="images/sec1-2.png" alt="的商户专属托管钱包"></div>
+     	<a href="https://llwalletwebuat.lianlianpay.com/login.htm" class="btn btn1">立即体验</a>
+    </div>
+    <div class="section section2">
+    	<h3 class="title">三步快速接入</h3>
+        <div class="three-step">
+        	<ul>
+            	<li>
+                	<i class="one">01</i>
+                    <h4>业务申请</h4>
+                    <p>填写相关资料、提交业务申请<br>获得个性化钱包解决方案</p>
+                </li>
+                <li>
+                	<i class="two">02</i>
+                    <h4>合同签署</h4>
+                    <p>达成合作意向，签署纸质合同</p>
+                </li>
+                <li>
+                	<i class="three">03</i>
+                    <h4>开发上线</h4>
+                    <p>确定解决方案，完成开发、上线</p>
+                </li>
+            </ul>
+        </div>
+    	<a href="https://llwalletwebuat.lianlianpay.com/login.htm" class="btn btn2">立即体验</a>
+    </div>
+    <div class="section section3">
+    	<h3 class="title" style="margin-left:-64px">产品特点</h3>
+        <div class="feature">
+        	<ul>
+            	<li>
+                	<i class="safety"></i>
+                    <h4>安全</h4>
+                    <p>绑卡即赠盗刷险<br>强大的风控团队保驾护航</p>
+                </li>
+                <li>
+                	<i class="profession"></i>
+                    <h4>专业</h4>
+                    <p>专属第三方支付机构<br>提供安全的底层技术及运维支持</p>
+                </li>
+                <li>
+                	<i class="fast"></i>
+                    <h4>快速</h4>
+                    <p>标准化定义接口<br>快速建立钱包账户体系</p>
+                </li>
+            </ul>
+        </div>
+    	<a href="https://llwalletwebuat.lianlianpay.com/login.htm" class="btn btn3">立即体验</a>
+    </div>
+</div>
+<div style="position:fixed; z-index:99999; right:10px; bottom:10px;display: none;">
+<img src="images/prod_qrcode.png"/>
+<p style="color:#fff">android客户端下载</p>
+</div>
+<div class="footer">秒付宝钱包 版权所有</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#pagepiling').pagepiling({
+		sectionsColor: ['#288cd6', '#e35e5e', '#28ad63'],
+		navigation: {
+            'textColor': '#fff',
+            'bulletsColor': '#fff',
+            'position': 'right',
+            'tooltips': ['秒付宝钱包', '快速接入', '产品特点']
+        },
+		afterLoad: function(anchorLink, index){
+			
+			//section 2
+			if(index == 2)
+			{
+				$(".section2 .title").css({"animation-name":"fadeInfromBottom"});
+				$(".three-step li").eq(0).css({"animation-name":"fadeInfromBottom"});
+				$(".three-step li").eq(1).css({"animation-name":"fadeInfromBottom","animation-delay":"0.2s"});	
+				$(".three-step li").eq(2).css({"animation-name":"fadeInfromBottom","animation-delay":"0.4s"});
+				$(".btn2").css({"animation-name":"fadeInfromBottom","animation-delay":"0.6s"});
+			}
+			
+			//section 2
+			if(index == 3)
+			{
+				$(".section3 .title").css({"animation-name":"fadeInfromBottom"});
+				$(".feature li").eq(0).css({"animation-name":"fadeInfromBottom"});
+				$(".feature li").eq(1).css({"animation-name":"fadeInfromBottom","animation-delay":"0.2s"});	
+				$(".feature li").eq(2).css({"animation-name":"fadeInfromBottom","animation-delay":"0.4s"});
+				$(".btn3").css({"animation-name":"fadeInfromBottom","animation-delay":"0.6s"});
+			}	
+		}
+	});
+	
+	
+	$(".btn").click(function(e) {
+	 
+	  if ($(this).hasClass('slider')) {
+		return;
+	  }
+
+	 
+	  $(".ripple").remove();
+	 
+	  var posX = $(this).offset().left,
+		  posY = $(this).offset().top,
+		  buttonWidth = $(this).width(),
+		  buttonHeight = $(this).height();
+	 
+	  $(this).prepend("<span class='ripple'></span>");
+	 
+	  if (buttonWidth >= buttonHeight) {
+		buttonHeight = buttonWidth;
+	  } else {
+		buttonWidth = buttonHeight;
+	  }
+	 
+	  var x = e.pageX - posX - buttonWidth / 2;
+	  var y = e.pageY - posY - buttonHeight / 2;
+	 
+	  $(".ripple").css({
+		width: buttonWidth,
+		height: buttonHeight,
+		top: y + 'px',
+		left: x + 'px'
+	  }).addClass("rippleEffect");
+	   
+	});               
+})
+// 2016-10-20
+function changeSize()
+{
+	var oW = $(window).width();
+	var oH = $(window).height();
+
+	if(oH<=768)
+	{
+		//page1
+		$(".icon1").css({"margin-left":-200});
+		$(".icon1 img").width("60%");
+		$(".txt1").css({"top":300});
+		$(".txt2").css({"top":400});	
+		$(".btn1").css({"bottom":"10%"});
+		
+		//page2
+		$(".section2 .title").css({"top":100});
+		$(".three-step li").css({"height":290});
+		$(".three-step").css({"top":160});	
+		$(".btn2").css({"bottom":"10%"});
+		
+		//page3
+		$(".section3 .title").css({"top":100});
+		$(".feature").css({"top":100});
+		$(".feature li i").css({"margin-bottom":0});
+		$(".feature p").css({"padding-top":0});		
+		$(".btn3").css({"bottom":"15%"});	
+	}
+	else
+	{
+		//page1
+		$(".icon1").css({"margin-left":-180});
+		$(".icon1 img").width("100%");
+		$(".txt1").css({"top":410});
+		$(".txt2").css({"top":516});	
+		$(".btn1").css({"bottom":"20%"});
+		
+		//page2
+		$(".section2 .title").css({"top":160});
+		$(".three-step li").css({"height":320});
+		$(".three-step").css({"top":240});	
+		$(".btn2").css({"bottom":"20%"});
+		
+		//page3
+		$(".section3 .title").css({"top":160});
+		$(".feature").css({"top":200});
+		$(".feature li i").css({"margin-bottom":20});
+		$(".feature p").css({"padding-top":20});		
+		$(".btn3").css({"bottom":"20%"});		
+	}		
+}
+changeSize();
+
+window.onresize = function()
+{
+	changeSize();	
+}
+</script>
+
+</body>
+</html>

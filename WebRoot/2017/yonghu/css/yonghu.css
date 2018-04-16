@@ -1,0 +1,338 @@
+@charset "utf-8";
+html, body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	}
+body{
+	background:#f2f2f2;
+	font-size: 14px;
+}
+.top{
+	height:30px; line-height:30px;
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	z-index:999;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff);
+	background:rgba(255,255,255, 0.8);
+	}
+.top-nav{
+	font-size: 16px;
+	}
+.top-nav a{
+	display:inline-block;
+	margin-right:40px;
+	color:#999
+	}	
+.top-nav a.cur,
+.top-nav a:hover{
+	color:#333;
+	}
+.top-link a{
+	color:#666;
+	margin-right:20px;
+	display:inline-block;
+	}	
+.top-link a:hover{
+	color:#333;
+	}	
+.language{
+	float:right;
+	height:22px;
+	}
+.language a{
+	display:block;
+	background:url(../images/icon.png) 28px -664px;
+	padding-right:36px;
+	}
+.language a:hover{
+	color:#2e92ff;
+	background-position:28px -706px;
+	}	
+
+.yh-header{
+	background:none;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff);
+	background:rgba(255,255,255, 0.5);
+	width:100%;
+	min-width:1200px;
+	position:absolute;
+	z-index:999;
+	top:30px;
+	height:60px;
+	}
+.header-link a{
+	line-height:30px;
+	color:#fff;
+	margin-top:10px;
+	display:inline-block;
+	padding:5px 10px;
+	}
+.header-link a:hover{
+	color:#333;
+	}
+.yh-logo{
+	margin:15px 0 0 0;
+	}
+.yh-nav{
+	margin-left:50px;
+	}
+.yh-nav li{
+	float:left;
+	line-height:60px;
+	}
+.yh-nav li a{
+	display:block;
+	padding:0 20px;
+	font-size: 18px;
+	color:#fff
+	}
+.yh-nav li a.cur,
+.yh-nav li a:hover{
+	color:#333;
+	}	
+/* swiper 扩展 */
+.pagination {
+  position: absolute;
+  z-index: 20;
+  right: 20px;
+  width: 12px;
+  top:45%;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 8px;
+  background: #fff;
+  margin: 3px 0px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.swiper-pagination-switch:hover{
+	opacity: 1;
+	}
+.swiper-active-switch {
+  background: #2e92ff;
+  opacity: 1;
+}
+/* 设置每一页背景图 */
+.slide01, .slide02, .slide03, .slide04, .slide05{
+	position:relative;
+	animation:3s ease;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	background-attachment:fixed;
+	zoom:1;
+	}
+.slide01{
+	background:url(../images/user_bg01.jpg) center center no-repeat;
+	background-size:cover;
+	}
+.slide02{
+	background:url(../images/user_bg02.jpg) center center no-repeat;
+	background-size:cover;
+	}
+.slide03{
+	background:url(../images/user_bg03.jpg) center center no-repeat;
+	background-size:cover;
+	}
+.slide04{
+	background:url(../images/user_bg04.jpg) center center no-repeat;
+	background-size:cover;
+	}
+.slide05{
+	background:url(../images/user_bg05.jpg) center center no-repeat;
+	background-size:cover;
+	}
+
+.slogan01{
+	position:absolute;
+	top:36%;
+	left:180px;
+	}
+.slogan01 p{
+	color:#fff;
+	font-size: 18px;
+	line-height:26px;
+	margin:20px 0 0 80px
+	}
+.slogan02{
+	position:absolute;
+	top:42%;
+	left:180px;
+	}
+.slogan02 p{
+	color:#fff;
+	font-size: 18px;
+	line-height:30px;
+	margin:20px 0 0 0
+	}
+.slogan03{
+	position:absolute;
+	top:40%;
+	right:100px;
+	}
+@media screen and (max-width: 1280px) {
+	.slogan03{
+		position:absolute;
+		top:40%;
+		right:25%;
+	}
+}
+.slogan03 p{
+	color:#fff;
+	font-size: 18px;
+	line-height:26px;
+	margin:20px 0 0 0
+	}
+.slogan04{
+	position:absolute;
+	top:32%;
+	left:100px;
+	}
+.slogan04 p{
+	color:#fff;
+	font-size: 18px;
+	line-height:30px;
+	margin:10px 0 0 0
+	}
+.slogan05{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	top:40%;
+	}
+.slogan05 img{
+	width:70%;
+	}
+@media screen and (max-width: 1280px) {
+	.slogan05 img{
+		width:60%;
+	}
+}
+/* 底部内容 */
+.ftBar{
+	height:70px;
+	position:absolute;
+	z-index:999;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#77000000,endColorstr=#77000000);
+	background:rgba(0,0,0, 0.6);
+	}
+.ftBar.last{
+	text-align:center;
+	height:35px;
+	line-height:35px;
+	color:#999;
+	}
+.user-pro{
+	width:1200px;
+	margin:0 auto;
+	color:#fff;
+	}
+.pro-name{
+	line-height:70px;
+	float:left;
+	}
+.pro-intro{
+	border-left:2px solid #fff;
+	float:left;
+	margin:15px 0 0 20px;
+	padding:0 0 0 20px;
+	height:40px; line-height:20px
+	}
+.pro-intro.lh40{ line-height:40px;}
+.pro-detail{
+	float:right;
+	line-height:70px;
+	display:none
+	}
+.pro-detail a{
+	color:#2e92ff;
+	margin-left:40px
+	}
+.pro-detail a:hover{
+	text-decoration:underline;
+	}
+	
+.arrow_down{
+	width:50px;
+	height:50px;
+	position:fixed;
+	z-index:9999;
+	left:50%;
+	margin-left:-25px;
+	bottom:80px;
+	background:url(../images/icon.png) 7px -562px no-repeat;
+	}
+.arrow_down:hover{
+	cursor:pointer;
+	}
+	
+/* animate */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+.mask{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0; right:0;
+	top:0; bottom:0;
+	z-index:20000000;
+	background:#000;
+	opacity:0.60;
+	filter:alpha(opacity=60);
+	background:rgba(0,0,0, 0.60);
+	display:none;
+	}
+.change-phone{
+	position:absolute;
+	top:6%; left:50%;
+	z-index:200000001;
+	margin-left:-500px;
+	border-radius:10px; 
+	background:#fff; 
+	box-shadow:0 0 10px rgba(0,0,0, 0.2);
+	padding:20px 0 30px 0;
+	}

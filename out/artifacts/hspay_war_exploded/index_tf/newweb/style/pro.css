@@ -1,0 +1,553 @@
+@charset "utf-8";
+/* CSS Document */
+.payclass_left {width:229px;float:left;margin-bottom:10px;background-color:#efeff0;border-left: 1px solid #dddbde;border-bottom: 1px solid #dddbde; background:url("../pic/payclass_left_bg.gif")/*tpa=https://www.tftpay.com/newweb/pic/payclass_left_bg.gif*/ repeat-y;}
+.payclass_left dt a,.payclass_left dt a:hover,.payclass_left dt a:link, .payclass_left dt a:visited ,.payclass_left .tit a,.payclass_left .tit a:hover,.payclass_left .tit a:link, .payclass_left .tit a:visited { color:#FFF;font-size:14px;font-weight:bold;}
+.payclass_main_l_tit{font-size: 14px;line-height: 34px;font-weight: bold;background: url("../pic/left2_h_bg.jpg")/*tpa=https://www.tftpay.com/newweb/pic/left2_h_bg.jpg*/;background-repeat: repeat-x;text-align:center; color:#fff;border-top: 1px solid #8c4b9d;border-left: 1px solid #8c4b9d;border-right: 1px solid #8c4b9d;}
+.payclass_left .tit, .payclass_left dt {
+	line-height: 40px;
+	font-weight: bold;
+	text-align:left;
+	color:#414042;
+	text-indent:40px;
+	height:40px;
+	background: url("../pic/payclass_dt_bg.jpg")/*tpa=https://www.tftpay.com/newweb/pic/payclass_dt_bg.jpg*/;
+	background-repeat: no-repeat;
+}
+.payclass_left dd { font-size:12px; height:40px;line-height:40px;/*padding:0 16px;*/ background:url("../pic/payclass_left_dd_bg.jpg")/*tpa=https://www.tftpay.com/newweb/pic/payclass_left_dd_bg.jpg*/;background-repeat: repeat-x;width:229px;}
+.payclass_left dd.dd_bottom {border-bottom:none;}
+.payclass_left dd a {font-size:12px;padding-left:25px;display:block;background:url("../pic/payclass_left_dd_bg2.gif")/*tpa=https://www.tftpay.com/newweb/pic/payclass_left_dd_bg2.gif*/ no-repeat left;height:40px;}
+.payclass_left dd a:hover,.payclass_left dd a.current {font-size:12px;background:url("../pic/payclass_left_dd_bg2.jpg")/*tpa=https://www.tftpay.com/newweb/pic/payclass_left_dd_bg2.jpg*/ no-repeat left;height:40px;
+}/*左侧菜单第一样式*/
+.payclass_left dd.icon{height:40px;line-height:40px;}
+.payclass_left dd.icon:hover,.payclass_left dd.icon.current{font-size:12px;background:url("../pic/payclass_left_dd_bg2.jpg")/*tpa=https://www.tftpay.com/newweb/pic/payclass_left_dd_bg2.jpg*/ no-repeat left; height:40px;}
+.payclass_left dd.icon.current2{font-size:14px;background:url("../pic/payclass_left_dd_bg3.jpg")/*tpa=https://www.tftpay.com/newweb/pic/payclass_left_dd_bg3.jpg*/ no-repeat left; height:40px;}
+.payclass_left dd.icon a{display:block;height:40px;background:none;font-size:12px;}
+/*左侧菜单第一样式结束*/
+.payclass_r{width:751px;float:right; padding-left:20px;border-top: 1px solid #ebebec;border-right: 1px solid #ebebec;border-bottom: 1px solid #ebebec;}
+.warpbox{ border:1px solid #DCDCDC;
+position:relative;
+height:auto; width:728px;}
+.warpbox2{ border:1px solid #DCDCDC;
+position:relative;
+height:auto; width:728px;}
+.warpbox3{
+	margin-bottom:10px;
+	position:relative;
+	height:auto;
+	width:728px;
+}
+.warpbox_center2_0{
+	position:relative;
+	width:720px;
+	margin-top:15px;
+	margin-left:5px;
+    height:auto; 
+	padding-bottom:20px;
+}
+.warpbox_center3_0{
+	position:relative;
+	width:720px;
+	margin-left:5px;
+	height:auto; 
+	padding-bottom:20px;
+}
+.pro{border-bottom: 1px solid #ececec; line-height:40px; float:left; 
+margin-bottom:20px; width:92%; display:inline; padding:10px;
+}
+.pro2{ line-height:40px; float:left; 
+margin-bottom:20px; width:92%; display:inline; padding:10px;
+}
+.pro_index_l{ width:365px; float:left; line-height:18px;}
+.pro_index_l h4{
+	font-size:14px;
+	font-weight:bold;
+}
+.pro_other{ float:left;}
+.pro_otherul{ width:880px; float:left; margin-left:42px; margin-bottom:30px;padding:0px; display:inline;}
+.pro_otherul li{ width:430px; float:left; border:1px solid #fff; }
+.pro_otherul li h4{font-size:14px;font-weight:bold;margin-top:30px;
+}
+.pro_otherul li p{margin-top:8px;line-height:18px;
+}
+.icon_pro_otherul1{
+	background: url("../pic/icon_pro_otherul1.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_otherul1.png*/;background-repeat: no-repeat;background-position: left;height:110px;text-align: left;
+}
+.icon_pro_otherul2{
+	background: url("../pic/icon_pro_otherul2.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_otherul2.png*/;background-repeat: no-repeat;background-position: left;height:110px;text-align: left;
+}
+.icon_pro_otherul3{
+	background: url("../pic/icon_pro_otherul3.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_otherul3.png*/;background-repeat: no-repeat;background-position: left;height:110px;text-align: left;
+}
+.icon_pro_otherul4{
+	background: url("../pic/icon_pro_otherul4.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_otherul4.png*/;background-repeat: no-repeat;background-position: left;height:110px;text-align: left;
+}
+.icon_pro_otherul5{
+	background: url("../pic/icon_pro_otherul5.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_otherul5.png*/;background-repeat: no-repeat;background-position: left;height:110px;text-align: left;
+}
+.icon_pro_otherul6{
+	background: url("../pic/icon_pro_otherul6.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_otherul6.png*/;background-repeat: no-repeat;background-position: left;height:110px;text-align: left;
+}
+.payclass_a:link{
+	font-size: 12px;
+	color:#6d6e71;
+	text-decoration: none;
+}
+.payclass_a:visited{
+	font-size: 12px;
+	color:#6d6e71;
+	text-decoration: none;}
+.payclass_a:hover{
+	text-decoration: none;
+	font-size: 12px;
+	color:#6d6e71;
+	text-decoration: none;
+	background:#f9f9f9;
+	border:1px solid #f2f3f3;
+}/* 灰色链接*/
+
+
+.pro_tit{font-size:16px;color:#975ca6;line-height:18px;background-position: left;text-align: left;text-indent: 15px;background: url("../pic/pro_tit_icon.jpg")/*tpa=https://www.tftpay.com/newweb/pic/pro_tit_icon.jpg*/;background-repeat: no-repeat; font-weight:bold; 
+}
+.pro_tit_more{ margin-right:20px;line-height:18px;}
+.blue2_a:link{
+	
+	font-size: 12px;
+	color:#338dcc;
+	text-decoration: none;
+}
+.blue2_a:visited{
+	font-size: 12px;
+	color:#338dcc;
+	text-decoration: none;}
+.blue2_a:hover{
+
+	font-size: 12px;
+	color:#338dcc;
+	text-decoration:underline;
+}/*蓝色链接*/
+#pro_l{width:330px; margin-left:26px; display:inline;}
+#pro_l h1{font-family: "微软雅黑";font-size: 24px;line-height: 72px;;color: #87bc22;
+}
+#pro_l p{ color:#636466; line-height:18px;}
+.pro_l_line{background: url("../pic/pro_l_line.jpg")/*tpa=https://www.tftpay.com/newweb/pic/pro_l_line.jpg*/;height: 1px;width: 319px;margin-top: 22px;margin-bottom: 18px;
+}
+#pro_l h4{font-family: Arial, Helvetica, sans-serif;font-size: 14px;line-height: 18px;color: #8c409f;font-weight: bold;background: url("../pic/pro_l_h4.jpg")/*tpa=https://www.tftpay.com/newweb/pic/pro_l_h4.jpg*/;background-repeat: no-repeat;background-position: left;text-align: left;text-indent: 14px; margin-bottom:5px;
+}
+.pro_l_ul{ margin:0; padding:0; float:left;}
+.pro_l_ul li{list-style-position: inside;list-style-image: none;list-style-type: disc; line-height:20px;
+}
+#pro_l span{margin-right:20px;text-align: left;text-indent: 45px; line-height:25px;display:block;
+}
+.iconul{ margin:0; padding:0; float:left; width:312px;	list-style-type: none;list-style-image: none;}
+.iconul li{
+	width:104px;
+	float:left;
+	list-style-type: none;
+	list-style-image: none;
+	line-height:30px;
+}
+.icon_kuaijie_min{
+	background: url("../pic/icon_kuaijie_min.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_kuaijie_min.jpg*/;background-repeat: no-repeat;background-position: left;height:30px;text-align: left;
+	text-indent: 40px;
+}
+.icon_zhenshu_min{background: url("../pic/icon_zhenshu_min.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_zhenshu_min.jpg*/;background-repeat: no-repeat;background-position: left; height:30px;text-align: left;text-indent: 40px;}
+.icon_accout_min{background: url("../pic/icon_accout_min.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_accout_min.jpg*/;background-repeat: no-repeat;background-position: left; height:30px;text-align: left;text-indent: 40px;}
+#pro_wap{width:660px; margin-left:26px; display:inline;}
+#pro_wap h1{font-family: "微软雅黑";font-size: 24px;line-height: 72px;;color: #87bc22;
+}
+#pro_wap h2{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 93px;
+	color: #87bc22;
+	text-align:left;
+	text-indent: 80px;
+}
+#pro_wap h4{font-family: Arial, Helvetica, sans-serif;font-size: 14px;line-height: 18px;color: #8c409f;font-weight: bold;background: url("../pic/pro_l_h4.jpg")/*tpa=https://www.tftpay.com/newweb/pic/pro_l_h4.jpg*/;background-repeat: no-repeat;background-position: left;text-align: left;text-indent: 14px; margin-bottom:5px;
+margin-top:30px;}
+#pro_wap p{ color:#636466; line-height:18px; width:650px;}
+.pro_wapgreen14_b{ color:#9ec94c;
+font-size:14px;
+font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+.icon_pro_other1{
+	background: url("../pic/icon_pro_other1.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_other1.png*/;background-repeat: no-repeat;background-position: left;height:93px;text-align: left;
+}
+.icon_pro_other2{
+	background: url("../pic/icon_pro_other2.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_other2.png*/;background-repeat: no-repeat;background-position: left;height:93px;text-align: left;
+}
+.icon_pro_other3{
+	background: url("../pic/icon_pro_other3.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_other3.png*/;background-repeat: no-repeat;background-position: left;height:93px;text-align: left;
+}
+.icon_pro_other4{
+	background: url("../pic/icon_pro_other4.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_other4.png*/;background-repeat: no-repeat;background-position: left;height:93px;text-align: left;
+}
+.icon_pro_other5{
+	background: url("../pic/icon_pro_other5.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_other5.png*/;background-repeat: no-repeat;background-position: left;height:93px;text-align: left;
+}
+.icon_pro_other6{
+	background: url("../pic/icon_pro_other6.png")/*tpa=https://www.tftpay.com/newweb/pic/icon_pro_other6.png*/;background-repeat: no-repeat;background-position: left;height:93px;text-align: left;
+}
+.pro_bz_bg{background: url("../pic/pro_bz_bg.png")/*tpa=https://www.tftpay.com/newweb/pic/pro_bz_bg.png*/;background-repeat: no-repeat;height: 28px;width: 632px; margin-top:15px;
+}
+.pro_bz_bg span{ margin-left:75px;line-height:28px; color:#5c79b3;}
+.proh4{font-family: Arial, Helvetica, sans-serif;font-size: 14px;line-height: 18px;color: #8c409f;font-weight: bold;background: url("../pic/pro_l_h4.jpg")/*tpa=https://www.tftpay.com/newweb/pic/pro_l_h4.jpg*/;background-repeat: no-repeat;background-position: left;text-align: left;text-indent: 14px; margin-bottom:5px; margin-left:50px; margin-top:20px;
+}
+.ui-round-mar {
+	margin: 20px auto 15px;
+}
+.tutorial {
+	padding-top: 20px;
+}
+.fn-clear:after,.ui-title:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}.fn-clear,.ui-title{zoom:1;}
+.pt_20 {
+	padding-top: 20px;
+}
+.ui-tclayout-right {
+	margin-left: 20px;
+	padding-top: 30px;
+	width: 500px;
+	height:456px;;
+	background: url("../pic/ui-tclayout-right_bg.jpg")/*tpa=https://www.tftpay.com/newweb/pic/ui-tclayout-right_bg.jpg*/;
+	background-repeat: no-repeat;
+	background-position: center;
+	display:inline;	
+}
+.ui-con {
+	line-height: 18px;
+	margin-bottom: 20px;
+}
+.uili-arrow {
+	background: url("../pic/btn.png")/*tpa=https://www.tftpay.com/newweb/pic/btn.png*/ no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 42px;
+	outline: medium none;
+	position: absolute;
+	top: 200px;
+	width: 30px;
+}
+.uili-arrow-prev {
+	background-position: -243px -60px;
+	left: 0;
+}
+.uili-arrow-next {
+	background-position: -272px -60px;
+	left: 283px;
+}
+.uili-step {
+	padding-bottom: 2px;
+	text-align: center;
+	position: relative;
+	width: 310px;
+}
+.uili-step2 {
+	padding-bottom: 2px;
+	text-align: center;
+	position: relative;
+	width: 124px;
+}
+.uili-step .uili-step2 .uili-stepbtn {
+	text-decoration: none;
+	background-image: -moz-linear-gradient(center top , #FFFFFF, #E8E8E8);
+	border: 1px solid #C2C2C2;
+	margin: 3px auto;
+	min-height: 24px;
+	padding: 7px;
+	text-align: center;
+	width: 120px;
+	border-radius: 4px 4px 4px 4px;
+	cursor: pointer;
+	display: block;
+}
+.uili-step .cur {
+	background-image: -moz-linear-gradient(center top , #EAF5FF, #b2d235);
+	border: 1px solid #72B6EF;
+}
+.uili-intext {
+	color: #333333;
+	display: block;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.new-tab .ui-tab-body {
+	overflow: hidden;
+	padding: 17px 0;
+}
+.ui-tclayout-left {
+	background: url("../pic/phonebg.png")/*tpa=https://www.tftpay.com/newweb/pic/phonebg.png*/ no-repeat scroll left 10px transparent;
+	height: 490px;
+	margin-left: 30px;
+	overflow: hidden;
+	width: 310px;
+}
+.ui-tclayout-left, .ui-tclayout-right {
+	display: inline;
+	float: left;
+	position: relative;
+}
+.gallery {
+	margin: 0 59px 0 62px;
+	overflow: hidden;
+	padding: 60px 0 140px;
+	position: relative;
+	width: 181px;
+}
+.gallery-box {
+	width: 181px;
+	height: 302px;
+	overflow: hidden;
+}
+.gallery ul1 {
+	position: relative;
+	width: 2000em;
+}
+.gallery ul li {
+	float: left;
+	height: 302px;
+	overflow: hidden;
+	width: 181px;
+}
+.go-details {
+	display: block;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 435px;
+	width: 180px;
+}
+.uili-arrow {
+	background: url("../pic/btn.png")/*tpa=https://www.tftpay.com/newweb/pic/btn.png*/ no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 42px;
+	outline: medium none;
+	position: absolute;
+	top: 200px;
+	width: 30px;
+}
+.uili-arrow-prev {
+	background-position: -243px -60px;
+	left: 0;
+}
+.uili-arrow-prev:hover {
+	background-position: -243px -101px;
+}
+.uili-arrow-next {
+	background-position: -272px -60px;
+	left: 283px;
+}
+.uili-arrow-next:hover {
+	background-position: -274px -101px;
+}
+.ui-tclayout-right-con {
+	line-height: 18px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.ui-tclayout-right .current a {
+	border: 1px solid #72B6EF;
+	text-decoration: none;
+}
+.uili-step .uili-btn {
+	margin: 3px auto;
+}
+.uili-btn {
+	background-image: -moz-linear-gradient(center top , #FFFFFF, #F6F6F6);
+	border: 1px solid #bdbfc7;
+	border-radius: 4px 4px 4px 4px;
+	cursor: pointer;
+	display: block;
+}
+.uili-step {
+	padding-bottom: 0px;
+	text-align: center;
+}
+.uili-stepbtn {
+	min-height: 24px;
+	padding: 7px;
+	text-align: center;
+	width: 126px;
+}
+.uili-stepbtn:hover {
+	border: 1px solid #975ca6;
+	text-decoration: none;
+}
+.ui-tclayout-right .current a {
+	background-image: -moz-linear-gradient(center top , #c5e85a, #b2d235);
+	border: 1px solid #9bc13f;
+	text-decoration: none;
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #c5e85a), color-stop(1, #b2d235));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#c5e85a', EndColorStr='#b2d235');
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#c5e85a',EndColorStr='#b2d235')";
+}
+.uili-intext {
+	color: #333333;
+	display: block;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.ui-tclayout-right {
+	margin-left: 30px;
+	padding-top: 30px;
+	width: 300px;
+}
+/*.grey_line {
+	background: url(../pic/greyLine.png) repeat-x scroll 0 0px transparent;
+}*/
+.ui-button-text {
+	text-indent: -9999px;
+}
+.listStyle_None {
+	list-style-type: none;
+}
+.tutorial, .mobileweb {
+	padding-top: 20px;
+}
+.clientIntro .uili-box {
+	border: none;
+}
+#xtab-demo1-Cnt {
+	width: 510px;
+}
+
+
+.uili-step .uili-btn {
+	margin: 3px auto;
+}
+.uili-shortStepbtn {
+	min-height: 24px;
+	padding: 7px;
+	text-align: center;
+	width: 120px;
+}
+.uili-btn {
+	background-image: -moz-linear-gradient(center top , #FFFFFF, #E8E8E8);
+	border: 1px solid #C2C2C2;
+	border-radius: 4px 4px 4px 4px;
+	cursor: pointer;
+	display: block;
+}
+.step-left-box {
+	float: left;
+}
+.step-left-box, .step-right-box {
+	width: 140px;
+}
+.step-right-box {
+	float: right;
+}
+.step-left-box, .step-right-box {
+	width: 140px;
+}
+.icon-left {
+	left: 60px;
+}
+.icon-right {
+	right: 60px;
+}
+.icon-left, .icon-right {
+	position: absolute;
+}
+.ui-arrow-bottom {
+	background: url("../pic/btn.png")/*tpa=https://www.tftpay.com/newweb/pic/btn.png*/ no-repeat scroll right top transparent;
+	display: block;
+	height: 10px;
+	margin: 0 auto;
+	width: 12px;
+}
+.barcodePay .code-box .gallery ul li {
+	height: 452px;
+	width: 311px;
+	float: left;
+	overflow: hidden;
+}
+
+.barcodePay .code-box .gallery {
+	height: 452px;
+	margin: 0;
+	padding: 0;
+	width: 311px;
+	overflow: hidden;
+	position: relative;
+}
+
+.lotterTicket .ui-tab-body .current, .lifeContributions .ui-tab-body .current, .lifeWaterElectricityGas .ui-tab-body .current, .lifeGathering .ui-tab-body .current {
+	display: block;
+}
+.lifeCorrespondence .ui-tab-body .current, .lifeRechargeQ .ui-tab-body .current, .lifeRechargeGame .ui-tab-body .current, .lifePayment .ui-tab-body .current {
+	display: block;
+}
+.ui-con {
+	line-height: 18px;
+	margin-bottom: 20px;
+}
+.signUp .uili-box {
+	border: none;
+}
+.signUp .new-tab .ui-tab-head ul, .signUp .new-tab {
+	background: none;
+}
+
+
+
+.ui-arrow-bottom {
+	background: url("../pic/btn.png")/*tpa=https://www.tftpay.com/newweb/pic/btn.png*/ no-repeat scroll right top transparent;
+	display: block;
+	height: 10px;
+	margin: 0 auto;
+	width: 12px;
+}
+
+.mobileWeb .uili-box{
+	border:none;
+}
+
+.barcodePay .ui-tclayout-left{
+	background:none;
+}
+
+
+.lifePayment .ui-tclayout-right{
+	padding-top: 18px;
+}
+
+
+.tvPay #slider1-triggers .current a {
+	background-image: -moz-linear-gradient(center top , #EAF5FF, #b2d235);
+	border: 1px solid #72B6EF;
+	text-decoration: none;
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #eaf5ff), color-stop(1, #b2d235));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#eaf5ff', EndColorStr='#b2d235');
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#eaf5ff',EndColorStr='#b2d235')";
+}
+.bgwit{ background:#fff;}
+.prduct_r2{width:736px;float:right; padding-left:35px;border-top: 1px solid #ebebec;border-right: 1px solid #ebebec;border-bottom: 1px solid #ebebec;}/*产品中心水电煤*/
+.pro_wge1{ width:700px;background:#fbfbfb;border-bottom:none; border-left:1px solid #ebebeb;border-right:1px solid #ebebeb;border-top:1px solid #ebebeb;float:left;}/*水电煤*/
+.pro_wge1_h4{background:#f5f5f5;border-bottom:1px solid #f0f0f1;height:38px;font-size:16px;font-weight:bold;color:#636466; width:680px;
+line-height:38px; padding-left:20px;}
+#sleHid { display:block; width:70px; overflow:hidden; height:24px; margin-top:5px;}  /*隐藏下拉框*/   
+#sleBG {width:78px;height:24px;border:none;color:#3c8cbf;display:block;background-repeat: no-repeat;background: url("../pic/selArr.jpg")/*tpa=https://www.tftpay.com/newweb/pic/selArr.jpg*/;margin-top:5px;} /*隐藏下拉框*/ 
+.pro_wge1_h4 select { width:90px; height:24px; background:none; border:none; color:#3b8cc1;}
+.pro_wge1_l,.pro_wge1_r{ border-bottom:1px solid #ebebeb;}
+.pro_wge1_l{ width:78px; height:81px; padding:27px;}
+.pro_wge1_l_img1{ background:url("../pic/icon_water.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_water.jpg*/ no-repeat; width:60px; height:61px;}
+.pro_wge1_l_img1_b{ background:url("../pic/icon_water_b.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_water_b.jpg*/ no-repeat; width:60px; height:61px;}
+.pro_wge1_l_img2{ background:url("../pic/icon_e.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_e.jpg*/ no-repeat; width:60px; height:61px;}
+.pro_wge1_l_img2_b{ background:url("../pic/icon_e_b.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_e_b.jpg*/ no-repeat; width:60px; height:61px;}
+.pro_wge1_l_img3{ background:url("../pic/icon_gas.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_gas.jpg*/ no-repeat; width:60px; height:61px;}
+.pro_wge1_l_img3_b{ background:url("../pic/icon_gas_b.jpg")/*tpa=https://www.tftpay.com/newweb/pic/icon_gas_b.jpg*/ no-repeat; width:60px; height:61px;}
+.pro_wge1_r{ width:567px; height:135px; color:#a7a9ac; font-family:Arial, Helvetica, sans-serif;}
+.pro_wge1_lc{width:700px;height:30px; background:url("../pic/pro_wge1_lc_bg.gif")/*tpa=https://www.tftpay.com/newweb/pic/pro_wge1_lc_bg.gif*/ no-repeat; line-height:30px; color:#4d4d4f;}
+.wge1_main {
+	width:1002px;
+    background:#FFF;
+    margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.wge1_live {width:1002px;margin-bottom:10px; float:left; height:auto;border:1px solid #c4d9ea; background:#fff;}
+
+
+
+
+

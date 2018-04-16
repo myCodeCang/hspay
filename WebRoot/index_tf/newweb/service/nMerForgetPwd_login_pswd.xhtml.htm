@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="keywords" content="秒付宝" />
+<title>秒付宝 - 商户找回登录密码</title>
+<link href="../style/global.css" tppabs="newweb/style/global.css" rel="stylesheet" type="text/css" />
+<link href="../style/user.css" tppabs="newweb/style/user.css" rel="stylesheet" type="text/css" />
+<link href="../style/commons.css" tppabs="newweb/style/commons.css" rel="stylesheet" type="text/css" />
+<link href="../style/banner.css" tppabs="newweb/style/banner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="../script/writeObject.js" tppabs="newweb/script/writeObject.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../script/jquery-1.3.2.min.js" tppabs="newweb/script/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../script/jquery.js" tppabs="newweb/script/jquery.js"></script>
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function checklogid(){
+	 var LOG_ID=$("#LOG_ID").val();
+	 
+	 if(LOG_ID!=''&&LOG_ID!=null){
+		 req_param = "LOG_ID="+LOG_ID;
+		 $.ajax({
+          type:"POST",
+          url: "OPTSURM3/PTS3100013.dow",
+          processData: false,
+          data: req_param,
+          dataType: "json",
+          success:function(data){
+               if(data.GWA.MSG_CD == 'URM21010') {  
+                  $("#LOGID_TIPS").html("该账户不存在");
+                  $("#LOGID_TIPS").attr("class","red");
+                  return false;
+               }else if(data.GWA.MSG_CD == 'URM21015') {  
+                   $("#LOGID_TIPS").html("该商户不存在");
+                   $("#LOGID_TIPS").attr("class","red");
+                   return false;
+                }else if(data.GWA.MSG_CD == 'URM21016') {  
+                    $("#LOGID_TIPS").html("该商户状态不正常");
+                    $("#LOGID_TIPS").attr("class","red");
+                    return false;
+                }else{          
+               	  	$("#LOGID_TIPS").html("");
+                    return true;
+                }
+          },
+          error:function(data){ 
+          	  alert("加载处理失败");  
+          }
+        });
+	 }else{
+ 	 		$("#LOGID_TIPS").html("请输入登录帐号");
+      		$("#LOGID_TIPS").attr("class","red");
+      		return false;
+  	}
+}
+function checkmbl(){
+    var strP=/^\d+$/;
+    var mbl_t = /^0{0,1}(13[0-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|18[0-0]|18[3-3]|18[5-9])[0-9]{8}$/;
+    $("#MOBIL_TIPS").css("display","");
+    var REG_MBL_NO=$("#MBL_NO").val();
+    if(REG_MBL_NO!=''&&REG_MBL_NO!=null){
+       if(!mbl_t.test(REG_MBL_NO)){
+           $("#MOBIL_TIPS").html("请输入正确的手机号");
+           $("#MOBIL_TIPS").attr("class","red");
+           return false;
+       }else{
+    	   $("#MOBIL_TIPS").html("");
+    	   return true;
+       }
+    }else{
+   	 	$("#MOBIL_TIPS").html("请输入手机号");
+        $("#MOBIL_TIPS").attr("class","red");
+        return false;
+    }
+ }   
+function getsmscd(){
+	var strP=/^\d+$/;
+    var mbl_t = /^0{0,1}(13[0-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|18[0-0]|18[3-3]|18[5-9])[0-9]{8}$/;
+	var LOG_ID=$("#LOG_ID").val();
+	var REG_MBL_NO=$("#MBL_NO").val();
+
+    if($.trim(REG_MBL_NO) == ""){
+		alert("请输入操作员手机号");
+        return false;
+	}
+    if(REG_MBL_NO!=''&&REG_MBL_NO!=null){
+        if(!mbl_t.test(REG_MBL_NO)){
+            $("#MOBIL_TIPS").html("请输入正确的手机号");
+            $("#MOBIL_TIPS").attr("class","red");
+            return false;
+        }else{
+     	   $("#MOBIL_TIPS").html("");
+        }
+     }else{
+    	 	$("#MOBIL_TIPS").html("请输入手机号");
+         $("#MOBIL_TIPS").attr("class","red");
+         return false;
+     }
+    if($.trim(LOG_ID) == ""){
+		alert("请输入登录帐号");
+        return false;
+	}
+    var req_param="REG_MBL_NO="+REG_MBL_NO+"&LOG_ID="+LOG_ID;    
+    $.ajax({
+        type:"POST",
+        url: "OPTSURM3/PTS3100020.dow",
+        processData: false,
+        data: req_param,
+        dataType: "json",
+        success:function(data){
+            if(data.GWA.MSG_CD == 'URM00000') {
+                waitSM();
+                return;
+             }else{          
+                alert(data.GWA.MSG_INF);
+                return;
+             }
+        },
+        error:function(data){           
+          alert("获取短信验证码失败！");
+          return;  
+        }
+      }); 
+    return true;
+}
+var kj_speed = 1000,kj_wait,kj_isinerval;
+function send(s){
+   kj_wait = s;   
+
+   // 获取银行短信验证码 
+   getsmscd();     
+   
+}
+function waitSM(){
+  if(kj_wait == 0){
+    $("#sendMSCD").val("获取验证码");
+     $("#sendMSCD").attr("disabled",false);
+    //$("#ms-info").hide();
+    clearInterval(kj_isinerval);
+  }
+  else{
+    //$("#ms-info").show();
+    $("#sendMSCD").attr("disabled",true);
+    $("#sendMSCD").val("("+kj_wait+")秒后重新获取验证码");
+    kj_wait--;
+    kj_isinerval=window.setTimeout("waitSM()",kj_speed);
+  }
+}
+
+function next(){ 
+	var LOG_ID=$("#LOG_ID").val();
+	var REG_MBL_NO=$("#MBL_NO").val();
+	
+	if($.trim(LOG_ID) == ""){
+		alert("请输入登录帐号");
+        return false;
+	}
+	if($.trim(REG_MBL_NO) == ""){
+		alert("请输入操作员手机号");
+        return false;
+	}
+    if ($.trim($("#SMS_CD").val()) == "") {
+        alert("请输入短信验证码");
+        return false;
+    } 
+    document.getElementById("form").action="OPTSURM3/PTS3100021.dow";
+    document.getElementById("form").submit();
+    document.getElementById("form").action="";
+    return false;
+   
+}
+//跳转到邮箱页面
+function tomail(){
+	 document.getElementById("form").action="/newweb/service/nMerForgetPwd_login_pswdF.xhtml?F=MAIL";
+	 document.getElementById("form").submit();
+	 document.getElementById("form").action="";
+}
+//跳转到代理商
+function mercheck(){
+	 document.getElementById("form").action="/newweb/service/nMerForgetPwd_login_pswdF.xhtml?F=AGT";
+	 document.getElementById("form").submit();
+	 document.getElementById("form").action="";
+}
+//-->
+</script>
+<!--[if lte IE 6]>
+	<script src="../script/DD_belatedPNG_0.0.8a-min.js" tppabs="newweb/script/DD_belatedPNG_0.0.8a-min.js" language="javascript"></script>
+	<script>
+	  DD_belatedPNG.fix('div,li,a,h3,span,img,.png_bg,ul,input,dd,dt,a,a:hover');
+	</script>
+<![endif]-->
+</head>
+<body class="body_register">
+<div id="container">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="top">
+        <ul>
+            <li><a href="../../index.jsp" tppabs="index_main.jsp" target="_blank">网站首页</a></li>
+            <li><a href="../../nihelplist_center.jsp" tppabs="newweb/service/nihelplist_center.xhtml">帮助中心</a></li>
+            
+            
+            <li><a href="../../nlogin.jsp" tppabs="newweb/service/nlogin.xhtml">登录</a></li> 
+            
+        </ul>
+  </div>
+ <!--顶部帮助 退出结束-->
+<div id="register_header">
+<div class="left returnpasswd_logo"><a href="../../index.jsp" tppabs="index_main.jsp"><img src="../pic/logo_login.png" tppabs="newweb/pic/logo_login.png" border="0"/></a></div>
+</div>
+<!--logo tel 结束-->
+<div class="main">
+<div class="record">
+<div class="t_record left border_b_gray">
+<div class="t_live_icon left b">找回登录密码</div>
+</div>
+<!--标题结束-->
+<div class="left safety_return height450 relative ">
+ <form id="form" name="form" method="post" action="">
+ 	<div class="left width700 marginl30 inline">
+			 <label class="ui-form2-label">商户类型：</label>
+				 <input name="merlogpwd" type="radio"  class="marginr5" value="" checked="checked"/>
+				 <span class="line-h30">商户</span>
+				 <input name="merlogpwd" type="radio" value="" class="marginl10 marginr5" onclick="mercheck();"/>
+				 <span>代理商</span>
+	 </div>
+ 	<div class="left width700 marginl30 inline">
+			 <label class="ui-form2-label">账号类型：</label>
+				 <input name="userlogpwd" type="radio"  class="marginr5" value="" checked="checked"/>
+				 <span class="line-h30">手机账号</span>
+				 <input name="userlogpwd" type="radio" value="" class="marginl10 marginr5" onclick="tomail();"/>
+				 <span>邮箱账号</span>
+	 </div>
+	 <div class="left width720 marginl30 inline margint10">
+			 <label class="ui-form2-label">登录帐号：</label>
+			<input id="LOG_ID" name="LOG_ID" type="text" maxlength="40" class="input width180" value=""  onblur="checklogid();" />
+		 	<span id="LOGID_TIPS"  style="margin-left: 20px;" >
+		 	<font color="red" style="margin-left: 20px;"></font>  
+		 	</span>
+	 </div>
+     <div class="left width700 marginl30 inline margint10">
+		 <label class="ui-form2-label">手机号：</label>
+		 <font class="line-h30 font_16 b"> 
+          		<input id="MBL_NO" name="MBL_NO" autocomplete="off" type="text" size="11" class="input width180" maxlength="11" onblur="checkmbl();"/> 
+      		</font>
+      		<span id="MOBIL_TIPS"  style="margin-left: 20px;display: none;" >
+		 	<font color="red" style="margin-left: 20px;"></font>  
+		 	</span>
+	</div>
+	 <div class="left width700 marginl30 inline margint10">
+	 <label class="ui-form2-label">验证码：</label>
+		  <input id="SMS_CD" name="SMS_CD" maxlength="6" autocomplete="off" class="input width100" /> 
+      	  <input name="sendMSCD" id="sendMSCD" type="button" class="btn_gray113 marginl10" onclick="send(60);" value="获取短信验证码" />
+	 </div>
+	 <br/>
+    
+   </form>
+    <div class="left width600 marginl122 inline margint30">
+        <input type="button" class="btn_blue" onclick="next()" value="下一步" />
+    </div>
+    
+<div class="left bottom20 left0 right0 absolute">
+<div class="left marginl30 grey_line"></div>
+<div class="left marginl30 margint20 width700">
+<p class="b font_purple">使用遇到问题？</p>
+<p class="font_qianhei">问：手机没有收到短信验证码怎么办？</p>
+<p class="gray">答：经过网关时，网络通讯异常可能会造成短信丢失，或者您会延时收到短信，请您耐心等待或将您的手机卡换到其他手机上操作。</p>
+</div>
+</div>
+</div>
+<!--查询条件结束--></div>
+</div>
+<!--主结束--> 
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="foot" class="left">
+	<div class="left tcenter width1002">
+		<a href="../../index.jsp" tppabs="index_main.jsp" class="ray_a marginr5">首页</a>
+		<font class="gray_foot_line marginr5">|</font> <a
+			href="nabout_index.xhtml.htm" tppabs="newweb/service/nabout_index.xhtml"
+			class="ray_a marginr5">关于我们</a> <font class="gray_foot_line marginr5">|</font>
+		<a href="nabout_contact.xhtml.htm" tppabs="newweb/service/nabout_contact.xhtml"
+			class="ray_a marginr5">联系我们</a> <font class="gray_foot_line marginr5">|</font>
+		<a href="nabout_partner_business.xhtml.htm" tppabs="newweb/service/nabout_partner_business.xhtml"
+			class="ray_a marginr5">合作伙伴</a> <font class="gray_foot_line marginr5">|</font><a
+			href="nabout_maps.xhtml.htm" tppabs="newweb/service/nabout_maps.xhtml"
+			class="ray_a marginr5">站点地图</a>
+	</div>
+	<div class="left tcenter width1002 gray_foot">Copyright&#169;2014-2019
+		成都华翔通达网络科技有限公司 版权所有 粤ICP备11009418号-2 客服热线：0830-3153101</div>
+</div> <!--foot结束--></div>
+<!--所有结束-->
+</body>
+</html>
+>	>

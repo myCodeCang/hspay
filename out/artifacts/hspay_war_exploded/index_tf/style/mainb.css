@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,li,h1,h2,p {margin:0; padding:0; font-size:12px;}
+a {list-style-type:none;}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {color:#999;} 
+.clear {clear:both;}
+.top1 {height:147px; background:url("../pic/top1.gif")/*tpa=https://www.tftpay.com/pic/top1.gif*/;}
+.maina {width:930px; margin:auto;}
+.logobox {width:250px; height:60px; float:left;}
+.logobox p {margin:0px; padding:0px; background:#0CC;}
+.logobox h1 {font-size:12px; color:#888; line-height:23px; margin:0px; padding:3px 0px 28px 0px;font-weight:normal;}
+.logobox h1 a{ color:#888;}
+.navmenu ul {float:right;}
+.navmenu li a {color:#707070; text-decoration:none;}
+.navmenu li a:hover {color:#666;}
+.logobox span{padding-left:16px;}
+
+.telbox {width: 910px;height: 34px;line-height: 34px;float: right;padding-left: 80px;padding-right: 20px;background: url("../pic/tel.gif")/*tpa=https://www.tftpay.com/pic/tel.gif*/ no-repeat scroll 760px 0px transparent;text-align: right;}
+.telbox span {font-size:16px; color:#e56406; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+
+ul#navbut {text-align: center; float:right; overflow: hidden;}
+ul#navbut li {float: left; list-style: none; }
+ul#navbut li a {display: block; width: 90px; height: 45px;padding:67px 0 0 0;font-family:"΢ź"; font-size:14px;color: #707070; text-decoration: none; background:url("../pic/menubg.png")/*tpa=https://www.tftpay.com/pic/menubg.png*/ 0 -112px no-repeat; }
+ul#navbut li a:hover { background:url("../pic/menubg.png")/*tpa=https://www.tftpay.com/pic/menubg.png*/ 0 0 no-repeat; color: #fff; text-shadow: 0 2px 3px #4c2222;}
+ul#navbut li a.js:hover { background:url("../pic/menubg.png")/*tpa=https://www.tftpay.com/pic/menubg.png*/ 0 -112px no-repeat;}
+

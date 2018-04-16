@@ -1,0 +1,27 @@
+.help_right_box{
+    color: #585858;
+    padding: 18px 37px !important;
+}
+.help_right_box p{
+    text-indent: 28px;
+    line-height: 22px;
+    padding: 5px 0;
+}
+.help_right_box img{
+      width: 875px;
+      border:1px solid #e8e8e8;
+      margin:15px 0;
+}
+.buz{
+    display:inline-block!important;
+    height:20px;
+    width:20px;
+    border-radius: 100%;
+    line-height:20px;
+    text-align: center;
+    color:white;
+    font-size:14px;
+    text-indent: 0!important;
+    background-color:#e48600;
+    vertical-align: middle;
+}

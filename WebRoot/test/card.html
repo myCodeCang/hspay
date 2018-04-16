@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+		<title>充值卡接口演示</title>
+	</head>
+	<body>
+		<div>充值卡通用接口测试</div>
+		<div id="input">
+		<form method="post" action="cardpay.jsp">
+			<div>商家编号:<input type="text" name="memberid" id="memberid" value="22" /></div>
+			<div>充值卡类型id:<input type="text" name="cardid" id="cardid" value="jw" /></div>
+			<div>订单编号:<input type="text" name="orderno" id="orderno" value="CI201703242180001"/></div>
+			<div>卡金额:<input type="text" name="money" id="money" value="5" /></div>
+			<div>卡号:<input type="text" name="cardno" id="cardno" value="1234567890" /></div>
+			<div>卡密码:<input type="text" name="cardpwd" id="cardpwd" value="1234567890" /></div>
+			<div>商户接收支付成功数据的地址:<input type="text" name="url" id="url" value="http://localhost:8080/pay/test/callback.jsp"/>&nbsp;<span style="color:#FF0000;font-weight:100;">*</span></div>
+			<div><input type="submit" value="充值" /></div>
+			</form>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="keywords" content="秒付宝" />
+<title>秒付宝 - 用户注册</title>
+<link href="../style/global.css" tppabs="newweb/style/global.css" rel="stylesheet"
+	type="text/css" />
+<link href="../style/user.css" tppabs="newweb/style/user.css" rel="stylesheet"
+	type="text/css" />
+<link href="../style/commons.css" tppabs="newweb/style/commons.css" rel="stylesheet"
+	type="text/css" />
+<script type="text/javascript" language="javascript"
+	src="../script/writeObjectB-1.js" tppabs="newweb/script/writeObjectB.js" charset="UTF-8"></script>
+<script type="text/javascript"
+	src="../script/jquery-1.3.2.min.js" tppabs="newweb/script/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../script/jquery.js" tppabs="newweb/script/jquery.js"></script>
+<style>
+.inputa{border:1px solid #D4D5D7;width:180px;height:22px;line-height:24px;background:transparent url("../pic/input_bg.jpg")/*tpa=newweb/pic/input_bg.jpg*//*tpa=newweb/pic/input_bg.jpg*/ repeat-x scroll 0% 0%;text-align:left;text-indent:8px;padding-top:8px;overflow:hidden;float:left;}
+</style>
+<script type="text/JavaScript">
+var chk_mbl_flg='N';
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function writePassShow(oid, cfg, passid){
+    writePassObject(oid, cfg, passid, "");
+  }
+function updateCode() {
+ var verify=document.getElementById('divCode');
+verify.setAttribute('src','/newweb/pmodule/common/codeImage.jsp?'+ Math.random());
+}
+
+var ts="1492865832375";
+var message = "密码输入错误：";
+
+function hide_error(id1,id2){
+	var text = $("#"+id1).val();
+	if(text != "null" || text != ""){
+		$("#"+id2).hide();
+	}
+}
+
+function reg_submit(ocx1,ocx2,ocx3,ocx4){
+
+        //var arrItm=new Array("ID_NM","ID_TYP","ID_NO","ADDR","PROVCD","OCCP");
+	var arrItm=new Array("ID_NM","ID_TYP","ID_NO");
+    var powerobj1;
+   
+    if (_app == 'Microsoft Internet Explorer' || navigator.userAgent.indexOf("Trident")>0) {
+        powerobj1 = getIBSInput(ocx1 + "_ie", ts, "user_error", message);
+        powerobj2 = getIBSInput(ocx2 + "_ie", ts, "confirm_error",message);
+        powerobj3 = getIBSInput(ocx3 + "_ie", ts, "user_pay_error",message);
+        powerobj4 = getIBSInput(ocx4 + "_ie", ts, "confirm_pay_error",message);
+    } else {
+        powerobj1 = getIBSInput(ocx1 + "_noie", ts, "user_error",message);
+        powerobj2 = getIBSInput(ocx2 + "_noie", ts, "confirm_error",message);
+        powerobj3 = getIBSInput(ocx3 + "_noie", ts, "user_pay_error",message);
+        powerobj4 = getIBSInput(ocx4 + "_noie", ts, "confirm_pay_error",message);
+    }
+   
+   
+    document.getElementById("user_pswd").value = powerobj1;
+    document.getElementById("user_pswd_confirm").value = powerobj2;
+    document.getElementById("user_pay").value = powerobj3;
+    document.getElementById("user_pay_confirm").value = powerobj4;
+    var sPassword = document.getElementById("user_pswd").value;
+    var cPassword = document.getElementById("user_pswd_confirm").value;
+    var sPayword = document.getElementById("user_pay").value;
+    var cPayword = document.getElementById("user_pay_confirm").value;
+    
+    var user_pswd_tips=$('#user_tips');
+    var user_pswd_error=$('#user_error');
+    if(user_pswd_tips.html()!=''&&(sPassword == "null" || sPassword == "")){
+    	user_pswd_error.show();
+    	user_pswd_tips.hide();
+    	user_pswd_error.attr("class","org");
+     }else{
+    	 user_pswd_error.hide();
+    	 user_pswd_tips.show();
+     }
+
+
+    var user_pswd_confirm_error=$('#confirm_error');
+    if(user_pswd_confirm_error.html()!=''){
+    	user_pswd_confirm_error.show();
+    	user_pswd_confirm_error.attr("class","org");
+    }else{
+    	user_pswd_confirm_error.hide();
+    }
+
+    var user_pay_tips=$('#user_pay_tips');
+    var user_pay_error=$('#user_pay_error');
+    //alert($('#user_pay_error').html());
+    if(user_pay_error.html()!=''){
+    	user_pay_error.show();
+    	user_pay_tips.hide();
+    	user_pay_error.attr("class","org");
+     }else{
+    	 user_pay_error.hide();
+     	user_pay_tips.show();
+     }
+
+    var user_pswd_confirm_error=$('#confirm_pay_error');
+    if(user_pswd_confirm_error.html()!=''){
+    	user_pswd_confirm_error.show();
+    	user_pswd_confirm_error.attr("class","org");
+     }else{
+    	 user_pswd_confirm_error.hide();
+     }
+
+    
+    if (sPassword == "null" || sPassword == "") {
+        return false;
+    }else{
+    	$("#user_error").hide();
+    }
+    if (cPassword == "null" || cPassword == "") {
+        return false;
+    }else{
+    	$("#confirm_error").hide();
+    }
+    if (sPayword == "null" || sPayword == "") {
+        return false;
+    }else{
+    	$("#user_pay_error").hide();
+    }
+    if (cPayword == "null" || cPayword == "") {
+        return false;
+    }else{
+    	$("#confirm_pay_error").hide();
+    }
+  //检查密码
+	  $.ajax({
+        type:"POST",
+        url: "OPTSURM3/PTS3000030.dow",
+        processData: false,
+        data: $("#form1").serialize(),
+        dataType: "json",
+	
+        success:function(data){
+            if(data.GWA.MSG_CD == 'URM00000') {
+                 //alert(1);
+            	 document.getElementById("form1").action="/newweb/service/nregister_mblcode.xhtml";
+			// document.getElementById("form1").submit();
+		 for(var index in arrItm){
+			
+		checkIdInfo(arrItm[index],"form1");
+	}
+
+            	           
+                return true;
+             }else{          
+            	 if(data.GWA.MSG_CD == 'URM80051'){
+						alert("输入的登录密码不一致");
+						 return false;
+                	 }
+            	 if(data.GWA.MSG_CD == 'URM80052'){
+						alert("输入的支付密码不一致");
+						 return false;
+             	 }
+	 if(data.GWA.MSG_CD == 'URM80053'){
+						alert("输入的登陆密码和支付密码一致");
+						 return false;
+             	 }
+             }
+        },
+        error : function(XMLHttpRequest, textStatus, errorThrown) {   
+            alert("加载出错");  
+   }
+      }); 
+  
+     var arrItm=new Array("ID_NM","ID_TYP","ID_NO");
+//	var arrItm=new Array("ID_NM","ID_TYP","ID_NO");
+	for(var index in arrItm){
+		var name=arrItm[index];
+		var value=$('#'+name).val();
+		//alert("item:"+name+";value:"+value);
+		if(value==''||value==null){
+			//$("#"+name+"_TIPS").html("请输入正确的证件号");
+			if(name=='ID_NM'){
+				$("#"+name+"_TIPS1").hide();
+				}
+			$("#"+name+"_TIPS").attr("class","org");
+			$("#"+name+"_TIPS").show();
+			return false;
+		}
+	}
+	
+    $("#error_info").html("");
+    if(chk_mbl_flg != 'Y'){
+         return false;
+    }
+  
+      return true;
+  }
+
+function getsmscd(){
+    
+    var REG_MBL_NO=document.getElementById("MBL_NO").value;
+    var req_param="REG_MBL_NO="+REG_MBL_NO;
+    if ($.trim($("#MBL_NO").val()) == "") {
+        alert("请输入手机号");
+        return false;
+    }
+    var mbl=$("#MBL_NO").val();
+    var mbl_t=/^0{0,1}(13[0-9]|13[4][9-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|17[0-0]|17[5-9]|18[0-4]|18[5-9])[0-9]{8}$/; 
+   //var mbl_t=/^0{0,1}(13[0-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|18[0-0]|18[2-2]|18[5-9])[0-9]{8}$/; 
+   // var mbl_t="((\\(\\d{3}\\))|(\\d{3}\\-))?13[0-9]\\d{8}|15[189]\\d{8}|18[6789]\\d{8}";
+    
+    if(mbl!=''&&mbl!=null){
+        if(!mbl_t.test(mbl)){
+            alert("手机号不合法！");
+            return false;
+        }
+    }
+    $.ajax({
+        type:"POST",
+        url: "/newweb/service/nsend_chk_no.xhtml",
+        processData: false,
+        data: req_param,
+        dataType: "json",
+        success:function(data){
+            if(data.GWA.MSG_CD == 'URM00000') {
+                 
+                waitSM();
+                return true;
+             }else{          
+                 $("#MBL_TIPS").html("该手机号已被注册");
+                return false;
+             }
+        },
+        error:function(data){ 
+          alert("加载处理失败");  
+        }
+      }); 
+    return true;
+}
+
+var kj_speed = 1000,kj_wait,kj_isinerval;
+function send(s){
+   kj_wait = s;   
+ 
+   // 获取银行短信验证码 
+   getsmscd()     
+       
+ 
+}
+function waitSM(){
+  if(kj_wait == 0){
+    $("#sendMSCD").val("获取验证码");
+     $("#sendMSCD").attr("disabled",false);    
+    clearInterval(kj_isinerval);
+  }
+  else{  
+    $("#sendMSCD").attr("disabled",true);
+    $("#sendMSCD").val("("+kj_wait+")秒后重新获取验证码");
+    kj_wait--;
+    kj_isinerval=window.setTimeout("waitSM()",kj_speed);
+  }
+}
+
+
+/**
+ * 动态下拉菜单 （获得省公司所包含的市公司）
+ */
+ function iloadItem_city() {
+  var PROV_CD_QRY = $('#PROVCD').val(); //获取相应的省公司编号
+  var CITYCODE='';
+   $.ajax( {
+       type:"POST",
+       url:"/newweb/service/nregister_prov_city.xhtml",
+       dataType:"json",
+       data:"SRT_TYP=I&PROV_CD_QRY="+PROV_CD_QRY,
+       success:function(data){
+           var htmlContent="<option value=''>请选择</option >";
+           if(data.REC != null){
+               for( var i = 0; i < data.REC.length; i++ ) {
+               	if(CITYCODE==""){
+               		if(parseInt(data.REC.length)==1){                            
+                   htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"' selected='selected'>"+data.REC[i].AREA_NAME+" </option >\n";
+               		}
+               		else{
+               			 htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"' >"+data.REC[i].AREA_NAME+" </option >\n";
+                          
+               		}
+                   }
+                 else{
+                     if(data.REC[i].CITY_CODE==CITYCODE){
+                 	 htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"'selected='selected'>"+data.REC[i].AREA_NAME+" </option >\n";
+                     }
+                     else{
+                     	 htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"' >"+data.REC[i].AREA_NAME+" </option >\n";
+                     }
+                 }
+               }
+               $("#CITYCODE").html(htmlContent);
+           }else{
+              htmlContent = htmlContent + " <option value=''></option >";
+              $("#CITYCODE").html(htmlContent);
+           }
+        }
+   });
+}
+
+ /**
+  * 动态下拉菜单 （获得省公司）
+  */
+  function iloadItem_prov() {
+   var CITYCODE='';
+    $.ajax( {
+        type:"POST",
+        url:"/newweb/service/nregister_prov_city.xhtml",
+        dataType:"json",
+        data:"SRT_TYP=&PROV_CD_QRY=",
+        success:function(data){
+            var htmlContent="<option value=''>请选择</option >";
+            if(data.REC != null){
+            	
+                for( var i = 0; i < data.REC.length; i++ ) {
+                	if(CITYCODE==""){
+                		if(parseInt(data.REC.length)==1){                            
+                    htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"' selected='selected'>"+data.REC[i].AREA_NAME+" </option >\n";
+                		}
+                		else{
+                			 htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"' >"+data.REC[i].AREA_NAME+" </option >\n";
+                           
+                		}
+                    }
+                  else{
+                      if(data.REC[i].CITY_CODE==CITYCODE){
+                  	 htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"'selected='selected'>"+data.REC[i].AREA_NAME+" </option >\n";
+                      }
+                      else{
+                      	 htmlContent = htmlContent + " <option value='"+data.REC[i].CITY_CODE+"' >"+data.REC[i].AREA_NAME+" </option >\n";
+                      }
+                  }
+                }
+                $("#PROVCD").html(htmlContent);
+            }else{
+               htmlContent = htmlContent + " <option value=''></option >";
+               $("#PROVCD").html(htmlContent);
+            }
+         }
+    });
+ }
+
+
+  function checkIdNo(){
+	    
+	     var idNo=$("#ID_NO").val();
+	     var idTyp=$("#ID_TYP").val();
+
+	     if(idNo!=''&&idTyp=='01'){
+		    if(!idCheck(idNo)){
+		    	$("#ID_NO_TIPS").html("请输入正确的身份证号");
+	            $("#ID_NO_TIPS").attr("class","org");
+	            $("#ID_NO_TIPS").show();
+				return false;
+		    }
+
+		    
+		}
+	     if(idNo!=''&&idTyp!='01'&&idNo.length>30){
+	    	 $("#ID_NO_TIPS").html("请输入正确的证件号");
+	            $("#ID_NO_TIPS").attr("class","org");
+	            $("#ID_NO_TIPS").show();
+				return false;
+	     }
+			
+	     $("#ID_NO_TIPS").hide();
+	 	return true;	
+	     
+	}
+
+
+	//验证身份证号方法 
+var idCheck=function(idcard){ 
+	var Errors=new Array("验证通过!","身份证号码位数不对!","身份证号码出生日期超出范围或含有非法字符!","身份证号码校验错误!","身份证地区非法!"); 
+	var area={11:"北京",12:"天津",13:"河北",14:"山西",15:"内蒙古",21:"辽宁",22:"吉林",23:"黑龙江",31:"上海",32:"江苏",33:"浙江",34:"安徽",35:"福建",36:"江西",37:"山东",41:"河南",42:"湖北",43:"湖南",44:"广东",45:"广西",46:"海南",50:"重庆",51:"四川",52:"贵州",53:"云南",54:"西藏",61:"陕西",62:"甘肃",63:"青海",64:"宁夏",65:"xinjiang",71:"台湾",81:"香港",82:"澳门",91:"国外"} 
+	var idcard,Y,JYM; 
+	var S,M; 
+	var idcard_array = new Array(); 
+	idcard_array = idcard.split(""); 
+	if(area[parseInt(idcard.substr(0,2))]==null) return false; 
+	switch(idcard.length){ 
+	case 15: 
+	if ((parseInt(idcard.substr(6,2))+1900) % 4 == 0 || ((parseInt(idcard.substr(6,2))+1900) % 100 == 0 && (parseInt(idcard.substr(6,2))+1900) % 4 == 0 )){ 
+	ereg = /^[1-9][0-9]{5}[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}$/;//测试出生日期的合法性 
+} 
+else{ 
+ereg = /^[1-9][0-9]{5}[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|1[0-9]|2[0-8]))[0-9]{3}$/;//测试出生日期的合法性 
+} 
+if(ereg.test(idcard)) 
+return true; 
+else 
+return false; 
+break; 
+case 18: 
+if( parseInt(idcard.substr(6,4)) % 4 == 0 || ( parseInt(idcard.substr(6,4)) % 100 == 0 && parseInt(idcard.substr(6,4))%4 == 0 )){ 
+ereg = /^[1-9][0-9]{5}19[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|[1-2][0-9]))[0-9]{3}[0-9Xx]$/;//闰年出生日期的合法性正则表达式 
+} 
+else{ 
+ereg = /^[1-9][0-9]{5}19[0-9]{2}((01|03|05|07|08|10|12)(0[1-9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1-9]|[1-2][0-9]|30)|02(0[1-9]|1[0-9]|2[0-8]))[0-9]{3}[0-9Xx]$/;//平年出生日期的合法性正则表达式 
+} 
+if(ereg.test(idcard)){ 
+S = (parseInt(idcard_array[0]) + parseInt(idcard_array[10])) * 7 + (parseInt(idcard_array[1]) + parseInt(idcard_array[11])) * 9 + (parseInt(idcard_array[2]) + parseInt(idcard_array[12])) * 10 + (parseInt(idcard_array[3]) + parseInt(idcard_array[13])) * 5 + (parseInt(idcard_array[4]) + parseInt(idcard_array[14])) * 8 + (parseInt(idcard_array[5]) + parseInt(idcard_array[15])) * 4 + (parseInt(idcard_array[6]) + parseInt(idcard_array[16])) * 2 + parseInt(idcard_array[7]) * 1 + parseInt(idcard_array[8]) * 6 + parseInt(idcard_array[9]) * 3 ; 
+Y = S % 11; 
+M = "F"; 
+JYM = "10X98765432"; 
+M = JYM.substr(Y,1); 
+if(M == idcard_array[17]) 
+return true; 
+else 
+return false; 
+} 
+else 
+return false; 
+break; 
+default: 
+return false; 
+break; 
+} 
+}
+
+function checkIdInfo(name,formItem){
+
+	var lastItem=$('#LAST_CLICK_ITEM').html();
+	$('#LAST_CLICK_ITEM').html(name);
+	//alert($('#LAST_CLICK_ITEM').html());
+	if(lastItem==null||lastItem==''){
+		return true;
+	}else{
+		if(name=="ID_TYP"&&$('#ID_NO').val()!=''){
+			name="ID_NO";
+		}
+		name=lastItem;
+	}
+
+	var value=$('#'+name).val();
+	//alert("item:"+name+";value:"+value);
+	if(value==''||value==null){
+		//$("#"+name+"_TIPS").html("请输入正确的证件号");
+		if(name=='ID_NM'){
+			$("#"+name+"_TIPS1").hide();
+			}
+        $("#"+name+"_TIPS").attr("class","org");
+        $("#"+name+"_TIPS").show();
+		return false;
+	}else{
+		$("#"+name+"_TIPS").hide();
+		if(name=='ID_NO'&&$('#ID_TYP').val()=='01'){
+			if(!checkIdNo()){
+				return false;
+			}
+			$('#ID_NO_IMG').show();
+			$.ajax({
+		        type:"POST",
+		        url:"OPTSURM3/PTS3000020.dow",
+		        dataType:"json",
+		        data:"ID_NO="+value+"&CUS_NM="+encodeURI(encodeURI($('#ID_NM').val())),
+		        success:function(data){
+		        	$('#ID_NO_IMG').hide();
+		        	if((data.GWA.MSG_INF != null&&data.GWA.MSG_INF!='')||(data.ERROR_MSG!=null&&data.ERROR_MSG!='')||data.RESULT_GMSFHM!=data.RESULT_XM||(data.GWA!=null && data.GWA!=''&& data.RESULT_GMSFHM==0 && data.RESULT_XM==0)){
+		        		$("#"+name+"_TIPS").html("证件或姓名可信验证失败,请重新输入");
+		        		$("#"+name+"_TIPS").attr("class","org");
+		                	$("#"+name+"_TIPS").show();
+		             
+		        		return false;
+			        }else if(data.GWA!=null && data.GWA!=''&& data.RESULT_GMSFHM==2 && data.RESULT_XM==2){
+			        	$("#"+name+"_TIPS").html("证件号码或姓名不存在,请重新输入");
+		        		$("#"+name+"_TIPS").attr("class","org");
+		                $("#"+name+"_TIPS").show();
+		                return false;
+			        }else{
+						if(formItem!=null){
+								
+								$("#"+formItem).submit();
+								$("#"+formItem).attr("action");
+							
+						}
+					}
+		        	
+		         }
+		    });
+			
+		}
+		
+	}
+	
+	return true;
+}
+
+  $(function(){ 
+	   //加载省份信息
+	  iloadItem_prov();
+   }); 
+	function checkalias(){
+	    var alias=$("#ALIAS").val();
+		var alias_t=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$/; 
+     
+		//var REG_MBL_NO=mbl;
+		var req_param="ALIAS="+alias;
+		
+		if(alias==''||alias==null){
+			$("#AL_TIPS").html("请输入用户名");
+			$("#AL_TIPS").attr("class","red");
+			return false;
+		}
+		if(!alias_t.test(alias)){
+			$("#AL_TIPS").html("请输入正确的用户名");
+			$("#AL_TIPS").attr("class","red");
+			return false;
+		}
+		
+		$.ajax({
+            type:"POST",
+            url: "OPTSURM3/PTS3000024.dow",
+            processData: false,
+            data: req_param,
+            dataType: "json",
+            success:function(data){
+                if(data.GWA.MSG_CD == 'URM00000') {
+                    $("#AL_TIPS").html("恭喜您可以使用此用户号");
+                    $("#AL_TIPS").attr("class","blue");
+                    return true;
+                 }else{          
+                     $("#AL_TIPS").html("该用户名已被占用");
+                     $("#AL_TIPS").attr("class","red");
+                    return false;
+                 }
+            },
+            error:function(data){ 
+              alert("加载处理失败");  
+            }
+        }); 
+	}
+function checkmbl(){
+     var mbl=$("#MBL_NO").val();
+     
+     
+     var mbl_t=/^0{0,1}(13[0-9]|13[4][9-9]|14[5-7]|15[5-9]|15[0-2]|15[3-3]|17[0-0]|17[5-9]|18[0-4]|18[5-9])[0-9]{8}$/; 
+     
+     /*var mbl_t=/^0{0,1}(13[0-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|18[0-0]|18[2-2]|18[5-9])[0-9]{8}$/;*/
+     
+     /*var mbl_t=/^0{0,1}(13[0-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|18[0-2]|18[5-9])[0-9]{8}$/;*/
+     var REG_MBL_NO=mbl;
+     var req_param="REG_MBL_NO="+REG_MBL_NO;
+     
+     if(mbl!=''&&mbl!=null){
+         if(!mbl_t.test(mbl)){
+             $("#MBL_TIPS").html("请输入正确的手机号");
+             $("#MBL_TIPS").attr("class","red");
+             return false;
+             
+         }
+         else{
+             $.ajax({
+                    type:"POST",
+                    url: "/newweb/service/nregister_user_check.xhtml",
+                    processData: false,
+                    data: req_param,
+                    dataType: "json",
+                    success:function(data){
+                        if(data.GWA.MSG_CD == 'URM00000') {
+                            $("#MBL_TIPS").html("恭喜您可以使用此手机号");
+                            $("#MBL_TIPS").attr("class","blue");
+                            chk_mbl_flg='Y';
+                            return true;
+                         }else{          
+                             $("#MBL_TIPS").html("该手机号已被注册");
+                             $("#MBL_TIPS").attr("class","red");
+                            return false;
+                         }
+                    },
+                    error:function(data){ 
+                      alert("加载处理失败");  
+                    }
+                  }); 
+             
+         }
+     }
+     else{
+         $("#MBL_TIPS").html("请输入手机号");
+         $("#MBL_TIPS").attr("class","red");
+     }
+    
+}
+
+
+//处理两次点击提交的问题，加一个同步的验证手机号方法
+function checkmblToBack(){
+     var mbl=$("#MBL_NO").val();
+     
+     
+     var mbl_t=/^0{0,1}(13[0-9]|13[4][9-9]|14[5-7]|15[5-9]|15[0-2]|15[3-3]|17[0-0]|17[5-9]|18[0-4]|18[5-9])[0-9]{8}$/; 
+     
+     /*var mbl_t=/^0{0,1}(13[0-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|18[0-0]|18[2-2]|18[5-9])[0-9]{8}$/;*/
+     
+     /*var mbl_t=/^0{0,1}(13[0-9]|14[7-7]|15[5-9]|15[0-2]|15[3-3]|18[0-2]|18[5-9])[0-9]{8}$/;*/
+     var REG_MBL_NO=mbl;
+     var req_param="REG_MBL_NO="+REG_MBL_NO;
+     
+     if(mbl!=''&&mbl!=null){
+         if(!mbl_t.test(mbl)){
+             $("#MBL_TIPS").html("请输入正确的手机号");
+             $("#MBL_TIPS").attr("class","red");
+             return false;
+             
+         }
+         else{
+             $.ajax({
+                    type:"POST",
+                    url: "/newweb/service/nregister_user_check.xhtml",
+                    processData: false,
+                    data: req_param,
+                    dataType: "json",
+                    async:false,
+                    success:function(data){
+                        if(data.GWA.MSG_CD == 'URM00000') {
+                            $("#MBL_TIPS").html("恭喜您可以使用此手机号");
+                            $("#MBL_TIPS").attr("class","blue");
+                            chk_mbl_flg='Y';
+                            return true;
+                         }else{          
+                             $("#MBL_TIPS").html("该手机号已被注册");
+                             $("#MBL_TIPS").attr("class","red");
+                            return false;
+                         }
+                    },
+                    error:function(data){ 
+                      alert("加载处理失败");  
+                    }
+                  }); 
+             
+         }
+     }
+     else{
+         $("#MBL_TIPS").html("请输入手机号");
+         $("#MBL_TIPS").attr("class","red");
+     }
+    
+}
+	function checkIDateInfo(){
+		var idEffDt=$("#ID_EFF_DT").val();
+		var idEffDt_t=/^(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})(((0[13578]|1[02])(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)(0[1-9]|[12][0-9]|30))|(02(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))0229)$/; 
+	
+		if(idEffDt==''||idEffDt==null){
+			$("#ID_DATE_TIPS1").html("请输入身份证有效期");
+			$("#ID_DATE_TIPS1").attr("class","red");
+			return false;
+		}
+		if(!idEffDt_t.test(idEffDt)){
+			$("#ID_DATE_TIPS1").html("请输入正确的身份证有效期");
+			$("#ID_DATE_TIPS1").attr("class","red");
+			return false;
+		}
+		$("#ID_DATE_TIPS1").html("(格式:19900101) 方便持续核验有效证件");
+		$("#ID_DATE_TIPS1").attr("class","gray");
+		return true;
+	}
+
+</script>
+
+</head>
+<body class="body_register">
+	<div id="container">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="top">
+        <ul>
+            <li><a href="../../index.jsp" tppabs="index_main.jsp" target="_blank">网站首页</a></li>
+            <li><a href="../../nihelplist_center.jsp" tppabs="newweb/service/nihelplist_center.xhtml">帮助中心</a></li>
+            
+            
+            <li><a href="../../nlogin.jsp" tppabs="newweb/service/nlogin.xhtml">登录</a></li> 
+            
+        </ul>
+  </div>
+
+		<!--顶部帮助 退出结束-->
+		<div id="register_header">
+			<div class="left register_logo">
+				<a href="../../index.jsp" tppabs="index_main.jsp"><img
+					src="../pic/logo_register-1.png" tppabs="newweb/pic/logo_register.png" alt="秒付宝 
+logo"
+					border="0" /> </a>
+			</div>
+		</div>
+
+		<!--logo tel 结束-->
+		<div class="main">
+			<div class="record">
+				
+				<div class="t_record left border_b_gray">
+					<div class="t_live_icon left b">用户注册</div>
+				</div>
+				<span id="LAST_CLICK_ITEM" style="display: none;" class="gray"></span>
+				<!--标题结束-->
+				<div class="left register">
+					<form id="form1" name="form1" method="post" action="">
+            <input type="hidden" name="MERC_ID" id="MERC_ID" value="" />
+            <input type="hidden" name="MERC_REQ_NO" id="MERC_REQ_NO" value="" />
+          
+						<div id="progress_line" class="left marginl42 inline paddingl30">
+							<span class="blue_jindu b">填写基本信息</span>
+			  				<span class="marginl100 gray">校验用户名</span>
+							<span class="marginl100 gray">注册完成</span>
+							
+						</div>
+						<div class="left marginl30 grey_line2 margint10 width800"></div>
+
+						<div class="left margint30 marginl30 ">
+							<div class="left font_16 font_purple b">填写安全信息</div>
+							<div class="left grey_line2 width700"></div>
+						</div>
+                        <div class="left width700 marginl30 inline margint10">
+							<label class="ui-form2-label-return "><font class="star">*</font>用户名：</label> 
+							<input id="ALIAS" name="ALIAS" type="text" class="input width180 marginr10" onblur="checkalias();"/>
+							<font id="AL_TIPS" class="gray">用户名由数字和字母组成，6-12位</font>
+						</div>
+
+						<div class="left width700 marginl30 inline margint10">
+							<label class="ui-form2-label-return "><font class="star">*</font>注册手机号：</label> 
+							<input id="MBL_NO" name="MBL_NO" type="text" class="input width180 marginr10" onblur="checkmbl();"/>
+							<!-- onMouseOut="checkmbl();"<span><a href="/newweb/service/nregister_email_index.xhtml?JRN_KEY=&FLAG=&merchantId=&requestId="
+								 class="blue_a">邮箱注册</a></span>&nbsp;&nbsp;&nbsp;&nbsp;-->
+							
+							<font id="MBL_TIPS" class="gray">手机号码将为您默认绑定</font>
+						</div>
+						<div class="left width850 marginl30 inline  margint10">
+						<div class="left width330">
+							<label class="ui-form2-label-return"><font class="star">*</font>登录密码：</label>
+							<!--input type="text" class="input width180 marginr10"/-->
+							<span id="usr_pass" class="inputa"> 
+								<script type="text/javascript">writePassShow("userpass",{"accepts":"[:graph:]+","width":170,"height":18,"maxLength":16,"caption":"秒付宝","textColor":"#000000","backColor":"#FFFFFF","classnm":"","contentType":"3"},"usr_pass");</script>
+								<input type="hidden" id="user_pswd" name="user_pswd" value="" />
+							</span> 
+						</div>
+						<div class="left width500 line-h30"> 
+							<span id="user_error"></span> 
+							<span id="user_tips">
+								<font class="gray line-20" >密码为6-16位数字、英文字母或特殊字符</font>
+							</span>
+						</div>
+						</div>
+						<div class="left width850 marginl30 inline  margint10">
+						<div class="left width330">
+							<label class="ui-form2-label-return "><font class="star">*</font>确认登录密码：</label>
+							<!--input type="text" class="input width180"/-->
+							<span id="usr_pass_confirm" class="inputa"> 
+								<script type="text/javascript">writePassShow("userpswd_confirm",{"accepts":"[:graph:]+","width":170,"height":18,"maxLength":16,"caption":"秒付宝","textColor":"#000000","backColor":"#FFFFFF","classnm":"","contentType":"3"},"usr_pass_confirm");</script>
+								<input type="hidden" id="user_pswd_confirm" name="user_pswd_confirm" value="" /> 
+							</span> 
+						</div>
+						<div class="left width500 line-h30"> 
+							<span id="confirm_error"></span> 
+							
+						</div>
+						</div>
+						
+						<div class="left width850 marginl30 inline  margint10">
+						<div class="left width330">
+							<label class="ui-form2-label-return "><font class="star">*</font>支付密码：</label>
+							<!--input type="text" class="input width180 marginr10"/-->
+							<span id="usr_pay" class="inputa"> <script type="text/javascript">writePassShow("userpay",{"accepts":"[:graph:]+","width":170,"height":18,"maxLength":16,"caption":"秒付宝","textColor":"#000000","backColor":"#FFFFFF","classnm":"","contentType":"3"},"usr_pass");</script>
+								<input type="hidden" id="user_pay" name="user_pay" value="" />
+							</span>
+						</div>
+						<div class="left width500 line-h30"> 
+							<span id="user_pay_error"></span> 
+							<span id="user_pay_tips">
+								<font class="gray line-20" >密码为6-16位数字、英文字母或特殊字符</font>
+							</span>
+						</div>
+						</div>
+						<div class="left width850 marginl30 inline  margint10">
+						<div class="left width330">
+							<label class="ui-form2-label-return "><font class="star">*</font>确认支付密码：</label>
+							<!--input type="text" class="input width180"/-->
+							<span id="usr_pay_confirm" class="inputa"> <script type="text/javascript">writePassShow("userpay_confirm",{"accepts":"[:graph:]+","width":170,"height":18,"maxLength":16,"caption":"秒付宝","textColor":"#000000","backColor":"#FFFFFF","classnm":"","contentType":"3"},"usr_pass_confirm");</script>
+								<input type="hidden" id="user_pay_confirm" name="user_pay_confirm" value=""/> </span> 
+						</div>
+						<div class="left width500 line-h30"> 
+							<span id="confirm_pay_error"></span> 
+						</div>
+						</div>
+						
+
+						<div class="left margint30 marginl30 ">
+							<div class="left">
+								<span class="font_16 font_purple b">填写身份信息</span><span
+									class="gray"> (用于充值、提现、转账付款)</span>
+							</div>
+							<div class="left grey_line2 width538 marginl5 inline"></div>
+						</div>
+
+
+						<div class="left width800 marginl30 inline margint30">
+							<label class="ui-form2-label-return "><font class="star">*</font>真实姓名：</label> 
+							<input id="ID_NM" name="ID_NM" onclick="checkIdInfo('ID_NM');" type="text" class="input width180 marginr10" onblur="checkIdInfo('ID_NO');" />
+							<span id="ID_NM_TIPS1" class="gray">请输入真实姓名，在使用充值、提现、转账等功能时，需要使用。注册完成后不可修改</span>
+							<span id="ID_NM_TIPS" style="display: none;" class="gray">请输入真实姓名</span>
+						</div>
+						<div class="left width700 marginl30 inline margint10">
+							<label class="ui-form2-label-return "><font class="star">*</font>证件类型：</label> 
+							<select id="ID_TYP" name="ID_TYP" class="select width180" onclick="checkIdInfo('ID_TYP');" onblur="checkIdInfo('ID_NO');" >
+								<option value="01" selected="selected">身份证</option>
+							</select>
+						</div>
+						<div class="left width700 marginl30 inline margint10">
+							<label class="ui-form2-label-return "><font class="star">*</font>证件号码：</label> 
+							<input id="ID_NO" maxLength="18" name="ID_NO" type="text" onclick="checkIdInfo('ID_NO');" class="input width180 marginr10" onblur="checkIdInfo('ID_NO');"/> 
+							<span id="ID_NO_TIPS" style="display: none;" class="gray">请输入证件号码</span>
+							<!--  <span id="ID_NO_IMG" style="display: none;" class="gray"><img src="/newweb/images/register/loading.gif"/>公安系统认证中......</span>-->
+							<span id="ID_NO_IMG" style="display: none;" class="gray"><img src="../images/register/loading-1.gif" tppabs="newweb/images/register/loading.gif"/>可信系统认证中......</span>
+						</div>
+                        <div class="left width700 marginl30 inline margint10">
+							<label class="ui-form2-label-return "><font class="star">*</font>有效期限：</label> 
+							<input id="ID_EFF_DT" name="ID_EFF_DT"  type="text" class="input width180 marginr10" onblur="checkIDateInfo();" />
+							<span id="ID_DATE_TIPS1" class="gray">(格式:19900101) 方便持续核验有效证件</span>
+							<span id="ID_DATE_TIPS" style="display: none;" class="gray">请输入身份证有效期限(格式如：20161010)</span>
+						</div>
+						<!--
+						 <div class="left width700 marginl30 inline margint10">
+							<label class="ui-form2-label-return "><font class="star">*</font>职业：</label> <select
+								id="OCCP" name="OCCP" class="select width180" onclick="checkIdInfo('OCCP');">
+								<option value="01">在职</option>
+								<option value="02">军人</option>
+								<option value="03">公司职员</option>
+								<option value="04">医生</option>
+							</select>
+						</div>
+						<div class="left width700 marginl30 inline margint10">
+							<label class="ui-form2-label-return "><font class="star">*</font>常用地址：</label> <select
+								id="PROVCD" name="PROVCD" class="select width120"
+								value="" onchange="iloadItem_city();" onclick="checkIdInfo('PROVCD');">
+								<option value="">--请选择--</option>
+							</select> 
+							<select id="CITYCODE" name="CITYCODE" class="select width120" value="">
+								<option value="">--请选择--</option>
+							</select> 
+							<span id="PROVCD_TIPS" style="display:none;" class="gray">请选择省份</span>
+							<span id="CITYCODE_TIPS" style="display:none;" class="gray">请选择城市</span>
+							<br />
+						</div>
+
+            <div class="left width700 marginl30 inline ">
+							<label class="ui-form2-label-return "></label>
+						  <input id="ADDR" name="ADDR" type="text"   onclick="checkIdInfo('ADDR');" class="input width320 marginr10 margint10" />
+							<span id="ADDR_TIPS"  class="gray marginr10 margint10">请输入常用地址</span>
+						</div>	-->
+
+						<div class="left width700 marginl30 inline margint10">
+							<input type="hidden" name="JRN_KEY" id="JRN_KEY"
+								value="" /> <input type="hidden" name="FLAG"
+								id="FLAG" value="" />
+						</div> 
+					</form>
+					
+					<div class="left width600 marginl160 inline margint50">
+						<input type="button" class="btn_blue marginb30"
+							onclick="return reg_submit('userpass','userpswd_confirm','userpay','userpay_confirm');"
+							value="提交" />
+					</div>
+				</div>
+				<!--查询条件结束-->
+			</div>
+		</div>
+		<!--主结束-->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="foot" class="left">
+	<div class="left tcenter width1002">
+		<a href="../../index.jsp" tppabs="index_main.jsp" class="ray_a marginr5">首页</a>
+		<font class="gray_foot_line marginr5">|</font> <a
+			href="nabout_index.xhtml.htm" tppabs="newweb/service/nabout_index.xhtml"
+			class="ray_a marginr5">关于我们</a> <font class="gray_foot_line marginr5">|</font>
+		<a href="nabout_contact.xhtml.htm" tppabs="newweb/service/nabout_contact.xhtml"
+			class="ray_a marginr5">联系我们</a> <font class="gray_foot_line marginr5">|</font>
+		<a href="nabout_partner_business.xhtml.htm" tppabs="newweb/service/nabout_partner_business.xhtml"
+			class="ray_a marginr5">合作伙伴</a> <font class="gray_foot_line marginr5">|</font><a
+			href="nabout_maps.xhtml.htm" tppabs="newweb/service/nabout_maps.xhtml"
+			class="ray_a marginr5">站点地图</a>
+	</div>
+	<div class="left tcenter width1002 gray_foot">Copyright&#169;2014-2019
+		成都华翔通达网络科技有限公司 版权所有 粤ICP备11009418号-2 客服热线：0830-3153101</div>
+</div>
+		<!--foot结束-->
+	</div>
+	<!--所有结束-->
+</body>
+</html>   

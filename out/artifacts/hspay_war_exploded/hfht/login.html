@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+<meta charset=UTF-8>
+<title>赛富特_登录｜互联网金融服务商</title>
+<meta name=keywords content="赛富特,付钱啦,聚合支付,支付通道,聚合SDK,聚合支付SDK,秒收,apple pay,创业支付,开发者支付,支付接口,快速支付对接,付款接口,移动支付,应用内支付,微信支付,支付宝支付,一秒支付,创业,开发者,支付sdk">
+<meta name=description content="赛富特|为创业者提供全新的支付接入服务，仅需几行简单代码，就能同时接入主流支付服务商，轻松实现收款，助您在支付上抢先一步。 ">
+<link href="css/common.css?2a41eea31d84eb72bbce" rel="stylesheet">
+<link href="css/login.css?2a41eea31d84eb72bbce" rel="stylesheet">
+<link href="/css/validform.css" rel="stylesheet">
+</head>
+<body>
+<a class=fql-logo href=index.html></a>
+		<form name="frmLogon" action="/login/login" id="frmLogon" method="post">
+		<input type="hidden" name="IS_PAGE_CODE" value="T" id="IS_PAGE_CODE" />
+		<input type="hidden" name="CHK_SMS_FLG" value="Y" id="CHK_SMS_FLG" />
+		<input id="VER_CD" name="VER_CD" type="hidden" size="4" value="1234" maxlength="4" class="loginyzm"/>
+<div class=new-login-box>
+  <div class=flip-container>
+    <p>©2017 重庆风华捷讯网络科技有限公司 渝ICP备17010209号</p>
+    <div class=login-front>
+      <div class=login-front-inner>
+        <div class=login-fq-logo></div>
+        <div class="login-error hide"> <span></span> </div>
+        <div class=input-parent>
+          <input type=text name="email" id="email" class="login-account account-input" placeholder=邮箱  nullmsg="请输入登陆邮箱！" datatype="*"/>
+        </div>
+        <div class=input-parent>
+          <input type=password id="password" name="password" class="login-password account-input" placeholder=密码  nullmsg="请输入登陆密码！" datatype="*"/>
+        </div>
+        <div class=remember-me>
+          <span class=right>忘记密码请联系客服</span> </div>
+        <input type="submit" class="login-btn transition-btn" value="登录">
+        <p>还没有账号？<a class=register-promptly href="register.html">立即注册</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+        </form>
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	var defaultForm = $("#frmLogon").Validform({
+		tiptype : 1,
+		postonce:true,
+		ajaxPost:true,
+		ignoreHidden:true,
+		callback:function(data){
+			if(data.status=="y"){
+				setTimeout(function(){
+					window.location.href="/mtwo";
+				},1000);
+			}
+		}
+	});
+});
+</script>
+</body>
+</html>

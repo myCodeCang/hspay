@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+
+.log_title{background:url("../images/log_title.jpg")/*tpa=https://www.tftpay.com/images/log_title.jpg*/ no-repeat left top; width:940px; height:30px;
+position:absolute;
+left:-10px;
+line-height:30px; padding-left:20px;}/* 标题 */
+.log_box{padding:50px 10px 20px;
+}/* box*/
+#login2{ width:320px;
+position:relative;
+margin-bottom:10px;
+background-color:#FFF;}
+#login2_meun{ height:38px;
+font-size:14px;
+line-height:38px;
+color:#689107;
+font-weight:bold;
+width:320px;}
+#login2_meun span{ width:137px;
+height:38px;
+float:left;
+cursor:pointer;
+text-align:center;
+display:block;
+background:url("../images/login2_menu.jpg")/*tpa=https://www.tftpay.com/images/login2_menu.jpg*/ no-repeat;
+}
+#login2_meun span.hover{
+	color:#FFF;
+	background:url("../images/login2_menu_on.jpg")/*tpa=https://www.tftpay.com/images/login2_menu_on.jpg*/ no-repeat;}
+#reg_content{
+	width:300px;
+	overflow:hidden;
+	margin-left:110px;
+	padding:20px;
+	height:220px;
+	margin-bottom:100px;
+	border: 1px dotted #CCCCCC;
+	background-color: #FFFFFF;
+	background-position: right top;
+	background: url("../images/reg_mobile_bg.png")/*tpa=https://www.tftpay.com/images/reg_mobile_bg.png*/;
+	background-repeat: no-repeat;
+}
+#reg_content2{
+	width:300px;
+	background:#fff;
+	overflow:hidden;
+	margin-right:110px;
+	padding:20px;
+	height:220px;
+	margin-bottom:100px;
+	border: 1px dotted #CCCCCC;
+}
+#login2_content{ width:298px;
+background:#f3ffec;
+overflow:hidden;
+padding:10px;
+height:370px;
+border:1px solid #64b437;}
+#login2_content li{
+	height:25px;
+	margin-bottom:5px;
+	float:left;
+	width:298px;
+	}
+
+#login2_content li .left{
+	 display:inline;
+	height:20px;
+	line-height:20px;
+	float:left;
+	}
+.login2_error{ color:#C80000;
+padding-left:20px;
+background:url("../images/password_error2.jpg")/*tpa=https://www.tftpay.com/images/password_error2.jpg*/ no-repeat left;
+height:16px;
+display:block;
+}
+.setps_01{
+	width:800px;
+	margin:0 auto;
+	text-align: center;
+}
+.setps_01 span{ height:20px;}
+.setps_01 span img{ vertical-align:middle; margin-left:5px;}
+.login2_error2{
+	color:#C80000;
+	padding-left:5px;
+	font-size:12px;
+	line-height:20px;
+	height:20px;
+}
+.login_line{ width:293px;
+height:1px;
+font-size:0px;
+line-height:1px;
+background:url("../images/login_line.jpg")/*tpa=https://www.tftpay.com/images/login_line.jpg*/ no-repeat;}
+.login2_btn{ margin-bottom:10px;}
+.login2_tips{ text-align:center;
+margin-top:10px;
+}
+.login2_tips a{ margin-left:10px;}
+/* 登录框 */
+.location{
+	position:relative;
+  }
+.location li {
+	float:left;
+	margin-top: 0px;
+	margin-right: 60px;
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+.find_password{padding:60px 250px 180px; margin:0 auto;}/* 找密码*/
+
+.find_password_process{ width:880px;
+ margin:0 auto;}/* 流程*/
+.find_password_process .ul{
+	border-bottom:1px dashed #DCDCDC;
+	height:60px;
+	padding-bottom:30px;
+	padding-top:20px;
+	position:relative;}
+.help_q{ padding-left:30px; background:url("../images/icon_q.jpg")/*tpa=https://www.tftpay.com/images/icon_q.jpg*/ no-repeat left top;}
+.help_a{ padding-left:30px; background:url("../images/icon_a.jpg")/*tpa=https://www.tftpay.com/images/icon_a.jpg*/ no-repeat left top;}
+
+
+
+.log_img_list ul li{float:left;display:inline; width:130px; margin-left:40px;}
+.reg_text_input {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 200px; BACKGROUND: #fff; HEIGHT: 25px; line-height:25px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; margin-top:5px; margin-bottom:5px;
+}
+.reg_mtext_input {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 250px; BACKGROUND: #fff; HEIGHT: 25px; line-height:25px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; margin-top:5px; margin-bottom:5px;
+}
+.reg_text_no {
+	WIDTH: 250px;
+	HEIGHT: 25px;
+	line-height:25px;
+	margin-top:5px;
+	margin-bottom:5px;
+	background-color: #FFFFFF;
+	border: 1px none #ccc;
+}
+.reg_yzm {
+	BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 100px; BACKGROUND: #fff; HEIGHT: 25px; line-height:25px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; margin-top:5px; margin-bottom:5px;
+}
+.reg_textarea{BORDER-BOTTOM: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; BACKGROUND: #fff; line-height:25px; BORDER-TOP: #ccc 1px solid; BORDER-RIGHT: #ccc 1px solid; margin-top:5px; margin-bottom:5px;}
+

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<title>聚合支付_产品_赛富特</title>
+<meta name=keywords content=聚合支付SDK>
+<meta name=description content=赛富特精心推出的聚合支付SDK，为创业者而生。方便快捷的支付接入体验，让支付和收款更简单！>
+<link rel="shortcut icon" href=images/favicon.ico type=image/x-icon>
+<link href="css/common.css?2a41eea31d84eb72bbce" rel="stylesheet">
+<link href="css/polyPay.css?2a41eea31d84eb72bbce" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <div class="header-main clearfix">
+    <h1 id="logo"><a href="index.html">首页</a></h1>
+    <div class="nav-box">
+      <ul class="nav" id="nav">
+        <li class="more"> <a href="#nogo">产品与服务</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav product-list">
+            <ul>
+              <li> <a href="polyPay.html">聚合支付</a> </li>
+              <li> <a href="scancode.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;扫码支付&quot;,platformType:&quot;pc&quot;})">扫码支付</a> </li>
+              <!--<li> <a href="cashCompass.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;现金罗盘&quot;,platformType:&quot;pc&quot;})">现金罗盘</a> </li>-->
+              <li> <a href="allDirectionData.html">八方数据</a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="more"> <a href="#nogo">解决方案</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav scheme">
+            <ul>
+              <li><a href="cashFlow.html">个性化服务</a></li>
+              <li><a href="fundDeposit.html">资金通道</a></li>
+              <!--<li> <a href="enterpriseFin.html">企业理财</a> </li>-->
+              <!--<li> <a href="supply.html">供应链金融</a> </li>-->
+              <li> <a href="stagepay.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;分期支付&quot;,platformType:&quot;pc&quot;,position:&quot;header-nav&quot;})">分期支付</a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="more"> <a href="#nogo">开发者中心</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav developer-center">
+            <ul>
+              <li> <a href="quickStart.html">开发指南</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="login-box">
+      <div style="float: left;margin-top: 22px;margin-bottom: 22px;padding-right: 42px;padding-left: 33px;height: 26px;font-size: 14px;line-height: 26px;color: #333;background-position: 0 0;">&nbsp;</div>
+      <div class="no_login" style="display: block;"> <a class="login-btn" href="login.html">登录</a><a class="reg-btn" href="register.html">注册</a> </div>
+      
+    </div>
+  </div>
+</div>
+<div class="polyPay product">
+  <div class="banner polyPay_banner">
+    <div class=main>
+      <h1>聚合支付SDK 为创业者而生</h1>
+      <h2>方便快捷的支付接入体验，让支付和收款更简单！</h2>
+    </div>
+    <ul class=key-word>
+      <li>极速</li>
+      <li>便捷</li>
+      <li>安全</li>
+      <li>稳定</li>
+    </ul>
+  </div>
+  <div class=brand-introduce>
+    <ul>
+      <li><span>7</span>种支持终端</li>
+      <li><span>28</span>种支付通道</li>
+      <li><span>50</span>种支付产品</li>
+    </ul>
+  </div>
+  <div class="mod all-scene">
+    <h2>支持全部场景</h2>
+    <p>提供支付接入方案，可在各种场景中流畅交易</p>
+    <div class=main>
+      <ul>
+        <li><span>电商</span><br>
+          E-Commerce<img data-original=images/index-pic-01.jpg alt=电商></li>
+        <li><span>金融</span><br>
+          Finance<img data-original=images/index-pic-04.jpg alt=零售></li>
+        <li><span>游戏</span><br>
+          Games<img data-original=images/index-pic-03.jpg alt=票务></li>
+        <li><span>娱乐</span><br>
+          Pastime<img data-original=images/index-pic-02.jpg alt=游戏></li>
+        <!--<li><span>金融</span><br>-->
+          <!--Finance<img data-original=images/index-pic-08.jpg alt=金融></li>-->
+        <!--<li><span>教育</span><br>-->
+          <!--Education<img data-original=images/index-pic-07.jpg alt=教育></li>-->
+        <!--<li><span>医疗</span><br>-->
+          <!--Medical<img data-original=images/index-pic-05.jpg alt=医疗></li>-->
+        <!--<li><span>其他</span><br>-->
+          <!--Others<img data-original=images/index-pic-06.jpg alt=其他></li>-->
+      </ul>
+    </div>
+  </div>
+  <div class="mod flow">
+    <div class=flow-clock>
+      <div class=hour></div>
+      <div class=minute></div>
+      <div class=second></div>
+    </div>
+    <div class=flow-content>
+      <h2>快速接入流程</h2>
+      <p>只需4个步骤即可成功接入</p>
+      <ul>
+        <li>商户注册</li>
+        <li>线上测试</li>
+        <li>参数配置</li>
+        <li>完成接入</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pay_product polyPay_product">
+    <div class=main>
+      <div class=my_title>支付产品</div>
+      <div class=describe> 让您在各个场景下轻松实现收款，涵盖手机APP、移动网页<br>
+        PC网页、微信公众号、手机扫码等场景, <a class=tast_href href=tastesdk.html>立即体验</a>吧~ </div>
+      <div class=pay_list>
+        <div class=tab_title>
+          <ul class=clearfix>
+            <li class="left cur">全部</li>
+            <li class=left>移动APP</li>
+            <li class=left>移动网页</li>
+            <li class=left>PC网页</li>
+            <li class=left>微信公众平台</li>
+            <li class=left>手机扫码</li>
+            <li class="left underline"></li>
+          </ul>
+        </div>
+        <div class=tab_cont>
+          <div class="pay_scene active all">
+            <ul class=clearfix>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>移动支付</div>
+              </li>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>手机网站</div>
+              </li>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>即时到帐</div>
+              </li>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>当面付</div>
+              </li>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>声波支付</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>APP支付</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>公众号支付</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>扫码支付</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>刷卡支付</div>
+              </li>
+              <li class="pro_item left yl">
+                <div class=pro_name>银联支付</div>
+                <div class=pro_type>手机控件</div>
+              </li>
+              <li class="pro_item left yl">
+                <div class=pro_name>银联支付</div>
+                <div class=pro_type>手机网页</div>
+              </li>
+              <li class="pro_item left yl">
+                <div class=pro_name>银联支付</div>
+                <div class=pro_type>网银支付</div>
+              </li>
+              <li class="pro_item left bd">
+                <div class=pro_name>百度钱包</div>
+                <div class=pro_type>APP支付</div>
+              </li>
+              <li class="pro_item left bd">
+                <div class=pro_name>百度钱包</div>
+                <div class=pro_type>移动网页</div>
+              </li>
+              <li class="pro_item left bd">
+                <div class=pro_name>百度钱包</div>
+                <div class=pro_type>电脑支付</div>
+              </li>
+              <li class="pro_item left jd">
+                <div class=pro_name>京东支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+              <li class="pro_item left jd">
+                <div class=pro_name>京东支付</div>
+                <div class=pro_type>PC端</div>
+              </li>
+              <li class="pro_item left yb">
+                <div class=pro_name>易宝支付</div>
+                <div class=pro_type>网银支付</div>
+              </li>
+              <li class="pro_item left yb">
+                <div class=pro_name>易宝支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+              <li class="pro_item left kq">
+                <div class=pro_name>快钱</div>
+                <div class=pro_type>网银支付</div>
+              </li>
+            </ul>
+          </div>
+          <div class="pay_scene app">
+            <ul class=clearfix>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>移动支付</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>APP支付</div>
+              </li>
+              <li class="pro_item left yl">
+                <div class=pro_name>银联支付</div>
+                <div class=pro_type>手机控件</div>
+              </li>
+              <li class="pro_item left bd">
+                <div class=pro_name>百度钱包</div>
+                <div class=pro_type>APP支付</div>
+              </li>
+              <li class="pro_item left jd">
+                <div class=pro_name>京东支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+              <li class="pro_item left yb">
+                <div class=pro_name>易宝支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+            </ul>
+          </div>
+          <div class="pay_scene wap">
+            <ul class=clearfix>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>手机网站</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>公众号支付</div>
+              </li>
+              <li class="pro_item left yl">
+                <div class=pro_name>银联支付</div>
+                <div class=pro_type>手机网页</div>
+              </li>
+              <li class="pro_item left bd">
+                <div class=pro_name>百度钱包</div>
+                <div class=pro_type>移动网页</div>
+              </li>
+              <li class="pro_item left jd">
+                <div class=pro_name>京东支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+              <li class="pro_item left yb">
+                <div class=pro_name>易宝支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+            </ul>
+          </div>
+          <div class="pay_scene pcweb">
+            <ul class=clearfix>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>即时到帐</div>
+              </li>
+              <li class="pro_item left yl">
+                <div class=pro_name>银联支付</div>
+                <div class=pro_type>网银支付</div>
+              </li>
+              <li class="pro_item left bd">
+                <div class=pro_name>百度钱包</div>
+                <div class=pro_type>电脑支付</div>
+              </li>
+              <li class="pro_item left jd">
+                <div class=pro_name>京东支付</div>
+                <div class=pro_type>PC端</div>
+              </li>
+              <li class="pro_item left yb">
+                <div class=pro_name>易宝支付</div>
+                <div class=pro_type>网银支付</div>
+              </li>
+              <li class="pro_item left kq">
+                <div class=pro_name>快钱</div>
+                <div class=pro_type>网银支付</div>
+              </li>
+            </ul>
+          </div>
+          <div class="pay_scene wxpub">
+            <ul class=clearfix>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>公众号支付</div>
+              </li>
+              <li class="pro_item left yl">
+                <div class=pro_name>银联支付</div>
+                <div class=pro_type>手机网页</div>
+              </li>
+              <li class="pro_item left bd">
+                <div class=pro_name>百度钱包</div>
+                <div class=pro_type>移动网页</div>
+              </li>
+              <li class="pro_item left jd">
+                <div class=pro_name>京东支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+              <li class="pro_item left yb">
+                <div class=pro_name>易宝支付</div>
+                <div class=pro_type>H5、APP支付</div>
+              </li>
+            </ul>
+          </div>
+          <div class="pay_scene scancode">
+            <ul class=clearfix>
+              <li class="pro_item left zfb">
+                <div class=pro_name>支付宝</div>
+                <div class=pro_type>当面付</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>扫码支付</div>
+              </li>
+              <li class="pro_item left wx">
+                <div class=pro_name>微信支付</div>
+                <div class=pro_type>刷卡支付</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=deal>
+    <div class="container clearfix">
+      <div class="pic left"> <img src=css/img/product-deal-pic-1.png> </div>
+      <div class="deal_info right">
+        <div class=title>交易管理</div>
+        <div class=describe>强大的管理后台<br>
+          让您轻松管理交易数据</div>
+        </div>
+    </div>
+  </div>
+  <!--<div class=stages>-->
+    <!--<div class="container clearfix">-->
+      <!--<div class="stages_info left">-->
+        <!--<div class=title>分期付款</div>-->
+        <!--<div class=describe>新增金融分期通道接口，<br>-->
+          <!--让更多用户买得起您的产品。<br>-->
+          <!--<a href=stagepay.html class=btn-des>查看详情</a></div>-->
+      <!--</div>-->
+      <!--<div class="pic right"> <img src=css/img/product-stages-pic-1.png> </div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <div class=free-registration> <span class=des>科技让金融更简单</span> <a href=register.html class=btn>免费注册</a> </div>
+</div>
+<script type="text/javascript" src="js/common.js?2a41eea31d84eb72bbce"></script>
+<script type="text/javascript" src="js/polyPay.js?2a41eea31d84eb72bbce"></script>
+</body>
+</html>

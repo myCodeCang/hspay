@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+<meta charset=UTF-8>
+<meta name=keywords content=聚合支付流程图>
+<meta name=description content=聚合支付流程图详细介绍了赛富特聚合支付SDK的工作机制，帮助商户更方便的接入聚合支付。>
+<title>聚合支付流程图_开发者中心_赛富特</title>
+<link rel="shortcut icon" href=images/favicon.ico type=image/x-icon>
+<link href="css/common.css?2a41eea31d84eb72bbce" rel="stylesheet">
+<link href="css/quickStart.css?2a41eea31d84eb72bbce" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <div class="header-main clearfix">
+    <h1 id="logo"><a href="index.html">首页</a></h1>
+    <div class="nav-box">
+      <ul class="nav" id="nav">
+        <li class="more"> <a href="#nogo">产品与服务</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav product-list">
+            <ul>
+              <li> <a href="polyPay.html">聚合支付</a> </li>
+              <li> <a href="scancode.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;扫码支付&quot;,platformType:&quot;pc&quot;})">扫码支付</a> </li>
+              <li> <a href="cashCompass.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;现金罗盘&quot;,platformType:&quot;pc&quot;})">现金罗盘</a> </li>
+              <li> <a href="allDirectionData.html">八方数据</a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="more"> <a href="#nogo">解决方案</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav scheme">
+            <ul>
+              <li> <a href="cashFlow.html">流量变现</a> </li>
+              <li> <a href="fundDeposit.html">资金存管</a> </li>
+              <li> <a href="enterpriseFin.html">企业理财</a> </li>
+              <li> <a href="supply.html">供应链金融</a> </li>
+              <li> <a href="stagepay.html" onClick="sa.track(&quot;activityClicks&quot;,{name:&quot;分期支付&quot;,platformType:&quot;pc&quot;,position:&quot;header-nav&quot;})">分期支付</a> </li>
+            </ul>
+          </div>
+        </li>
+        <li class="more"> <a href="#nogo">开发者中心</a>
+          <div class="nav-line"></div>
+          <div class="sub-nav developer-center">
+            <ul>
+              <li> <a href="quickStart.html">开发指南</a> </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="login-box">
+      <div style="float: left;margin-top: 22px;margin-bottom: 22px;padding-right: 42px;padding-left: 33px;height: 26px;font-size: 14px;line-height: 26px;color: #333;background-position: 0 0;">&nbsp;</div>
+      <div class="no_login" style="display: block;"> <a class="login-btn" href="login.html">登录</a><a class="reg-btn" href="register.html" onClick="sa.track(&quot;registerBtnClicks&quot;,{platformType:&quot;pc&quot;,position:&quot;头部右上角&quot;,pageUrl:location.href})">注册</a> </div>
+      
+    </div>
+  </div>
+</div>
+<div class="main quickStart-main clearfix">
+  <div class=quickStart-left>
+    <ul>
+      <li><a href=quickStart.html>快速引导</a></li>
+      <li><a href=platformSummarize.html>平台概述</a></li>
+      <li><a href=payProcess.html class="active gl">支付流程</a>
+       
+      </li>
+      <li><a href=platformGuide.html>平台使用</a></li>
+    </ul>
+  </div>
+  <div class=synopsis-main>
+    <div>
+      <h1 class=guide> <span>聚合支付流程</span> </h1>
+      <div class=pic> <img src=css/img/Aggregate-Pay-line.png?86c88eb9a6996d439741faa7aefc09d8 class=pic-auto> </div>
+      <p class=mb15>支付交易场景为商户需要在手机应用(APP)、手机网页(WAP)、 PC网页上集成第三方支付时，可以选择赛富特的聚合支付功能，赛富特聚合支付的接入方式支持android/ios sdk,JS sdk，以及api直连方式，聚合支付接入与线下扫码还有所区别，所以请参考对应的流程。</p>
+      <ul>
+        <li>1.	商户客户端组装赛富特sdk需要的参数发送请求到商户服务端，使用商户专有密钥进行加密。</li>
+        <li>2.	商户服务端加密后，将加密串返回给商户前端。</li>
+        <li>3.	商户客户端组装完整支付请求发送到赛富特服务端。</li>
+        <li>4.	赛富特响应商户客户端请求，生成订单，返回支付凭证给商户客户端。</li>
+        <li>5.	客户端拿到支付凭证后调起支付控件，用户输入密码完成支付。</li>
+        <li>6.	支付完成后，赛富特聚合支付平台会接收到三方异步返回的支付结果，记录支付结果后，赛富特聚合支付平台会异步通知商户服务端该笔订单的支付结果。</li>
+        <li>7.	支付完成后，用户可以在页面点击完成，从而支付通道会直接在客户端返回支付结果，此处商户不要使用客户端的成功结果更新订单的最终状态。</li>
+      </ul>
+      <h3><strong>注意事项</strong></h3>
+      <ul class=mb30>
+        <li>1.	建议在处理逻辑中添加主动查询机制：如果在可接受的时间范围内异步通知，你也可以调用赛富特封装的查询方法，主动向赛富特发起请求来获得订单状态，该查询结果可以作为交易结果。</li>
+        <li>2. 请勿直接使用页面返回的支付结果作为最终判定订单状态的依据，建议订单状态的更新对比回调信息和查询接口获取的订单信息来确定。</li>
+      </ul>
+      <h3>扫码支付（非线下）：</h3>
+      <div class=pic> <img src=css/img/Aggregate-Pay-offline.png?b1afcb4942729a579ea103212ce8a1ab class=pic-auto> </div>
+      <ul>
+        <li>1.	商户客户端组装赛富特sdk需要的参数发送请求到商户服务端，使用商户专有密钥进行加密。</li>
+        <li>2.	商户服务端加密后，将加密串返回给商户前端。</li>
+        <li>3.	商户客户端组装完整支付请求发送到赛富特服务端。</li>
+        <li>4.	赛富特服务端下单成功后，返回支付二维码。</li>
+        <li>5.	商户根据链接自行生成二维码，显示在你的 PC 端或任意你需要展示二维码的平台。</li>
+        <li>6.	支付完成时，赛富特会接收到三方异步返回的支付结果，记录支付结果后，赛富特会主动以 POST 方式向你的notify_url通知地址发送支付结果。</li>
+        <li>7.	支付完成后，用户可以在页面点击完成，从而支付通道会直接在客户端返回支付结果，此处商户不要使用客户端的成功结果更新订单的最终状态。</li>
+      </ul>
+      <h3><strong>注意事项</strong></h3>
+      <ul class=mb30>
+        <li>1.	建议在处理逻辑中添加主动查询机制：如果在可接受的时间范围内没有收到异步支付结果通知，你也可以调用查询接口，主动向赛富特发起请求来获得订单状态，该查询结果可以作为交易结果。</li>
+        <li>2.	赛富特支持商户自行展示二维码以及通过赛富特展示二维码两种方式。</li>
+        <li>3.	支付完成后，第三方渠道不会直接给商户任何结果，所以你需要设计客户端主动轮询服务端查询扫码的支付结果。</li>
+      </ul>
+    </div>
+    <div>
+      <h1 class=guide> <span>快捷支付流程</span> </h1>
+      <div class=pic> <img src=css/img/Quick-pay.png?cabcbe220b8bc1a5f537a8e71e467b78 class=pic-auto> </div>
+      <h3><strong>流程说明：</strong></h3>
+      <ul>
+        <li>1.	用户在商户客户端发起支付请求；</li>
+        <li>2.	商户业务端创建订单;</li>
+        <li>3.	商户业务端根据用户的支付行为生成订单，包括业务端号、订单号、金额、手机号等支付要素，并提交获取短信验证码请求;</li>
+        <li>4.	我方请求数据进行处理，我方收到鉴权请求数据后，会先进行安全、重复性订单检查，一系列验证通过后便会处理完成这次发送过来的数据请求；</li>
+        <li>5.	我方向银行或第三方支付通道发送鉴权请求，鉴权通过银行或三方向用户发送手机短信验证码;</li>
+        <li>6.	用户输入短信验证码后，商户业务端接收用户短信验证码;</li>
+        <li>7.	商户业务端使用鉴权通过的订单要素，包括业务端号、订单号、金额、手机号、短信验证码等支付要素，并提交付款请求;</li>
+        <li>8.	我方请求数据进行处理，我方收到付款请求数据后，会先进行安全、重复性订单检查，一系列验证通过后便会处理完成这次发送过来的数据请求；</li>
+        <li>9.	我方向银行发送支付请求；</li>
+        <li>10. 银行端创建订单并生成支付页面；</li>
+        <li>11. 用户在银行端输入银行卡信息进行支付；</li>
+        <li>12. 银行对用户支付结果进行处理；</li>
+        <li>13. 银行同步及异步返回我方支付结果,两步可能同时进行，也可能不同时进行；</li>
+        <li>14. 我方对支付结果进行处理，转义、记录交易状态等处理；</li>
+        <li>15. 我方返回银行异步通知接收状态；</li>
+        <li>16. 我方确认用户支付成功后，同步及异步通知业务端处理结果（同时进行）；</li>
+        <li>17. 业务端对异步通知进行处理；</li>
+        <li>18. 业务返回我方异步通知接收状态（正常接收返回success），否则，我方需要向业务端启动重发机制；</li>
+      </ul>
+    </div>
+    <div>
+      <h1 class=guide> <span>B2B企业网银支付流程</span> </h1>
+      <div class=pic> <img src=css/img/B2B-Pay.png?c7551ba9230e9e94719098790774767b class=pic-auto> </div>
+      <p class=mb15>支付交易场景为商户需要在手机网页(WAP)、 PC网页上集成第三方支付时，可以选择赛富特的B2B企业网银支付功能，B2B企业网银支付的接入方式支持JS sdk，以及api直连方式。</p>
+      <ul>
+        <li>1.	商户客户端组装赛富特sdk需要的参数发送请求到商户服务端，使用商户专有密钥进行加密。</li>
+        <li>2.	商户服务端加密后，将加密串返回给商户前端。</li>
+        <li>3.	商户客户端组装完整支付请求发送到赛富特服务端。</li>
+        <li>4.	赛富特响应商户客户端请求，生成订单，返回支付凭证给商户客户端。</li>
+        <li>5.	客户端拿到支付凭据后调起银行网关支付页面，用户输入银行卡号，密码等等（此处因银行网关而异）完成支付。</li>
+        <li>6.	支付完成后，赛富特聚合支付平台会接收到三方异步返回的支付结果，记录支付结果后，赛富特聚合支付平台会异步通知商户服务端该笔订单的支付结果。</li>
+        <li>7.	支付完成后，用户可以在页面点击完成，从而支付通道会直接在客户端返回支付结果，此处商户不要使用客户端的成功结果更新订单的最终状态。</li>
+      </ul>
+      <h3><strong>注意事项</strong></h3>
+      <ul>
+        <li>1.	建议在处理逻辑中添加主动查询机制：如果在可接受的时间范围内异步通知，你也可以调用赛富特封装的查询方法，主动向赛富特发起请求来获得订单状态，该查询结果可以作为交易结果。</li>
+        <li>2.	请勿直接使用页面返回的支付结果作为最终判定订单状态的依据，建议订单状态的更新对比回调信息和查询接口获取的订单信息来确定。</li>
+      </ul>
+    </div>
+    <div>
+      <h1 class=guide> <span>B2C个人网银支付流程</span> </h1>
+      <div class=pic> <img src=css/img/B2C-Pay.png?74626819bb80a7eb7b85f12e9906348e class=pic-auto> </div>
+      <p class=mb15>支付交易场景为商户需要在手机网页(WAP)、PC网页上集成第三方支付时，可以选择赛富特的B2C个人网银支付功能，B2C个人网银支付的接入方式支持JS sdk，以及api直连方式。</p>
+      <ul>
+        <li>1.	商户客户端组装赛富特sdk需要的参数发送请求到商户服务端，使用商户专有密钥进行加密。</li>
+        <li>2.	商户服务端加密后，将加密串返回给商户前端。</li>
+        <li>3.	商户客户端组装完整支付请求发送到赛富特服务端。</li>
+        <li>4.	赛富特响应商户客户端请求，生成订单，返回支付凭证给商户客户端。</li>
+        <li>5.	客户端拿到支付凭据后调起银行网关支付页面，用户输入银行卡号，密码等等（此处因银行网关而异）完成支付。</li>
+        <li>6.	支付完成后，赛富特聚合支付平台会接收到三方异步返回的支付结果，记录支付结果后，赛富特聚合支付平台会异步通知商户服务端该笔订单的支付结果。</li>
+        <li>7.	支付完成后，用户可以在页面点击完成，从而支付通道会直接在客户端返回支付结果，此处商户不要使用客户端的成功结果更新订单的最终状态。</li>
+      </ul>
+      <h3><strong>注意事项</strong></h3>
+      <ul>
+        <li>1.	建议在处理逻辑中添加主动查询机制：如果在可接受的时间范围内异步通知，你也可以调用赛富特封装的查询方法，主动向赛富特发起请求来获得订单状态，该查询结果可以作为交易结果。</li>
+        <li>2.	请勿直接使用页面返回的支付结果作为最终判定订单状态的依据，建议订单状态的更新对比回调信息和查询接口获取的订单信息来确定。</li>
+      </ul>
+    </div>
+    <div>
+      <h1 class=guide> <span>分期支付流程</span> </h1>
+      <div class=pic> <img src=css/img/Instalment1.png?169a122614817214ba85b831258d981a class=pic-auto> </div>
+      <ul>
+        <li>1.	商户客户端组装赛富特sdk需要的参数发送请求到商户服务端，使用商户专有密钥进行加密。</li>
+        <li>2.	商户服务端加密后，将加密串返回给商户前端。</li>
+        <li>3.	请求赛富特服务器，赛富特服务器组装参数调用分期支付通道。</li>
+        <li>4.	赛富特响应商户客户端请求，生成订单，返回支付凭证给商户客户端。</li>
+        <li>5.	客户端拿到分期支付凭据后调起地址，用户按照步骤输入密码完成分期支付。</li>
+        <li>6.	分期支付完成后，赛富特聚合支付平台会接收到三方异步返回的分期支付结果，记录分期支付结果后，赛富特会异步 通知商户服务端该笔订单的分期支付结果。</li>
+        <li>7.	分期支付完成后，用户可以在页面点击完成，从而分期支付通道会直接在客户端返回支付结果，此处不要使用客户端 的成功结果更新订单的最终状态。</li>
+      </ul>
+      <h3><strong>注意事项</strong></h3>
+      <ul>
+        <li>1.	建议在处理逻辑中添加主动查询机制：如果在可接受的时间范围内异步通知，你也可以调用赛富特封装的查询方法，主动向赛富特发起请求来获得订单状态，该查询结果可以作为交易结果。</li>
+        <li>2.	请勿直接使用页面返回的支付结果作为最终判定订单状态的依据，建议订单状态的更新对比回调信息和查询接口获取的订单信息来确定。</li>
+      </ul>
+      <div class="pic mt30"> <img src=css/img/Instalment2.png?049470bf8aa1934587d0b135c2005ba5 class=pic-auto> </div>
+      <ul class=mb15>
+        <li>1.	用户在客户端选择还款并提交，客户端需要向你的服务端传递还款要素。 注意：在你的客户端和你的服务端之间的数据交互，还没有涉及到赛富特聚合支付，因此此处请你自定义通信方式。</li>
+        <li>2.	服务端接收到客户端请求参数，组装参数返回给客户端，调用赛富特支付平台服务端。</li>
+        <li>3.	请求赛富特服务器，赛富特服务器组装参数调用分期支付通道。</li>
+        <li>4.	赛富特响应你的客户端请求，返回分期还款访问地址给你的客户端。</li>
+        <li>5.	客户端拿到分期还款凭据后调起地址，用户按照步骤完成分期还款。</li>
+        <li>6.	分期还款完成后，用户可以在页面点击完成，从而分期支付通道会直接在客户端返回还款结果。</li>
+      </ul>
+      <p>注：还款业务也可用户直接下载分期通道提供的app，自行进行还款，可以不走此流程。</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/common.js?2a41eea31d84eb72bbce"></script>
+<script type="text/javascript" src="js/quickStart.js?2a41eea31d84eb72bbce"></script>
+</body>
+</html>
